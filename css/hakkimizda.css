@@ -1,0 +1,84 @@
+/* Hakkımızda sayfasındaki istatistik kartlarının yapısı (Öğrenci Sayısı vb). */
+.milestone-item {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+/* Hakkımızda istatistik kartlarındaki büyük sayıların rengi ve ağırlığı. */
+.milestone-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* İstatistik kartlarındaki açıklayıcı başlık. */
+.milestone-label {
+  font-size: 14px;
+  color: var(--dark-navy);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Hakkımızdaki "Temel Değerlerimiz" kısmının kart düzeni. */
+.value-card {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* Temel değerler ikonlarının yuvarlak ve ince kenarlıklı tasarımı. */
+.v-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  background: var(--bg-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 2px solid var(--border);
+}
+
+/* Hakkımızdaki tarihçe alanının solundaki dikey uzun zaman çizelgesi hattı. */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid var(--border);
+}
+
+/* Tarihçedeki her bir olayın madde/alan ayarı. */
+.tl-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+/* Zaman çizelgesi hattının üzerindeki mavi noktalı işaretler. */
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 3px solid var(--white);
+}
+
+/* Zaman çizelgesindeki yılların font tasarımı. */
+.tl-year {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+/* Zaman çizelgesindeki başlıklara ait tasarım (Kuruluş vb). */
+.tl-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dark-navy);
+}

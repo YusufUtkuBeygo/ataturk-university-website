@@ -1,0 +1,612 @@
+/* 
+   1. ORTAK KULLANILANLAR (GLOBAL STYLES, HEADER, FOOTER)
+   Tüm sayfalarda geçerli olan renkler, menüler, footer ve genel iskelet yapıları.
+*/
+
+/* Projenin genelinde kullanılan temel renkler, yazı tipleri, köşe yuvarlatma (border-radius) ve gölge (box-shadow) değerlerinin merkezi olarak tanımlandığı CSS değişkenleri (variables). */
+:root {
+  --white: #FFFFFF;
+  --dark-navy: #1A1F36;
+  --dark-panel: #212529;
+  --primary: #007BFF;
+  --primary-light: #3399FF;
+  --grey-light: #CCCCCC;
+  --grey-lighter: #DDDDDD;
+  --bg-light: #F4F6FA;
+  --border: #E3E7EF;
+  --text-muted: #6c757d;
+  --hero-bg: #0d1b2a;
+
+  /* Standart Sistem Fontları */
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* Tüm HTML elementlerinin kutu modelini (box-sizing) border-box yaparak genişlik ve yükseklik hesaplamalarını düzeltir. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Sayfanın varsayılan (body) yazı tipi, boyutu, metin rengi, arka planı ve satır yüksekliği ayarları. */
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--dark-panel);
+  background: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* Tüm başlık etiketlerinin (H1'den H6'ya) yazı tipi, kalınlık ve renk ayarları. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+/* Sayfadaki tüm bağlantıların (linklerin) varsayılan rengi ve geçiş (transition) animasyonu ayarları. */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+/* Bağlantıların üzerine gelindiğinde (hover) alacağı yeni renk ve alt çizgi durumu. */
+a:hover {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+/* ── TOP BAR (ÜST BİLGİ ÇUBUĞU) ── */
+
+/* Üst bilgi çubuğunun (topbar) dış konteyner rengi ve boşlukları. */
+.topbar {
+  background: var(--dark-navy);
+  color: var(--grey-lighter);
+  font-size: 12.5px;
+  padding: 7px 0;
+}
+
+/* Üst bilgi çubuğundaki metin öğelerinin (telefon, adres vb.) rengi. */
+.topbar-item {
+  color: var(--grey-lighter);
+}
+
+/* Üst bilgi çubuğundaki ayırıcı (dik çizgi) karakterlerin rengi ve boşlukları. */
+.topbar-divider {
+  margin: 0 10px;
+  color: #444c6a;
+}
+
+/* Üst bilgi çubuğundaki tıklanabilir bağlantıların (Türkçe, English vb.) tasarımı. */
+.topbar-link {
+  color: var(--grey-lighter);
+  margin: 0 4px;
+  font-size: 12.5px;
+  transition: color .2s;
+}
+
+/* Üst bilgi çubuğundaki bağlantıların üzerine gelindiğinde (hover) alacağı açık mavi renk. */
+.topbar-link:hover {
+  color: var(--primary-light);
+}
+
+/* ── MAIN NAVBAR (ANA MENÜ) ── */
+
+/* Ana menü alanının beyaz arka planı, alt sınırı ve gölgesi. */
+.main-navbar {
+  background: var(--white);
+  border-bottom: 2px solid var(--border);
+  padding: 12px 0;
+  box-shadow: var(--shadow-sm);
+  z-index: 1050;
+}
+
+/* Logodaki ikon alanının mavi kare arka planı ve hizalaması. */
+.logo-emblem {
+  width: 46px;
+  height: 46px;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* Logo içerisindeki "ATATÜRK" ve "ÜNİVERSİTESİ" yazılarını alt alta sıralar. */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+/* Logodaki "ATATÜRK" yazısının büyük fontu, ağırlığı ve harf aralığı. */
+.logo-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--dark-navy);
+  letter-spacing: 1px;
+}
+
+/* Logodaki "ÜNİVERSİTESİ" yazısının küçük, mavi fontu ve harf aralığı. */
+.logo-sub {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+
+/* Ana menüdeki üst düzey kategori bağlantılarının (Akademik, Araştırma vb.) font, boşluk ve köşe yuvarlatma ayarları. */
+.main-navbar .navbar-nav .nav-link {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--dark-panel);
+  padding: 8px 14px !important;
+  border-radius: var(--radius-sm);
+  transition: background .2s, color .2s;
+}
+
+/* Ana menü bağlantılarının üzerine gelindiğinde (hover) veya aktif olduğunda uygulanacak arkaplan ve metin rengi. */
+.main-navbar .navbar-nav .nav-link:hover,
+.main-navbar .navbar-nav .nav-link.active {
+  background: var(--bg-light);
+  color: var(--primary);
+}
+
+/* Açılır (dropdown) menülerin genel çerçevesi, gölgesi ve üstündeki mavi çizgi vurgusu. */
+.dropdown-menu {
+  border: none;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  border-top: 3px solid var(--primary);
+  padding: 8px 0;
+  min-width: 220px;
+}
+
+/* Akademik gibi çoklu sütuna sahip geniş açılır (mega dropdown) menülerin minimum genişliği. */
+.mega-menu {
+  min-width: 480px;
+}
+
+/* Açılır menülerdeki kategori başlıklarının (Örn: Birimler, Eğitim) büyük harfli tasarımı. */
+.dropdown-header {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--primary);
+  padding: 6px 16px 4px;
+}
+
+/* Açılır menü içerisindeki alt bağlantıların (Örn: Fakülteler) font, boşluk ve renk ayarları. */
+.dropdown-item {
+  font-size: 14px;
+  color: var(--dark-panel);
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  transition: background .15s, color .15s;
+}
+
+/* Açılır menü alt bağlantılarının üzerine gelindiğinde (hover) oluşan arkaplan vurgusu. */
+.dropdown-item:hover {
+  background: var(--bg-light);
+  color: var(--primary);
+}
+
+/* Menüdeki Öğrenci Girişi ve Personel Girişi butonlarının genel, ortak CSS kuralları (kenarlık, padding, font kalınlığı). */
+.btn-ogrenci,
+.btn-personel {
+  color: var(--white) !important;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  transition: background .2s, transform .15s;
+}
+
+/* Öğrenci Girişi butonunun ana rengi (mavi). */
+.btn-ogrenci {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Öğrenci Girişi butonunun üzerine gelindiğinde oluşan koyu mavi renk ve yukarı kayma efekti. */
+.btn-ogrenci:hover {
+  background: #0062cc;
+  border-color: #0062cc;
+  transform: translateY(-1px);
+}
+
+/* Personel Girişi butonunun ana rengi (koyu lacivert). */
+.btn-personel {
+  background: var(--dark-navy);
+  border-color: var(--dark-navy);
+}
+
+/* Personel Girişi butonunun üzerine gelindiğinde oluşan siyah-lacivert renk ve yukarı kayma efekti. */
+.btn-personel:hover {
+  background: #111827;
+  border-color: #111827;
+  transform: translateY(-1px);
+}
+
+/* Menünün sağında yer alan küçük yuvarlak arama (büyüteç) butonunun tasarımı. */
+.btn-icon-search {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--dark-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .2s, color .2s;
+}
+
+/* Arama butonunun üzerine gelindiğindeki mavi vurgu ayarları. */
+.btn-icon-search:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Arama çubuğunun açıldığında (collapse ile) içerisine yerleştiği dış alanın tasarımı. */
+.search-bar-container {
+  background: var(--bg-light);
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Arama input alanının tasarımı (sol köşeleri yuvarlatılmış, sağ köşeleri düz). */
+.search-input {
+  border: 2px solid var(--border);
+  border-right: none;
+  font-size: 15px;
+  height: 46px;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm) !important;
+}
+
+/* Arama input alanına tıklandığındaki mavi sınır ayarı. */
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: none;
+}
+
+/* Arama formu yanındaki "Ara" butonunun tasarımı (sol köşeleri düz, sağ köşeleri yuvarlatılmış). */
+.btn-search-go {
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+  font-weight: 600;
+  padding: 0 20px;
+}
+
+/* Arama alanının altındaki "Popüler aramalar" bilgilendirme yazısı stili. */
+.search-hints {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 12.5px;
+}
+
+/* "Popüler aramalar" kısmındaki linklerin renk ve boşluk ayarı. */
+.search-hints a {
+  color: var(--primary);
+  margin: 0 4px;
+}
+
+/* ── BREADCRUMB & PAGE HERO (SAYFA İŞARETÇİSİ VE ALT SAYFA BAŞLIĞI) ── */
+
+/* Breadcrumb (sayfa işaretçisi) alanının açık gri zemin rengi ve alt çizgisi. */
+.breadcrumb-bar {
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+}
+
+/* Bootstrap'in varsayılan breadcrumb stilinin üzerine yazılarak şeffaflık ve font büyüklüğü eklendi. */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Breadcrumb'daki aktif (şu anki) sayfa isminin rengi. */
+.breadcrumb-item.active {
+  color: var(--text-muted);
+}
+
+/* Alt sayfaların en üstünde yer alan başlık (Hero) alanının lacivert arkaplanı ve padding ayarı. */
+.page-hero {
+  background: var(--hero-bg);
+  color: var(--white);
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 4px solid var(--primary);
+}
+
+/* Alt sayfa başlığının font büyüklüğü ve rengi. */
+.page-hero-title {
+  font-size: 32px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+/* Alt sayfa başlığının altındaki kısa açıklama yazısının stili. */
+.page-hero-sub {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ── GENEL KART VE İÇERİK BÖLÜM STİLLERİ ── */
+
+/* Tüm alt sayfalardaki (fakülteler, hakkımızda vb.) genel section elementlerinin boşlukları. */
+.content-section {
+  padding: 50px 0;
+}
+
+/* Açık gri arkaplana sahip section alanlarını tanımlar. */
+.bg-alt {
+  background: var(--bg-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* İç sayfalardaki bölümlerin (Örn: Tüm Fakülteler) üst başlık font stili. */
+.inner-section-title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: var(--dark-navy);
+}
+
+/* İçerikleri gruplayan beyaz arka planlı standart kart şablonu. */
+.content-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+/* Kartların içinde yer alan ikonların mavi kare arkaplanlı tasarımı. */
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 123, 255, 0.1);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* Haber ve duyuru bölümlerinin üst kısmındaki ("Haberler" vs.) bölüm başlığı tasarımı. */
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  display: flex;
+  align-items: center;
+}
+
+/* Tümünü Gör linkinin stil ve rengi. */
+.btn-all-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+
+/* ── FOOTER (ALT BİLGİ) ── */
+
+/* Footer'ın koyu lacivert arkaplan rengi ve genel açık gri yazıları. */
+.main-footer {
+  background: var(--dark-navy);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Footer içerisindeki sol logoda kullanılan amblem kutucuğunun ebatları ve rengi. */
+.footer-logo-emblem {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Adres ve telefon bilgilerinin yazı stili ve boşlukları. */
+.footer-address {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 4px 0;
+}
+
+/* Sosyal medya ikonlarının birbirleriyle yan yana yatay dizilimi (flex boşluğu). */
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+/* Tekil sosyal medya ikonlarını çerçeveleyen dairesel yapı ve şeffaflık oranı. */
+.social-icon {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+}
+
+/* Footer sütunlarındaki Hızlı Bağlantılar, Birimler gibi başlıkların rengi ve fontu. */
+.footer-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+/* Footer listelerinin noktasız olarak (list-style: none) görünmesi. */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Footer listelerinde yer alan linklerin hafif mat olan gri rengi. */
+.footer-links a {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Footer içerisindeki üst-alt kısımları ayıran ince yatay çizginin opaklık ayarı. */
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 24px 0 16px;
+}
+
+/* Footer altındaki en küçük telif hakkı ve gizlilik yazılarının stilleri. */
+.footer-copy,
+.footer-legal a {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ── WIDGET ── */
+
+/* Sağ altta ekranda scroll edilse de yerinde duran (fixed) bildirim kutusunun boyutu ve kalın sol sınır vurgusu. */
+.resume-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 14px 16px 14px 18px;
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  max-width: 230px;
+}
+
+/* Bildirim kutusu içindeki "Kaldığın Yerden Devam Et" mini başlığının rengi. */
+.resume-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+/* Bildirim kutusundaki "Son Baktığınız" gibi ara yazının soluk rengi. */
+.resume-page {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Bildirim kutusundaki asıl kaldığı yeri gösteren tıklanabilir linkin kalın lacivert tasarımı. */
+.resume-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+/* ── DESKTOP HOVER DROPDOWN (Masaüstünde Üzerine Gelince Açılan Menü) ── */
+@media (min-width: 992px) {
+
+  /* Dropdown menünün hover ile açılması için varsayılan state'i */
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Üzerine gelindiğinde (hover) görünür kıl ve yukarı doğru hafifçe kaydır */
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Bootstrap'in tıkladıktan sonra açtığı durumda da görünür kalmasını garanti et */
+  .navbar-nav .nav-item.dropdown .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Hover köprüsü: Menü ve link arasındaki olası boşluğu kapatarak fare geçişini kolaylaştırır */
+  .navbar-nav .nav-item.dropdown .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: transparent;
+  }
+}
+
+/* ── MOBİL UYUM ── */
+
+/* Ekran boyutu 991px'den (tablet dikey ve daha küçük) az olduğunda topbar ve mega menü davranışını değiştirir. */
+@media (max-width: 991px) {
+
+  /* Topbar'daki bazı elemanların mobil ekranlara sığması için gizlenmesi. */
+  .topbar-left .topbar-item:not(:first-child),
+  .topbar-left .topbar-divider {
+    display: none;
+  }
+
+  /* Ana menüdeki büyük yapının ekran küçülünce daralması. */
+  .mega-menu {
+    min-width: 320px;
+  }
+}
+
+/* Ekran boyutu 575px'den (telefon ve daha küçük) az olduğunda topbar'ın tamamını gizler. */
+@media (max-width: 575px) {
+  .topbar {
+    display: none;
+  }
+}

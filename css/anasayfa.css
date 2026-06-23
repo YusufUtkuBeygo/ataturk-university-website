@@ -1,0 +1,431 @@
+/* ── MAIN HERO SECTION ── */
+
+/* Ana sayfanın büyük arka plan resmi, üzerine binen lacivert-mavi gradient katmanı ve hizalamaları. */
+.hero-section {
+  position: relative;
+  min-height: 520px;
+  background: linear-gradient(100deg, rgba(13, 27, 42, 0.97) 0%, rgba(26, 31, 54, 0.85) 55%, rgba(0, 123, 255, 0.18) 100%), url('../images/photo-1562774053-701939374585.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Hero alanının içindeki içeriklerin kapsayıcısı (z-index ile resmin önüne çıkarılır). */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0;
+}
+
+/* "2024-2025 Kayıtları Başladı" gibi dikkat çekici minik etiketin oval tasarımı ve renkleri. */
+.hero-badge {
+  display: inline-block;
+  background: rgba(0, 123, 255, 0.15);
+  border: 1px solid rgba(51, 153, 255, 0.4);
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+/* "Geleceği Keşfet, Bilgiyle Büyü" gibi ana sayfa büyük başlığının mobil uyumlu boyutlandırması. */
+.hero-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--white);
+  margin: 12px 0;
+}
+
+/* Ana başlıktaki renkli olarak vurgulanan metin. */
+.hero-title span {
+  color: var(--primary-light);
+}
+
+/* Ana başlığın altındaki açıklama metninin font büyüklüğü, satır genişliği ve rengi. */
+.hero-desc {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 17px;
+  max-width: 500px;
+}
+
+/* "Hemen Başvur" gibi eylem butonunun oval mavi tasarımı. */
+.btn-hero-primary {
+  background: var(--primary);
+  color: var(--white) !important;
+  font-weight: 700;
+  padding: 13px 30px;
+  border-radius: 50px;
+  border: none;
+  transition: transform .2s;
+}
+
+/* Eylem butonunun üzerine gelindiğinde yukarı kayma efekti. */
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* "Kampüsü Keşfet" gibi içi boş, kenarlıklı eylem butonunun tasarımı. */
+.btn-hero-outline {
+  background: transparent;
+  color: var(--white) !important;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  transition: border-color .2s, background .2s;
+}
+
+/* Kenarlıklı butonun üzerine gelindiğinde border'ın beyazlaması ve arka planın hafif beyazlaşması. */
+.btn-hero-outline:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Öğrenci, Program vb. gibi istatistik sayaçlarının (65K+ vb.) büyük sayıları. */
+.stat-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+/* Sayaçların altındaki (Öğrenci, Personel vb.) soluk başlıkları. */
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+/* İstatistik öğeleri arasına konan ince dik çizgi ayırıcı. */
+.stat-divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── HIZLI ERİŞİM VE E-HİZMETLER KARTLARI ── */
+
+/* Hızlı erişim kartlarının bulunduğu dış kutunun arkaplan rengi ve gölgesi. */
+.quick-access {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hızlı erişim kartının genel dikey tasarımı, sınırları ve hover hazırlığı. */
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--dark-panel);
+  transition: transform .2s, border-color .2s;
+  height: 100%;
+}
+
+/* Hızlı erişim kartının üzerine gelince yukarı kalkması ve renklenmesi efekti. */
+.quick-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  color: var(--primary);
+}
+
+/* Hızlı erişim kartının içerisindeki ikonu kapsayan minik yuvarlağın tasarımı. */
+.quick-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 9px;
+}
+
+/* Hızlı erişim kartının içindeki başlığın font boyutu ve kalınlığı. */
+.quick-card span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* OBS Girişi gibi önemli hızlı erişim kartlarını vurgulamak için varsayılan mavi tonlaması. */
+.highlight-card {
+  border-color: var(--primary);
+  background: rgba(0, 123, 255, 0.04);
+}
+
+/* Ana sayfadaki E-hizmetler butonlarının ortak iskelet ayarı. */
+.eservice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--dark-panel);
+  transition: transform .2s, border-color .2s;
+  height: 100%;
+}
+
+/* E-hizmetlerin açıklama metni font boyutu ayarı. */
+.eservice-card span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+/* E-hizmetlerin kurumsal logolarının boyut ve hizalaması. */
+.eservice-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: transform .25s ease;
+}
+
+/* E-hizmetler kartlarının üzerine gelindiğindeki animasyon ve renk vurguları. */
+.eservice-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.eservice-card:hover .eservice-logo {
+  transform: scale(1.1);
+}
+
+/* E-Portal gibi kartların daha önce ziyaret edildiğini ya da öne çıkarıldığını belirten aktif tasarım şekli. */
+.eservice-card.visited {
+  border-color: rgba(0, 123, 255, 0.35);
+  background: rgba(0, 123, 255, 0.04);
+}
+
+/* E-hizmetler mobil ve desktop özel sıralama sütun düzeni (Tek satır halinde listeleme) */
+.eservice-row-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 8px 4px 16px;
+  gap: 16px;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.eservice-row-scroll::-webkit-scrollbar {
+  display: none;
+  /* Safari & Chrome */
+}
+
+.eservice-col {
+  flex: 0 0 calc(33.333% - 11px);
+  min-width: 110px;
+}
+
+@media (min-width: 768px) {
+  .eservice-row-scroll {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .eservice-col {
+    flex: 0 0 16.666%;
+    max-width: 16.666%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ── HABERLER VE ADAY ÖĞRENCİ KARTLARI ── */
+
+/* Aday öğrenci bilgilendirme çubuğunun arkaplan ayarı. */
+.candidate-banner {
+  background: var(--bg-light);
+}
+
+/* Aday öğrenci alanındaki kalın sol çerçeveli kart stili. */
+.candidate-card {
+  position: relative;
+  background-image: url('../images/yok_atlas_bg.png');
+  background-size: cover;
+  background-position: right center;
+  border: 1.5px solid var(--border);
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Sol taraftaki metinlerin okunmasını engellemeden sağ taraftaki grafikleri net gösteren degrade geçiş katmanı */
+.candidate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 45%, rgba(255, 255, 255, 0.15) 100%);
+  z-index: -1;
+}
+
+/* Aday öğrenci kartının üstündeki küçük etiket (tag) kutucuğu. */
+.candidate-tag {
+  background: var(--primary);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 50px;
+}
+
+/* Aday öğrenci bölümündeki "Hemen Başvur" butonu tasarımı. */
+.btn-apply {
+  background: var(--primary);
+  color: var(--white) !important;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+/* YÖK Atlas butonu tasarımı (arka plan üzerinde net görünmesi için özel olarak renklendirildi). */
+.candidate-card .btn-outline-secondary {
+  color: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+  background-color: var(--white) !important;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.candidate-card .btn-outline-secondary:hover {
+  color: var(--white) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+/* ── HABERLER, ETKİNLİKLER VE DUYURULAR SLIDER TASARIMI ── */
+
+/* Kare şeklinde geçişli slider kutusunun genel çerçeve ve animasyon yapısı */
+.slider-card-square {
+  position: relative;
+  height: 380px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.slider-card-square:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* Slayt içindeki arka plan görsel yerleşimi */
+.slider-card-square .carousel-item {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Arka plan görselinin üstünde metinlerin parlamasını sağlayan degrade gölge tabakası */
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(26, 31, 54, 0.95) 0%, rgba(26, 31, 54, 0.45) 60%, rgba(26, 31, 54, 0.1) 100%);
+  z-index: 1;
+}
+
+/* Kare kutunun alt tabanına yaslanmış olan metin alanı */
+.slider-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 2;
+}
+
+/* Slider manşet başlığı */
+.slider-title {
+  color: var(--white);
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+/* Slider alt bilgi satırı (tarih / saat / yayıncı) */
+.slider-meta {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11.5px;
+  display: block;
+}
+
+/* Haber, Duyuru ve Etkinlikler başlık bağlantılarının hover efekti */
+.section-title-link {
+  color: var(--dark-navy) !important;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.section-title-link:hover {
+  color: var(--primary) !important;
+  text-decoration: none;
+}
+
+.section-title-link i {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.section-title-link:hover i {
+  transform: translateX(4px);
+}
+
+/* Slider sağ üstünde yer alan premium sayfa gösterge (dots) kapsülü */
+.slider-card-square .carousel-indicators {
+  bottom: auto;
+  top: 18px;
+  margin: 0;
+  justify-content: flex-end;
+  padding-right: 18px;
+  z-index: 3;
+}
+
+.slider-card-square .carousel-indicators li {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  margin: 0 4px;
+  transition: background-color 0.25s ease, width 0.25s ease;
+}
+
+.slider-card-square .carousel-indicators li.active {
+  background-color: var(--white);
+  width: 16px;
+  border-radius: 4px;
+}

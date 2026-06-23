@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atatürk Üniversitesi - Geleceği Keşfet, Bilgiyle Büyü." />
+  <title>Atatürk Üniversitesi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/ortak.css" />
+  <link rel="stylesheet" href="../css/anasayfa.css" />
+</head>
+
+<body>
+
+  <!--TOPBAR: İletişim bilgileri, dil seçenekleri ve sosyal medya ikonları gibi hızlı erişim alanlarını kapsar -->
+  <div class="topbar">
+    <div class="container-fluid px-4">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <div class="topbar-left d-flex align-items-center">
+          <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</span>
+        </div>
+        <div class="topbar-right d-flex align-items-center">
+          <a href="#" class="topbar-link">Türkçe</a><span class="topbar-divider">|</span>
+          <a href="#" class="topbar-link">English</a><span class="topbar-divider">|</span>
+          <a href="#" class="topbar-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="topbar-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="topbar-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="topbar-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR: Üniversite logosu, açılır menüler (Akademik, Araştırma vb.), arama çubuğu ve kullanıcı giriş butonlarını barındıran bölüm -->
+  <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+          style="width: 46px; height: 46px; object-fit: contain;" />
+        <div class="logo-text">
+          <span class="logo-title">ATATÜRK</span>
+          <span class="logo-sub">ÜNİVERSİTESİ</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mr-auto ml-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown">Akademik <i class="fa-solid fa-angle-down ml-1"></i></a>
+            <div class="dropdown-menu mega-menu">
+              <div class="row px-3 py-2">
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Birimler</h6>
+                  <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                  <a class="dropdown-item" href="#">Enstitüler</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Akademik Takvim</h6>
+                  <a class="dropdown-item" href="#">2024-2025 Takvimi</a>
+                  <a class="dropdown-item" href="#">Sınav Programı</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Eğitim</h6>
+                  <a class="dropdown-item" href="#">Lisans Programları</a>
+                  <a class="dropdown-item" href="#">Uzaktan Eğitim</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown">Araştırma <i
+                class="fa-solid fa-angle-down ml-1"></i></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Araştırma Merkezleri</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown">Öğrenci <i class="fa-solid fa-angle-down ml-1"></i></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><i class="fa-solid fa-utensils mr-2"></i> Yemek Listesi</a>
+              <a class="dropdown-item" href="#"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Yurt & Barınma</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown">Aday Öğrenci <i
+                class="fa-solid fa-angle-down ml-1"></i></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">YÖK Atlas</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center nav-right-actions">
+          <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user-graduate mr-2"></i> Öğrenci Girişi</a>
+          <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-briefcase mr-2"></i> Personel Girişi</a>
+          <button class="btn btn-icon-search" type="button" data-toggle="collapse" data-target="#searchBar"
+            aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="collapse search-bar-container" id="searchBar">
+      <div class="container-fluid px-4">
+        <div class="input-group">
+          <input type="text" class="form-control search-input" placeholder="Sitede ara..." />
+          <div class="input-group-append">
+            <button class="btn btn-search-go" type="button"><i class="fa-solid fa-magnifying-glass mr-2"></i>
+              Ara</button>
+          </div>
+        </div>
+        <small class="search-hints">Popüler: <a href="#">Yemek Listesi</a> · <a href="#">OBS Girişi</a></small>
+      </div>
+    </div>
+  </nav>
+
+  <!--BREADCRUMB: Kullanıcının sitede o an hangi sayfada bulunduğunu gösteren hiyerarşik yol (Örn: Ana Sayfa > Fakülteler) alanı -->
+  <div class="breadcrumb-bar">
+    <div class="container-fluid px-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item active"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!--HERO SECTION: Sayfaya girildiğinde ilk görünen büyük banner, karşılama mesajı, başvuru butonu ve istatistiklerin (Öğrenci sayısı vb.) yer aldığı ana görsel alan -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container-fluid px-4 h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-6 col-md-8 hero-content">
+          <div class="hero-badge mb-3"><i class="fa-solid fa-star mr-2 text-warning"></i> 2024-2025 Kayıtları Başladı
+          </div>
+          <h1 class="hero-title">Geleceği Keşfet,<br /><span>Bilgiyle Büyü.</span></h1>
+          <p class="hero-desc">Türkiye'nin köklü üniversitelerinden birinde kaliteli eğitim için hemen başvurun.</p>
+          <div class="hero-actions mt-4">
+            <a href="#" class="btn btn-hero-primary mr-3"><i class="fa-solid fa-file-signature mr-2"></i> Hemen
+              Başvur</a>
+            <a href="#" class="btn btn-hero-outline"><i class="fa-solid fa-play mr-2"></i> Kampüsü Keşfet</a>
+          </div>
+          <div class="hero-stats mt-5 d-flex">
+            <div class="stat-item mr-4"><span class="stat-num">65K+</span><span class="stat-label">Öğrenci</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item mx-4"><span class="stat-num">3.200+</span><span class="stat-label">Personel</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item ml-4"><span class="stat-num">200+</span><span class="stat-label">Program</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--QUICK ACCESS: Kullanıcıların en çok aradığı servis ve sayfalara (yemek listesi, ring saatleri, OBS vb.) doğrudan ulaşmasını sağlayan kısayollar -->
+  <section class="quick-access py-4">
+    <div class="container-fluid px-4">
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-2 mb-3"><a href="#" class="quick-card">
+            <div class="quick-icon"><i class="fa-solid fa-utensils"></i></div><span>Yemek Listesi</span>
+          </a></div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3"><a href="#" class="quick-card">
+            <div class="quick-icon"><i class="fa-solid fa-bus"></i></div><span>Ring Saatleri</span>
+          </a></div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3"><a href="#" class="quick-card">
+            <div class="quick-icon"><i class="fa-solid fa-newspaper"></i></div><span>Haberler</span>
+          </a></div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3"><a href="duyurular.html" class="quick-card">
+            <div class="quick-icon"><i class="fa-solid fa-bullhorn"></i></div><span>Duyurular</span>
+          </a></div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3"><a href="#" class="quick-card">
+            <div class="quick-icon"><i class="fa-solid fa-calendar-days"></i></div><span>Akademik Takvim</span>
+          </a></div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3"><a href="#" class="quick-card highlight-card">
+            <div class="quick-icon"><i class="fa-solid fa-laptop-code"></i></div><span>OBS Girişi</span>
+          </a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADAY ÖĞRENCİ BÖLÜMÜ: Üniversiteyi tercih etmeyi düşünen aday öğrencileri YÖK Atlas ve başvuru sayfalarına yönlendiren bilgilendirme çubuğu -->
+  <section class="candidate-banner py-4">
+    <div class="container-fluid px-4">
+      <div class="candidate-card d-flex align-items-center justify-content-between flex-wrap">
+        <div class="candidate-text">
+          <span class="candidate-tag">Aday Öğrenci</span>
+          <h4 class="mb-1 mt-2">Atatürk Üniversitesi'ni Tercih Et</h4>
+          <p class="mb-0 text-muted">YÖK Atlas üzerinden puanları, kontenjanları incele.</p>
+        </div>
+        <div class="candidate-actions mt-3 mt-md-0">
+          <a href="#" class="btn btn-apply mr-2"><i class="fa-solid fa-rocket mr-2"></i> Hemen Başvur</a>
+          <a href="#" class="btn btn-outline-secondary"><i class="fa-solid fa-chart-simple mr-2"></i> YÖK Atlas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABERLER, ETKİNLİKLER VE DUYURULAR: Otomatik geçişli premium kare slider kartlarından oluşan 3 sütunlu interaktif ızgara alanı -->
+  <section class="news-section py-5">
+    <div class="container-fluid px-4">
+      <div class="row">
+        <!-- Haberler Slayt Kartı -->
+        <div class="col-lg-4 mb-4">
+          <div class="section-header mb-3">
+            <h2 class="section-title">
+              <a href="#" class="section-title-link">
+                <i class="fa-solid fa-newspaper mr-2 text-primary"></i> Haberler
+                <i class="fa-solid fa-chevron-right ml-2"></i>
+              </a>
+            </h2>
+          </div>
+          <div id="carouselHaberler" class="carousel slide slider-card-square" data-ride="carousel"
+            data-interval="5000">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselHaberler" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselHaberler" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100" style="background-image: url('../images/news_featured.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat">Akademik</span>
+                  <h5 class="slider-title">Üniversitemiz uluslararası sıralamalarda yükseliş kaydetti</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 3 Mayıs 2025</small>
+                </div>
+              </div>
+              <div class="carousel-item h-100" style="background-image: url('../images/news_science.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat">Araştırma</span>
+                  <h5 class="slider-title">Yeni bilimsel araştırma laboratuvarımız faaliyete geçti</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 30 Nisan 2025</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etkinlikler Slayt Kartı -->
+        <div class="col-lg-4 mb-4">
+          <div class="section-header mb-3">
+            <h2 class="section-title">
+              <a href="#" class="section-title-link">
+                <i class="fa-solid fa-calendar-days mr-2 text-primary"></i> Etkinlikler
+                <i class="fa-solid fa-chevron-right ml-2"></i>
+              </a>
+            </h2>
+          </div>
+          <div id="carouselEtkinlikler" class="carousel slide slider-card-square" data-ride="carousel"
+            data-interval="5500">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselEtkinlikler" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselEtkinlikler" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100" style="background-image: url('../images/news_fest.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat" style="background-color: #28a745; color: white;">Şenlik</span>
+                  <h5 class="slider-title">Bahar Şenliği 2025 programı ve konser takvimi açıklandı</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 1 Mayıs 2025</small>
+                </div>
+              </div>
+              <div class="carousel-item h-100" style="background-image: url('../images/event_career.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat" style="background-color: #28a745; color: white;">Kariyer</span>
+                  <h5 class="slider-title">Geleceğim Kariyer Fuarı ve Sektör Buluşmaları başladı</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 25 Nisan 2025</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duyurular Slayt Kartı -->
+        <div class="col-lg-4 mb-4">
+          <div class="section-header mb-3">
+            <h2 class="section-title">
+              <a href="duyurular.html" class="section-title-link">
+                <i class="fa-solid fa-bullhorn mr-2 text-primary"></i> Duyurular
+                <i class="fa-solid fa-chevron-right ml-2"></i>
+              </a>
+            </h2>
+          </div>
+          <div id="carouselDuyurular" class="carousel slide slider-card-square" data-ride="carousel"
+            data-interval="6000">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselDuyurular" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselDuyurular" data-slide-to="1"></li>
+              <li data-target="#carouselDuyurular" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100" style="background-image: url('../images/ann_exam.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat" style="background-color: #dc3545; color: white;">Öğrenci</span>
+                  <h5 class="slider-title">Bahar dönemi final sınav programı ve salonları yayınlandı</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 15 Mayıs 2025</small>
+                </div>
+              </div>
+              <div class="carousel-item h-100" style="background-image: url('../images/ann_scholarship.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat" style="background-color: #dc3545; color: white;">Burs</span>
+                  <h5 class="slider-title">Vakıf Burs başvuruları için son başvuru tarihi uzatıldı</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 12 Mayıs 2025</small>
+                </div>
+              </div>
+              <div class="carousel-item h-100" style="background-image: url('../images/ann_career.png');">
+                <div class="slider-overlay"></div>
+                <div class="slider-content">
+                  <span class="news-cat" style="background-color: #dc3545; color: white;">Akademik</span>
+                  <h5 class="slider-title">Öğretim görevlisi kadro alımı ve başvuru süreci başladı</h5>
+                  <small class="slider-meta"><i class="fa-regular fa-clock mr-1"></i> 10 Mayıs 2025</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-HİZMETLER: Üniversitenin sunduğu dijital servislerin (Kütüphane, KVKK Başvuru, e-Portal vb.) ikonlu bağlantılarını içeren bölüm -->
+  <section class="eservices-section py-5">
+    <div class="container-fluid px-4">
+      <h2 class="section-title mb-4 text-center justify-content-center"><i
+          class="fa-solid fa-cubes mr-2 text-primary"></i> E-Hizmetler</h2>
+      <div class="eservice-row-scroll">
+        <div class="eservice-col"><a href="#" class="eservice-card visited">
+            <img src="../images/eservice_portal.png" alt="e-Portal" class="eservice-logo" />
+            <span>e-Portal</span>
+          </a></div>
+        <div class="eservice-col"><a href="#" class="eservice-card">
+            <img src="../images/eservice_obs.png" alt="OBS" class="eservice-logo" />
+            <span>OBS</span>
+          </a></div>
+        <div class="eservice-col"><a href="#" class="eservice-card">
+            <img src="../images/eservice_personel.png" alt="Personel Bilgi" class="eservice-logo" />
+            <span>Personel Bilgi</span>
+          </a></div>
+        <div class="eservice-col"><a href="#" class="eservice-card">
+            <img src="../images/eservice_kvkk.png" alt="KVKK Başvuru" class="eservice-logo" />
+            <span>KVKK Başvuru</span>
+          </a></div>
+        <div class="eservice-col"><a href="#" class="eservice-card">
+            <img src="../images/eservice_library.png" alt="Kütüphane" class="eservice-logo" />
+            <span>Kütüphane</span>
+          </a></div>
+        <div class="eservice-col"><a href="#" class="eservice-card">
+            <img src="../images/eservice_info.png" alt="Bilgi Edinme" class="eservice-logo" />
+            <span>Bilgi Edinme</span>
+          </a></div>
+      </div>
+    </div>
+  </section>
+
+  <!--FOOTER: Sayfa en altında yer alan logo, adres, iletişim, sosyal medya bağlantıları, site haritası linkleri ve telif hakkı bildirimini kapsayan bölüm -->
+  <footer class="main-footer pt-5 pb-3">
+    <div class="container-fluid px-4">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+              style="width: 44px; height: 44px; object-fit: contain;" />
+            <div><span class="footer-logo-title">ATATÜRK ÜNİVERSİTESİ</span></div>
+          </div>
+          <p class="footer-address"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</p>
+          <p class="footer-address"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</p>
+          <p class="footer-address"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</p>
+          <div class="footer-social mt-3">
+            <a href="#" class="social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">HIZLI BAĞLANTILAR</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">BİRİMLER</h6>
+          <ul class="footer-links">
+            <li><a href="fakulteler.html">Fakülteler</a></li>
+            <li><a href="#">Enstitüler</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">E-HİZMETLER</h6>
+          <ul class="footer-links">
+            <li><a href="#">e-Portal</a></li>
+            <li><a href="#">OBS</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <p class="footer-copy mb-0">Telif Hakkı © Atatürk Üniversitesi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- KALDIĞIN YERDEN DEVAM ET : Kullanıcıya son incelediği sayfayı/duyuruyu hatırlatan, ekranın kenarında beliren ve kapatılabilen küçük bildirim kutucuğu -->
+  <div class="resume-widget alert alert-dismissible fade show" role="alert">
+    <button type="button" class="close resume-close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
+    </button>
+    <div class="resume-body">
+      <small class="resume-label">Kaldığın Yerden Devam Et</small>
+      <p class="resume-page mb-1">Son Baktığınız Duyuru:</p>
+      <a href="#" class="resume-link">Ders Kayıtları <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
