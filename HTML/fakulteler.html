@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../css/fakulteler.css" />
 </head>
 
-<body>
+<body class="faculties-page">
 
 
   <!--TOPBAR: İletişim bilgileri, dil seçenekleri ve sosyal medya ikonları gibi hızlı erişim alanlarını kapsar -->
@@ -155,17 +155,16 @@
 
 
   <!-- SAYFA BAŞLIĞI : İlgili sayfanın ana başlığını ve kısa açıklamasını içeren karşılama alanı -->
-  <div class="page-hero">
+  <div class="page-hero fakulteler-hero">
     <div class="container-fluid px-4">
-      <h1 class="page-hero-title"><span style="color:var(--primary-light)"><i
-            class="fa-solid fa-building-columns"></i></span> Fakülteler</h1>
+      <h1 class="page-hero-title">Fakülteler</h1>
       <p class="page-hero-sub">Atatürk Üniversitesi bünyesindeki 25 fakülte ve sunduğu 200+ program.</p>
     </div>
   </div>
 
 
   <!-- FİLTRELEME ALANI: Fakülteleri alanlarına (Fen, Sağlık, Sosyal vb.) göre filtrelemek için kullanılan buton grubu -->
-  <section style="background:var(--bg-light);padding:20px 0;border-bottom:1px solid var(--border);">
+  <section class="filter-section">
     <div class="container-fluid px-4">
       <div class="d-flex align-items-center flex-wrap" style="gap:10px;">
         <span style="font-size:13px;font-weight:700;color:var(--dark-navy);margin-right:6px;">Filtrele:</span>
@@ -187,128 +186,155 @@
       <div class="row">
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-            <h5>Tıp Fakültesi</h5>
-            <p>Temel tıp bilimleri, klinik eğitim ve araştırma alanlarında kapsamlı eğitim. Yakın Doğu'nun öncü tıp
-              fakültelerinden biri.</p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 1.200 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 6 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_tip.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Tıp Fakültesi</h5>
+              <p>Temel tıp bilimleri, klinik eğitim ve araştırma alanlarında kapsamlı eğitim. Yakın Doğu'nun öncü tıp
+                fakültelerinden biri.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 1.200 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 6 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-gears"></i></div>
-            <h5>Mühendislik Fakültesi</h5>
-            <p>Bilgisayar, elektrik-elektronik, inşaat ve makine mühendisliği başta olmak üzere 10 mühendislik bölümü.
-            </p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 3.500 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 10 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_muhendislik.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Mühendislik Fakültesi</h5>
+              <p>Bilgisayar, elektrik-elektronik, inşaat ve makine mühendisliği başta olmak üzere 10 mühendislik bölümü.
+              </p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 3.500 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 10 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-            <h5>Hukuk Fakültesi</h5>
-            <p>Ulusal ve uluslararası hukukun tüm dallarında teorik ve uygulamalı eğitim. Aktif staj programları.</p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 900 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 4 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_hukuk.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Hukuk Fakültesi</h5>
+              <p>Ulusal ve uluslararası hukukun tüm dallarında teorik ve uygulamalı eğitim. Aktif staj programları.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 900 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 4 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-seedling"></i></div>
-            <h5>Ziraat Fakültesi</h5>
-            <p>Tarım bilimleri, gıda mühendisliği, bitki ve hayvan üretimi alanlarında köklü geçmişe sahip fakültemiz.
-            </p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 1.100 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 8 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_ziraat.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Ziraat Fakültesi</h5>
+              <p>Tarım bilimleri, gıda mühendisliği, bitki ve hayvan üretimi alanlarında köklü geçmişe sahip fakültemiz.
+              </p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 1.100 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 8 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h5>Eğitim Fakültesi</h5>
-            <p>Öğretmen yetiştirme, pedagoji ve eğitim bilimleri alanlarında Türkiye'nin en köklü programlarından biri.
-            </p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 2.800 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 12 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_egitim.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Eğitim Fakültesi</h5>
+              <p>Öğretmen yetiştirme, pedagoji ve eğitim bilimleri alanlarında Türkiye'nin en köklü programlarından
+                biri.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 2.800 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 12 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-microscope"></i></div>
-            <h5>Fen Fakültesi</h5>
-            <p>Matematik, fizik, kimya ve biyoloji alanlarında lisans ve lisansüstü programlar. Güçlü araştırma
-              laboratuvarları.</p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 1.600 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 7 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_fen.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Fen Fakültesi</h5>
+              <p>Matematik, fizik, kimya ve biyoloji alanlarında lisans ve lisansüstü programlar. Güçlü araştırma
+                laboratuvarları.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 1.600 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 7 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-chart-line"></i></div>
-            <h5>İktisadi ve İdari Bilimler Fakültesi</h5>
-            <p>İktisat, işletme, uluslararası ilişkiler ve kamu yönetimi bölümleriyle geniş kapsamlı sosyal bilimler
-              eğitimi.</p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 4.200 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 9 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_iibf.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>İktisadi ve İdari Bilimler Fakültesi</h5>
+              <p>İktisat, işletme, uluslararası ilişkiler ve kamu yönetimi bölümleriyle geniş kapsamlı sosyal bilimler
+                eğitimi.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 4.200 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 9 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-bullhorn"></i></div>
-            <h5>İletişim Fakültesi</h5>
-            <p>Gazetecilik, radyo-televizyon, halkla ilişkiler ve reklamcılık bölümleriyle medya ve iletişim dünyasına
-              hazırlık.</p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 800 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 5 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_iletisim.png');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>İletişim Fakültesi</h5>
+              <p>Gazetecilik, radyo-televizyon, halkla ilişkiler ve reklamcılık bölümleriyle medya ve iletişim dünyasına
+                hazırlık.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 800 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 5 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
-          <div class="faculty-card">
-            <div class="fac-icon"><i class="fa-solid fa-palette"></i></div>
-            <h5>Güzel Sanatlar Fakültesi</h5>
-            <p>Resim, heykel, müzik ve sahne sanatları bölümleriyle yaratıcılığı ve sanatsal ifadeyi destekleyen
-              programlar.</p>
-            <div class="fac-meta">
-              <span><i class="fa-solid fa-users mr-1"></i> 600 Öğrenci</span>
-              <span><i class="fa-solid fa-book-open mr-1"></i> 6 Bölüm</span>
+          <a href="#" class="faculty-card">
+            <div class="faculty-card-bg" style="background-image: url('../images/fac_guzelsanatlar.jpg');"></div>
+            <div class="faculty-card-overlay"></div>
+            <div class="faculty-card-content">
+              <h5>Güzel Sanatlar Fakültesi</h5>
+              <p>Resim, heykel, müzik ve sahne sanatları bölümleriyle yaratıcılığı ve sanatsal ifadeyi destekleyen
+                programlar.</p>
+              <div class="fac-meta">
+                <span><i class="fa-solid fa-users mr-1"></i> 600 Öğrenci</span>
+                <span><i class="fa-solid fa-book-open mr-1"></i> 6 Bölüm</span>
+              </div>
+              <div class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></div>
             </div>
-            <a href="#" class="btn-fac">Fakülteye Git <i class="fa-solid fa-arrow-right-long ml-1"></i></a>
-          </div>
+          </a>
         </div>
 
       </div>

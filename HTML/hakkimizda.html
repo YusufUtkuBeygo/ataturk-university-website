@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../css/hakkimizda.css" />
 </head>
 
-<body>
+<body class="about-page">
 
 
   <!--TOPBAR: İletişim bilgileri, dil seçenekleri ve sosyal medya ikonları gibi hızlı erişim alanlarını kapsar -->
@@ -154,10 +154,9 @@
 
 
   <!-- SAYFA BAŞLIĞI: İlgili sayfanın ana başlığını ve kısa açıklamasını içeren karşılama alanı -->
-  <div class="page-hero">
+  <div class="page-hero hakkimizda-hero">
     <div class="container-fluid px-4">
-      <h1 class="page-hero-title"><span style="color:var(--primary-light)"><i
-            class="fa-solid fa-building-columns"></i></span> Hakkımızda</h1>
+      <h1 class="page-hero-title">Hakkımızda</h1>
       <p class="page-hero-sub">1957'den bu yana Türkiye'nin ve dünyanın geleceğini şekillendiriyoruz.</p>
     </div>
   </div>
@@ -166,8 +165,9 @@
   <!-- HAKKIMIZDA METNİ VE İSTATİSTİKLER: Üniversitenin genel tanıtım yazısını ve öğrenci/personel sayısı gibi sayısal verilerini içeren ana bölüm -->
   <section class="content-section">
     <div class="container-fluid px-4">
-      <div class="row align-items-center">
-        <div class="col-lg-7 mb-4">
+      <!-- Tanıtım Metni (Üstte) -->
+      <div class="row mb-5">
+        <div class="col-12">
           <h2 class="inner-section-title">Atatürk Üniversitesi</h2>
           <p class="about-lead mb-4">
             1957 yılında kurulan Atatürk Üniversitesi, Türkiye'nin ilk ve köklü
@@ -187,28 +187,63 @@
             <i class="fa-solid fa-envelope mr-2"></i> Bizimle İletişime Geçin
           </a>
         </div>
+      </div>
+      <!-- Slayt ve İstatistikler (Altta) -->
+      <div class="row align-items-center">
+        <!-- Otomatik Slayt (Sol) -->
+        <div class="col-lg-7 mb-4">
+          <div id="aboutCarousel" class="carousel slide shadow-sm" data-ride="carousel" data-interval="4000">
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="../images/campus_history.png" class="d-block w-100" style="height: 340px; object-fit: cover;"
+                  alt="Atatürk Üniversitesi Kampüsü">
+              </div>
+              <div class="carousel-item">
+                <img src="../images/news_featured.png" class="d-block w-100" style="height: 340px; object-fit: cover;"
+                  alt="Kampüsten Kareler">
+              </div>
+              <div class="carousel-item">
+                <img src="../images/news_fest.png" class="d-block w-100" style="height: 340px; object-fit: cover;"
+                  alt="Kampüs Bahar Şenliği">
+              </div>
+              <div class="carousel-item">
+                <img src="../images/news_summer.png" class="d-block w-100" style="height: 340px; object-fit: cover;"
+                  alt="Kampüs Yaz Dönemi">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Önceki</span>
+            </a>
+            <a class="carousel-control-next" href="#aboutCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Sonraki</span>
+            </a>
+          </div>
+        </div>
+        <!-- Sayısal Veriler (Sağ) -->
         <div class="col-lg-5 mb-4">
           <div class="row text-center">
             <div class="col-6 mb-4">
-              <div class="milestone-item">
+              <div class="milestone-item shadow-sm">
                 <div class="milestone-num">65K+</div>
                 <div class="milestone-label">Öğrenci</div>
               </div>
             </div>
             <div class="col-6 mb-4">
-              <div class="milestone-item">
+              <div class="milestone-item shadow-sm">
                 <div class="milestone-num">3.200+</div>
                 <div class="milestone-label">Akademik Personel</div>
               </div>
             </div>
             <div class="col-6 mb-4">
-              <div class="milestone-item">
+              <div class="milestone-item shadow-sm">
                 <div class="milestone-num">200+</div>
                 <div class="milestone-label">Program</div>
               </div>
             </div>
             <div class="col-6 mb-4">
-              <div class="milestone-item">
+              <div class="milestone-item shadow-sm">
                 <div class="milestone-num">67</div>
                 <div class="milestone-label">Yıllık Deneyim</div>
               </div>
@@ -220,67 +255,72 @@
   </section>
 
 
-  <!-- MİSYON VE VİZYON: Üniversitenin Misyonunu ve gelecekteki hedeflerini özetleyen kartlar -->
-  <section class="content-section bg-alt">
-    <div class="container-fluid px-4">
-      <div class="row">
+  <!-- MİSYON, VİZYON VE TEMEL DEĞERLER (BİRLEŞİK BÖLÜM): Tek arka plan ve cam efektli kartlarla -->
+  <section class="content-section mission-vision-values-section">
+    <div class="mvv-overlay"></div>
+    <div class="container-fluid px-4 position-relative" style="z-index: 2;">
+      <!-- Misyon & Vizyon Satırı -->
+      <div class="row mb-5">
         <div class="col-md-6 mb-4">
-          <div class="content-card">
-            <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
-            <h5>Misyonumuz</h5>
-            <p>Evrensel bilim ve teknoloji üretimine katkıda bulunmak; eleştirel düşünce, etik değerler ve toplumsal
-              sorumluluk anlayışıyla donanmış, çağdaş bireyler yetiştirmek. Araştırma ve uygulamalarıyla bölgenin ve
-              ülkenin kalkınmasına öncülük etmek.</p>
+          <div class="mvv-card">
+            <h3 class="mvv-card-title">Misyonumuz</h3>
+            <p class="mvv-card-text">Evrensel bilim ve teknoloji üretimine katkıda bulunmak; eleştirel düşünce,
+              etik değerler ve toplumsal sorumluluk anlayışıyla donanmış, çağdaş bireyler yetiştirmek. Araştırma ve
+              uygulamalarıyla bölgenin ve ülkenin kalkınmasına öncülük etmek.</p>
           </div>
         </div>
         <div class="col-md-6 mb-4">
-          <div class="content-card">
-            <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
-            <h5>Vizyonumuz</h5>
-            <p>Ulusal ve uluslararası arenada tanınan, tercih edilen, araştırma ve eğitim kalitesiyle öne çıkan;
-              yenilikçi, çevre dostu ve sürdürülebilir bir üniversite olmak. 2030 yılına kadar dünya sıralamalarında ilk
-              500 üniversite arasına girmek.</p>
+          <div class="mvv-card">
+            <h3 class="mvv-card-title">Vizyonumuz</h3>
+            <p class="mvv-card-text">Ulusal ve uluslararası arenada tanınan, tercih edilen, araştırma ve eğitim
+              kalitesiyle öne çıkan; yenilikçi, çevre dostu ve sürdürülebilir bir üniversite olmak. 2030 yılına kadar
+              dünya sıralamalarında ilk 500 üniversite arasına girmek.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <!-- TEMEL DEĞERLEr: Üniversitenin benimsediği bilimsellik, etik, yenilikçilik gibi ana ilkeleri listeleyen bölüm -->
-  <section class="content-section">
-    <div class="container-fluid px-4">
-      <h2 class="inner-section-title text-center" style="padding-bottom:14px;">
-        Temel Değerlerimiz
-        <div style="width:48px;height:3px;background:var(--primary);border-radius:2px;margin:14px auto 0;"></div>
-      </h2>
+      <!-- Temel Değerlerimiz Satırı -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <h2 class="mvv-section-title text-center">Temel Değerlerimiz</h2>
+          <div class="mvv-section-title-line"></div>
+        </div>
+      </div>
       <div class="row mt-2">
-        <div class="col-6 col-md-3 mb-4">
-          <div class="value-card">
-            <div class="v-icon"><i class="fa-solid fa-flask-vial"></i></div>
-            <h5>Bilimsellik</h5>
-            <p>Araştırma ve eğitimde bilimsel yöntemi esas alır, kanıta dayalı yaklaşımı benimseriz.</p>
+        <div class="col-sm-6 col-lg-3 mb-4">
+          <div class="mvv-card text-center value-item">
+            <div class="mvv-value-icon"><i class="fa-solid fa-atom"></i></div>
+            <h4 class="mvv-value-title">Bilimsellik</h4>
+            <p class="mvv-value-text">Eğitim ve araştırma süreçlerimizin tamamında nesnel, kanıta dayalı ve uluslararası
+              düzeyde kabul görmüş bilimsel metotları esas alır, rasyonel düşünceyi ve akademik özgürlüğü tüm gücümüzle
+              destekleriz.</p>
           </div>
         </div>
-        <div class="col-6 col-md-3 mb-4">
-          <div class="value-card">
-            <div class="v-icon"><i class="fa-solid fa-handshake-angle"></i></div>
-            <h5>Etik</h5>
-            <p>Akademik dürüstlük, şeffaflık ve hesap verebilirlik ilkelerini her koşulda gözetiriz.</p>
+        <div class="col-sm-6 col-lg-3 mb-4">
+          <div class="mvv-card text-center value-item">
+            <div class="mvv-value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h4 class="mvv-value-title">Etik</h4>
+            <p class="mvv-value-text">Akademik ve idari tüm faaliyetlerimizde dürüstlük, şeffaflık ve hesap verebilirlik
+              ilkelerine sadık kalır; insan haklarına saygılı ve liyakati ön planda tutan bir yönetim anlayışını
+              benimseriz.</p>
           </div>
         </div>
-        <div class="col-6 col-md-3 mb-4">
-          <div class="value-card">
-            <div class="v-icon"><i class="fa-solid fa-lightbulb"></i></div>
-            <h5>Yenilikçilik</h5>
-            <p>Sürekli gelişim ve yeniliği teşvik ederek çağın gereksinimlerine hızlı uyum sağlarız.</p>
+        <div class="col-sm-6 col-lg-3 mb-4">
+          <div class="mvv-card text-center value-item">
+            <div class="mvv-value-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h4 class="mvv-value-title">Yenilikçilik</h4>
+            <p class="mvv-value-text">Değişen çağın dinamiklerine ve teknolojik gelişmelere hızla uyum sağlayarak,
+              inovatif projeleri, yaratıcı fikirleri ve disiplinler arası araştırmaları teşvik eden öncü adımlar atariz.
+            </p>
           </div>
         </div>
-        <div class="col-6 col-md-3 mb-4">
-          <div class="value-card">
-            <div class="v-icon"><i class="fa-solid fa-globe"></i></div>
-            <h5>Kapsayıcılık</h5>
-            <p>Farklı geçmişlerden gelen tüm bireylere eşit fırsat ve saygıyı temel hak olarak kabul ederiz.</p>
+        <div class="col-sm-6 col-lg-3 mb-4">
+          <div class="mvv-card text-center value-item">
+            <div class="mvv-value-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+            <h4 class="mvv-value-title">Kapsayıcılık</h4>
+            <p class="mvv-value-text">Çeşitliliği bir zenginlik olarak kabul eder; cinsiyet, din, dil, ırk ayrımı
+              gözetmeksizin tüm öğrencilerimize ve çalışanlarımıza adil, eşitlikçi ve demokratik bir öğrenim ve çalışma
+              ortamı sunarız.</p>
           </div>
         </div>
       </div>
