@@ -1,0 +1,223 @@
+/* ═══════════════════════════════════════════════════════
+   AKADEMİK TAKVİM SAYFASI — Sayfa Özel CSS
+   Dosya: takvim.css
+   Bağımlılık: style.css (ortak stiller) önce yüklenmeli
+═══════════════════════════════════════════════════════ */
+
+/* ── Tab (Sekme) Menüsü ──────────────────────────────── */
+.takvim-tabs {
+    border-bottom: 2px solid var(--border);
+    gap: 10px;
+}
+
+.takvim-tabs .nav-link {
+    color: var(--text-muted);
+    font-weight: 600;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    padding: 12px 24px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.takvim-tabs .nav-link:hover {
+    color: var(--primary);
+    background: rgba(0, 123, 255, 0.05);
+}
+
+.takvim-tabs .nav-link.active {
+    color: var(--primary);
+    background: transparent;
+    border-bottom: 3px solid var(--primary);
+}
+
+/* ── Takvim Kartı & Tablolar ─────────────────────────── */
+.calendar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: rgba(248, 249, 250, 0.7);
+    border-bottom: 1px solid var(--border);
+}
+
+.calendar-header .term-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--dark-navy);
+}
+
+.calendar-header .term-year {
+    background: var(--dark-navy);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.calendar-table {
+    margin-bottom: 0;
+}
+
+.calendar-table td {
+    padding: 16px 24px;
+    vertical-align: middle;
+    border-top: 1px solid var(--border);
+    font-size: 14.5px;
+}
+
+.calendar-table tr:first-child td {
+    border-top: none;
+}
+
+.calendar-table tr:hover {
+    background: rgba(0, 123, 255, 0.02);
+}
+
+.event-name {
+    color: var(--dark-panel);
+    font-weight: 600;
+    width: 60%;
+}
+
+.event-date {
+    text-align: right;
+    width: 40%;
+}
+
+/* Tarih Rozetleri */
+.date-badge {
+    display: inline-block;
+    background: rgba(0, 123, 255, 0.08);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    border: 1px solid rgba(0, 123, 255, 0.15);
+}
+
+/* Sınav Satırları Vurgusu */
+.exam-row .event-name {
+    color: #d32f2f;
+}
+
+.exam-badge {
+    background: rgba(211, 47, 47, 0.08);
+    color: #d32f2f;
+    border-color: rgba(211, 47, 47, 0.15);
+}
+
+/* ── PDF İndir Butonu ────────────────────────────────── */
+.btn-download-pdf {
+    display: flex;
+    align-items: center;
+    background: var(--dark-navy);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-download-pdf:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.pdf-icon {
+    font-size: 28px;
+    color: #ff4d4d;
+    margin-right: 16px;
+}
+
+.pdf-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-text strong {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.pdf-text span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pdf-arrow {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Sağ Sidebar ─────────────────────────────────────── */
+.sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h6 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+.holiday-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.holiday-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.holiday-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.h-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--dark-panel);
+    margin-bottom: 2px;
+}
+
+.h-date {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Sayfa Hero Alanı Arka Plan Görseli */
+.akademiktakvim-hero {
+    background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(26, 31, 54, 0.85) 100%), url('../images/campus_history.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid var(--primary);
+}

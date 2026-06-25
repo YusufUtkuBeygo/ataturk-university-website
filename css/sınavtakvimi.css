@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════
+   SINAV PROGRAMI SAYFASI — Sayfa Özel CSS
+   Dosya: sınavtakvimi.css
+   Bağımlılık: style.css (ortak stiller) önce yüklenmeli
+═══════════════════════════════════════════════════════ */
+
+/* ── Bilgi Kutusu ────────────────────────────────────── */
+.info-box {
+  background: rgba(0, 123, 255, 0.05);
+  border: 1.5px solid rgba(0, 123, 255, 0.15);
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--dark-panel);
+  line-height: 1.6;
+}
+
+/* ── Arama Çubuğu ────────────────────────────────────── */
+.search-filter-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-filter-box .search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.search-filter-box .form-control {
+  padding: 15px 20px 15px 45px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-filter-box .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+}
+
+/* ── Fakülte Sınav Kartları ──────────────────────────── */
+.exam-faculty-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.faculty-title {
+  background: var(--dark-navy);
+  color: var(--white);
+  padding: 18px 24px;
+  font-size: 16.5px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.exam-list {
+  padding: 0 24px;
+}
+
+.exam-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.exam-item:last-child {
+  border-bottom: none;
+}
+
+/* Vurgulu Öğeler İçin (Örn: En çok aranan bölümler) */
+.exam-item.highlight-item {
+  background: rgba(0, 123, 255, 0.03);
+  margin: 0 -24px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+}
+
+.exam-dept-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.exam-dept {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-panel);
+  margin-bottom: 4px;
+}
+
+.exam-update {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+/* İndirme Butonları */
+.exam-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-dl {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: var(--white) !important;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-dl:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-dl i {
+  margin-right: 6px;
+  font-size: 15px;
+}
+
+.btn-dl.vize {
+  background: var(--primary);
+}
+
+.btn-dl.vize:hover {
+  background: #0062cc;
+}
+
+.btn-dl.common {
+  background: #2c3e50;
+}
+
+.btn-dl.final {
+  background: #28a745;
+}
+
+.btn-dl.disabled {
+  background: #e9ecef;
+  color: #6c757d !important;
+  pointer-events: none;
+  border: 1px solid #dee2e6;
+}
+
+/* ── Sağ Sidebar ─────────────────────────────────────── */
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h6 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+}
+
+.sidebar-card.info-bg {
+  background: rgba(231, 76, 60, 0.05);
+  border-color: rgba(231, 76, 60, 0.2);
+}
+
+.sidebar-card.info-bg h6 {
+  border-bottom-color: rgba(231, 76, 60, 0.2);
+}
+
+.rule-list {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--dark-panel);
+  line-height: 1.6;
+}
+
+.rule-list li {
+  margin-bottom: 10px;
+}
+
+.rule-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Önemli Tarihler Bandı ───────────────────────────── */
+.dates-band {
+  background: var(--dark-navy);
+  padding: 40px 0;
+}
+
+.dates-band h3 {
+  color: var(--white);
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.date-item {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.date-item .d-emoji {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.date-item .d-date {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.date-item .d-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── Buton MYO (Sidebar İçin) ────────────────────────── */
+.btn-myo {
+  display: block;
+  text-align: center;
+  background: var(--primary);
+  color: var(--white) !important;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  transition: background .2s, transform .15s;
+  text-decoration: none;
+}
+
+.btn-myo:hover {
+  background: #0062cc;
+  transform: translateY(-1px);
+}
+
+/* Sayfa Hero Alanı Arka Plan Görseli */
+.sinavtakvimi-hero {
+  background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(26, 31, 54, 0.85) 100%), url('../images/campus_history.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid var(--primary);
+}

@@ -70,144 +70,41 @@
   color: var(--dark-navy);
 }
 
-/* ── YENİ EKLENEN STILLER (SAYFA BOYU ARKA PLAN VE ŞEFFAF TEMA) ── */
+/* ── YENİ EKLENEN STILLER (TEMİZ BEYAZ-MAVİ TEMA) ── */
 
-body.about-page {
-  background-image: url('../images/photo-1562774053-701939374585.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: var(--white);
-  position: relative;
+#aboutCarousel {
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
-body.about-page::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(13, 27, 42, 0.85);
-  /* İmza lacivert-mavi transparan katman */
-  z-index: -1;
-}
-
-/* Breadcrumb Bar Uyarlaması */
-body.about-page .breadcrumb-bar {
-  background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-body.about-page .breadcrumb-item,
-body.about-page .breadcrumb-item a {
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-
-body.about-page .breadcrumb-item.active {
-  color: var(--white) !important;
-}
-
-/* Sayfa Başlığı (Page Hero) Uyarlaması */
-.page-hero.hakkimizda-hero {
-  position: relative;
-  background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.mission-vision-values-section {
+  background: var(--bg-light);
   padding: 60px 0;
-}
-
-.page-hero.hakkimizda-hero::before {
-  display: none;
-}
-
-.page-hero.hakkimizda-hero .container-fluid {
-  position: relative;
-  z-index: 2;
-}
-
-/* Başlık ve Metin Renkleri Uyarlaması */
-body.about-page h2.inner-section-title,
-body.about-page h3,
-body.about-page h4,
-body.about-page h5 {
-  color: var(--white) !important;
-}
-
-body.about-page .about-lead {
-  color: rgba(255, 255, 255, 0.95);
-}
-
-body.about-page p {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Sayısal Veriler / İstatistik Kartları */
-body.about-page .milestone-item {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--white);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.about-page .milestone-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
-}
-
-body.about-page .milestone-num {
-  color: var(--primary-light);
-}
-
-body.about-page .milestone-label {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* Slayt (Carousel) Tasarımı */
-body.about-page #aboutCarousel {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Birleşik Misyon, Vizyon ve Değerler Bölümü */
-body.about-page .mission-vision-values-section {
-  position: relative;
-  background: transparent;
-  padding: 80px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-body.about-page .mvv-overlay {
-  display: none;
+  border-top: 1.5px solid var(--border);
+  border-bottom: 1.5px solid var(--border);
 }
 
 .mvv-card {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.08);
-  /* Cam efekti */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-top: 4px solid var(--primary);
   border-radius: var(--radius-md);
   padding: 40px;
   height: 100%;
+  box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mvv-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 123, 255, 0.2);
 }
 
 .mvv-card-title {
-  color: var(--white) !important;
+  color: var(--dark-navy) !important;
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -222,20 +119,19 @@ body.about-page .mvv-overlay {
   left: 0;
   width: 40px;
   height: 3px;
-  background: var(--primary-light);
+  background: var(--primary);
   border-radius: 2px;
 }
 
 .mvv-card-text {
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-muted);
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 0;
 }
 
-/* Bölüm Başlığı */
 .mvv-section-title {
-  color: var(--white) !important;
+  color: var(--dark-navy) !important;
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 14px;
@@ -244,12 +140,11 @@ body.about-page .mvv-overlay {
 .mvv-section-title-line {
   width: 48px;
   height: 3px;
-  background: var(--primary-light);
+  background: var(--primary);
   border-radius: 2px;
   margin: 0 auto 30px;
 }
 
-/* Değerler Kutusu (İçerik) */
 .mvv-card.value-item {
   padding: 30px 20px;
 }
@@ -258,84 +153,38 @@ body.about-page .mvv-overlay {
   width: 64px;
   height: 64px;
   margin: 0 auto 20px;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--primary-light);
+  background: rgba(0, 123, 255, 0.08);
+  color: var(--primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 123, 255, 0.2);
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .mvv-card.value-item:hover .mvv-value-icon {
-  background: var(--primary-light);
+  background: var(--primary);
   color: var(--white);
   transform: rotate(360deg);
 }
 
 .mvv-value-title {
-  color: var(--white) !important;
+  color: var(--dark-navy) !important;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .mvv-value-text {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
   font-size: 13.5px;
   line-height: 1.6;
   margin-bottom: 0;
 }
 
-/* Tarihçe & Liderlik Alanı Uyarlamaları */
-body.about-page .bg-alt {
-  background: transparent;
-  border-top: none;
-  border-bottom: none;
-}
-
-body.about-page .timeline {
-  border-left: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-body.about-page .tl-item::before {
-  border: 3px solid rgba(13, 27, 42, 1);
-  background: var(--primary-light);
-}
-
-body.about-page .tl-year {
-  color: var(--primary-light);
-}
-
-body.about-page .tl-title {
-  color: var(--white);
-}
-
-body.about-page .tl-desc {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-body.about-page .content-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--white);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+/* Liderlik bölümündeki kartların boyunun uzamasını engellemek için */
+.bg-alt .content-card {
   height: auto !important;
-}
-
-body.about-page .content-card h5 {
-  color: var(--white);
-}
-
-body.about-page .content-card p {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-body.about-page .content-card .card-icon {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--primary-light);
 }

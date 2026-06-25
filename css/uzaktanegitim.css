@@ -1,0 +1,295 @@
+/* ═══════════════════════════════════════════════════════
+   UZAKTAN EĞİTİM (ATA-AÖF) SAYFASI — Sayfa Özel CSS
+   Dosya: uzaktanegitim.css
+   Bağımlılık: style.css (ortak stiller) önce yüklenmeli
+═══════════════════════════════════════════════════════ */
+
+/* ── Bilgi Kutusu ────────────────────────────── */
+.info-box {
+    background: rgba(0, 123, 255, 0.05);
+    border: 1px solid rgba(0, 123, 255, 0.15);
+    border-left: 5px solid var(--primary);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--dark-panel);
+    line-height: 1.6;
+}
+
+/* ── Özellik Kartları (Neden ATA-AÖF?) ───────────────── */
+.feature-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.f-icon {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+    display: inline-block;
+    background: rgba(0, 123, 255, 0.08);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+}
+
+.feature-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Programlar Akordeonu ────────────────────────────── */
+.custom-accordion .card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+.custom-accordion .card-header {
+    background: var(--white);
+    border-bottom: 0;
+    padding: 0;
+}
+
+.custom-accordion .btn-link {
+    color: var(--dark-navy);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 18px 20px;
+    text-decoration: none;
+    background: rgba(248, 249, 250, 0.5);
+    transition: background 0.2s, color 0.2s;
+}
+
+.custom-accordion .btn-link:hover,
+.custom-accordion .btn-link:not(.collapsed) {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.custom-accordion .card-body {
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    padding: 20px;
+}
+
+.program-list-columns {
+    columns: 2;
+    /* İki sütunlu liste */
+    column-gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-list-columns li {
+    font-size: 14px;
+    color: var(--dark-panel);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+    break-inside: avoid;
+}
+
+.program-list-columns li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Mobilde tek sütun olsun */
+@media (max-width: 768px) {
+    .program-list-columns {
+        columns: 1;
+    }
+}
+
+/* ── Sağ Sidebar Alanı ───────────────────────────────── */
+
+/* Dev ÖYS (LMS) Giriş Butonu */
+.btn-huge-lms {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #FF6B6B 0%, #c0392b 100%);
+    /* AÖF için kırmızımsı farklı bir renk */
+    color: var(--white);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3);
+}
+
+.btn-huge-lms:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.4);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.lms-icon {
+    font-size: 36px;
+    margin-right: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.lms-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.lms-text span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2px;
+}
+
+.lms-text strong {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.lms-arrow {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Klasik Sidebar Kartı */
+.sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h6 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+/* İkinci Üniversite Kartı */
+.second-uni-card {
+    background: linear-gradient(to bottom right, #ffffff, #fdfbf5);
+    border-color: #f6e58d;
+}
+
+.second-uni-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.btn-second-uni {
+    display: inline-block;
+    text-align: center;
+    background: #f39c12;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-second-uni:hover {
+    background: #d68910;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Timeline (Tarihler) Listesi */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid var(--primary-light);
+    margin-left: 10px;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.timeline-list li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: var(--white);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+}
+
+.t-date {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.t-desc {
+    font-size: 13.5px;
+    color: var(--dark-panel);
+}
+
+/* Sayfa Hero Alanı Arka Plan Görseli */
+.uzaktanegitim-hero {
+    background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(26, 31, 54, 0.85) 100%), url('../images/campus_history.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid var(--primary);
+}

@@ -1,0 +1,365 @@
+/* ═══════════════════════════════════════════════════════
+   LİSANS PROGRAMLARI SAYFASI — Sayfa Özel CSS
+   Dosya: lisansprogramlari.css
+   Bağımlılık: style.css (ortak stiller) önce yüklenmeli
+═══════════════════════════════════════════════════════ */
+
+/* ── Arama ve Filtre Çubuğu ──────────────────────────── */
+.filter-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.search-box .filter-input {
+    padding-left: 40px;
+    border-radius: 50px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.search-box .filter-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.filter-pills {
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-navy);
+}
+
+.btn-filter {
+    background: var(--white);
+    border: 1px solid #d1d5db;
+    color: var(--dark-panel);
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+
+.btn-filter:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.btn-filter.active {
+    background: var(--dark-navy);
+    color: var(--white);
+    border-color: var(--dark-navy);
+}
+
+/* Renkli Filtre Hover Efektleri */
+.btn-filter.filter-say:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-filter.filter-ea:hover {
+    background: #fd7e14;
+    color: white;
+    border-color: #fd7e14;
+}
+
+.btn-filter.filter-soz:hover {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.btn-filter.filter-dil:hover {
+    background: #6f42c1;
+    color: white;
+    border-color: #6f42c1;
+}
+
+/* ── Bölüm (Program) Kartları ────────────────────────── */
+.program-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Kart Üst Renk Çizgisi (Puan türüne göre) */
+.card-say {
+    border-top: 4px solid #007bff;
+}
+
+.card-ea {
+    border-top: 4px solid #fd7e14;
+}
+
+.card-soz {
+    border-top: 4px solid #28a745;
+}
+
+.card-dil {
+    border-top: 4px solid #6f42c1;
+}
+
+.p-card-body {
+    padding: 24px 24px 20px;
+    flex: 1;
+}
+
+.p-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge-score {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.bg-say {
+    background: #007bff;
+}
+
+.bg-ea {
+    background: #fd7e14;
+}
+
+.bg-soz {
+    background: #28a745;
+}
+
+.bg-dil {
+    background: #6f42c1;
+}
+
+.badge-feature {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(26, 31, 54, 0.08);
+    color: var(--dark-navy);
+}
+
+.program-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-panel);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.program-faculty {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.program-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Müfredat Butonu Alanı */
+.p-card-footer {
+    padding: 0;
+    border-top: 1px solid var(--border);
+    background: rgba(248, 249, 250, 0.5);
+}
+
+.btn-curriculum {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-curriculum:hover {
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Sayfalama (Pagination) Özel Stil */
+.custom-pagination .page-link {
+    color: var(--dark-navy);
+    border-color: var(--border);
+    font-weight: 600;
+    margin: 0 4px;
+    border-radius: 6px;
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+/* ── Sağ Sidebar Alanı ───────────────────────────────── */
+
+/* Dev Bologna Butonu */
+.btn-huge-bologna {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1A1F36 0%, #2c3e50 100%);
+    color: var(--white);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-huge-bologna:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.bologna-icon {
+    font-size: 32px;
+    margin-right: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #00d2ff;
+}
+
+.bologna-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.bologna-text span {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bologna-text strong {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.bologna-arrow {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Klasik Sidebar Kartı */
+.sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h6 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+.sidebar-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ÇAP / Yandal Listesi */
+.yandal-list {
+    padding-left: 18px;
+    margin: 15px 0;
+    font-size: 13.5px;
+    color: var(--dark-panel);
+    line-height: 1.6;
+}
+
+.yandal-list li {
+    margin-bottom: 10px;
+}
+
+.yandal-list li strong {
+    color: var(--dark-navy);
+}
+
+.btn-outline-custom {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-outline-custom:hover {
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Sayfa Hero Alanı Arka Plan Görseli */
+.lisansprogramlari-hero {
+    background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(26, 31, 54, 0.85) 100%), url('../images/campus_history.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid var(--primary);
+}

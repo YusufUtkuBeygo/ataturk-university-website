@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Atatürk Üniversitesi güncel ara sınav (vize), yarıyıl sonu (final) ve bütünleme sınav programları." />
+    <meta name="keywords"
+        content="Atatürk Üniversitesi sınav programı, vize tarihleri, final programı, bütünleme, sınav takvimi" />
+    <title>Sınav Programı — Atatürk Üniversitesi</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/ortak.css" />
+    <link rel="stylesheet" href="../css/sınavtakvimi.css" />
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                <div class="topbar-left d-flex align-items-center">
+                    <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye /
+                        ERZURUM</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center">
+                    <a href="#" class="topbar-link">Türkçe</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link">English</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="topbar-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top" id="mainNav">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+                <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                    style="width: 46px; height: 46px; object-fit: contain;" />
+                <div class="logo-text">
+                    <span class="logo-title">ATATÜRK</span>
+                    <span class="logo-sub">ÜNİVERSİTESİ</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mr-auto ml-3">
+                    <!-- AKADEMİK -->
+                    <li class="nav-item dropdown current">
+                        <a class="nav-link dropdown-toggle" href="#" id="akademikMenu" data-toggle="dropdown">
+                            Akademik <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="akademikMenu">
+                            <div class="row px-3 py-2">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Birimler</h6>
+                                    <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                                    <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                                    <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                                    <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Akademik Takvim</h6>
+                                    <a class="dropdown-item" href="akademiktakvim.html">Güncel Takvim</a>
+                                    <a class="dropdown-item" href="sınavtakvimi.html"
+                                        style="color:var(--primary);font-weight:700;">▶ Sınav Programı</a>
+                                    <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Eğitim</h6>
+                                    <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                                    <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Araştırma <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Araştırma Merkezleri</a>
+                            <a class="dropdown-item" href="#">Projeler</a>
+                            <a class="dropdown-item" href="#">Yayınlar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Öğrenci <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fa-solid fa-utensils mr-2"></i> Yemek
+                                Listesi</a>
+                            <a class="dropdown-item" href="#"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+                            <a class="dropdown-item" href="akademiktakvim.html"><i
+                                    class="fa-solid fa-calendar-days mr-2"></i> Akademik Takvim</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="duyurular.html"><i class="fa-solid fa-bullhorn mr-2"></i>
+                                Duyurular</a>
+                            <a class="dropdown-item" href="#">Öğrenci Kulüpleri</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Aday Öğrenci <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Neden Atatürk Üniversitesi?</a>
+                            <a class="dropdown-item" href="#">YÖK Atlas</a>
+                            <a class="dropdown-item" href="#">ÖSYM Bilgileri</a>
+                            <a class="dropdown-item" href="#">Burs & İmkânlar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            İdari <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Rektörlük</a>
+                            <a class="dropdown-item" href="#">Personel Bilgi</a>
+                            <a class="dropdown-item" href="#">KVKK Başvuru</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center nav-right-actions">
+                    <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user mr-1"></i> Öğrenci Girişi</a>
+                    <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-chalkboard-user mr-1"></i> Personel
+                        Girişi</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="breadcrumb-bar">
+        <div class="container-fluid px-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana
+                            Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">Akademik</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sınav Programı</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="page-hero sinavtakvimi-hero">
+        <div class="container-fluid px-4">
+            <h1 class="page-hero-title">Sınav Programları</h1>
+            <p class="page-hero-sub">
+                2025 - 2026 Eğitim ve Öğretim Yılı Güz Dönemi Ara Sınav (Vize) ve Final Programları
+            </p>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container-fluid px-4">
+            <div class="row">
+
+                <div class="col-lg-8">
+
+                    <div class="info-box mb-4">
+                        <p><strong>Duyuru:</strong> Güz dönemi ara sınav (vize) programları ilgili dekanlıklar
+                            tarafından yayımlanmıştır. Bölümünüze ait PDF dosyasını indirerek sınav saati ve derslik
+                            bilgilerinizi kontrol edebilirsiniz.</p>
+                    </div>
+
+                    <div class="search-filter-box mb-4">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="form-control"
+                            placeholder="Fakülte veya bölüm adı ile arayın... (Örn: Yazılım, Hukuk, Tıp)">
+                    </div>
+
+                    <div class="exam-faculty-card">
+                        <h4 class="faculty-title"><i class="fa-solid fa-microchip mr-2"></i> Mühendislik Fakültesi</h4>
+                        <div class="exam-list">
+
+                            <div class="exam-item highlight-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">Yazılım Mühendisliği</span>
+                                    <span class="exam-update">Güncellendi: Dün, 14:30</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize"><i class="fa-solid fa-file-pdf"></i> Vize
+                                        Programı</a>
+                                    <a href="#" class="btn-dl final disabled"><i class="fa-solid fa-clock"></i> Final
+                                        (Açıklanmadı)</a>
+                                </div>
+                            </div>
+
+                            <div class="exam-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">Bilgisayar Mühendisliği</span>
+                                    <span class="exam-update">Güncellendi: 2 gün önce</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize"><i class="fa-solid fa-file-pdf"></i> Vize
+                                        Programı</a>
+                                    <a href="#" class="btn-dl final disabled"><i class="fa-solid fa-clock"></i> Final
+                                        (Açıklanmadı)</a>
+                                </div>
+                            </div>
+
+                            <div class="exam-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">Elektrik-Elektronik Mühendisliği</span>
+                                    <span class="exam-update">Güncellendi: 3 gün önce</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize"><i class="fa-solid fa-file-pdf"></i> Vize
+                                        Programı</a>
+                                    <a href="#" class="btn-dl final disabled"><i class="fa-solid fa-clock"></i> Final
+                                        (Açıklanmadı)</a>
+                                </div>
+                            </div>
+
+                            <div class="exam-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">Makine Mühendisliği</span>
+                                    <span class="exam-update">Güncellendi: 3 gün önce</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize"><i class="fa-solid fa-file-pdf"></i> Vize
+                                        Programı</a>
+                                    <a href="#" class="btn-dl final disabled"><i class="fa-solid fa-clock"></i> Final
+                                        (Açıklanmadı)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exam-faculty-card">
+                        <h4 class="faculty-title"><i class="fa-solid fa-chart-pie mr-2"></i> İktisadi ve İdari Bilimler
+                            Fakültesi</h4>
+                        <div class="exam-list">
+                            <div class="exam-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">İşletme</span>
+                                    <span class="exam-update">Güncellendi: Bugün, 09:15</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize"><i class="fa-solid fa-file-pdf"></i> Vize
+                                        Programı</a>
+                                    <a href="#" class="btn-dl final disabled"><i class="fa-solid fa-clock"></i>
+                                        Final</a>
+                                </div>
+                            </div>
+                            <div class="exam-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">İktisat</span>
+                                    <span class="exam-update">Güncellendi: Bugün, 09:15</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize"><i class="fa-solid fa-file-pdf"></i> Vize
+                                        Programı</a>
+                                    <a href="#" class="btn-dl final disabled"><i class="fa-solid fa-clock"></i>
+                                        Final</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exam-faculty-card">
+                        <h4 class="faculty-title" style="background-color: #2c3e50;"><i
+                                class="fa-solid fa-users mr-2"></i> Üniversite Ortak Seçmeli Dersleri (ÜOS)</h4>
+                        <div class="exam-list">
+                            <div class="exam-item">
+                                <div class="exam-dept-info">
+                                    <span class="exam-dept">Tüm Fakülteler Ortak Sınavı</span>
+                                    <span class="exam-update">Güncellendi: 1 hafta önce</span>
+                                </div>
+                                <div class="exam-actions">
+                                    <a href="#" class="btn-dl vize common"><i class="fa-solid fa-file-pdf"></i> ÜOS Vize
+                                        Programı</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+
+                    <div class="sidebar-card rules-card">
+                        <h6><i class="fa-solid fa-clipboard-check mr-2 text-primary"></i> Sınav Kuralları</h6>
+                        <ul class="rule-list">
+                            <li>Öğrenci kimlik belgesi olmayanlar sınav salonuna <strong>kesinlikle</strong>
+                                alınmayacaktır.</li>
+                            <li>Sınavın ilk 15 dakikası salona giriş yapılabilir, ancak ek süre verilmez.</li>
+                            <li>Sınavın ilk 30 dakikası salondan çıkış yapılması yasaktır.</li>
+                            <li>Cep telefonları ve akıllı saatler tamamen kapalı konumda kürsüye/çantaya bırakılmalıdır.
+                                Üzerinde cihaz bulunan öğrenci hakkında kopya işlemi başlatılır.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card info-bg">
+                        <h6><i class="fa-solid fa-notes-medical mr-2 text-danger"></i> Mazeret Sınavları</h6>
+                        <p style="font-size: 13.5px; color: var(--dark-panel); line-height: 1.6;">
+                            Haklı ve geçerli nedenlerle (sağlık raporu vb.) ara sınavlara katılamayan öğrenciler,
+                            mazeretlerini belgeleyerek sınav tarihinden itibaren <strong>en geç 5 iş günü</strong>
+                            içinde kendi fakülte sekreterliklerine başvurmalıdır.
+                        </p>
+                        <a href="#" class="btn-dl" style="display:inline-block; margin-top:10px; background:#e74c3c;"><i
+                                class="fa-solid fa-download"></i> Mazeret Dilekçesi Örneği</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h6><i class="fa-solid fa-laptop-code mr-2 text-primary"></i> Sınav Notları</h6>
+                        <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6;">
+                            Sınav sonuçlarınız öğretim üyeleri tarafından okunduktan sonra Öğrenci Bilgi Sistemi (OBS)
+                            üzerinden ilan edilmektedir.
+                        </p>
+                        <a href="#" class="btn-myo mt-2" style="font-size:13px; padding: 10px;">
+                            OBS'ye Giriş Yap →
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="dates-band mt-4">
+        <div class="container-fluid px-4">
+            <h3 class="text-center"><i class="fa-solid fa-stopwatch mr-2"></i> Yaklaşan Sınav Dönemleri</h3>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-pen-ruler text-warning"></i></span>
+                        <div class="d-date">15 - 23 Kasım</div>
+                        <div class="d-label">Güz Dönemi Ara Sınavları (Vize)</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-graduation-cap text-success"></i></span>
+                        <div class="d-date">29 Ara - 11 Oca</div>
+                        <div class="d-label">Yarıyıl Sonu Sınavları (Final)</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-rotate-right text-info"></i></span>
+                        <div class="d-date">17 - 25 Ocak</div>
+                        <div class="d-label">Bütünleme Sınavları</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer pt-5 pb-3 mt-5">
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                            style="width: 44px; height: 44px; object-fit: contain;" />
+                        <div><span class="footer-logo-title">ATATÜRK ÜNİVERSİTESİ</span></div>
+                    </div>
+                    <p class="footer-address"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</p>
+                    <p class="footer-address"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</p>
+                    <p class="footer-address"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</p>
+                    <div class="footer-social mt-3">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">HIZLI BAĞLANTILAR</h6>
+                    <ul class="footer-links">
+                        <li><a href="ATA_ÜNİ.HTML">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="fakulteler.html">Fakülteler</a></li>
+                        <li><a href="enstitüler.html">Enstitüler</a></li>
+                        <li><a href="duyurular.html">Duyurular</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">BİRİMLER</h6>
+                    <ul class="footer-links">
+                        <li><a href="fakulteler.html">Fakülteler</a></li>
+                        <li><a href="enstitüler.html">Enstitüler</a></li>
+                        <li><a href="yuksekokullar.html">Yüksekokullar</a></li>
+                        <li><a href="myo.html">MYO'lar</a></li>
+                        <li><a href="#">Araştırma Merkezleri</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">E-HİZMETLER</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">e-Portal</a></li>
+                        <li><a href="#">OBS</a></li>
+                        <li><a href="#">Personel Bilgi</a></li>
+                        <li><a href="#">KVKK Başvuru</a></li>
+                        <li><a href="#">Bilgi Edinme</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">ÖĞRENCİ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Yemek Listesi</a></li>
+                        <li><a href="#">Ring Saatleri</a></li>
+                        <li><a href="duyurular.html">Duyurular</a></li>
+                        <li><a href="#">Kampüs Yaşamı</a></li>
+                        <li><a href="#">Burslar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <p class="footer-copy mb-0">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+                <div class="footer-legal">
+                    <a href="#">Web Kılavuzu</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">Gizlilik Politikası</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

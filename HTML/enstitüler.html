@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════
+  ATATÜRK ÜNİVERSİTESİ — ENSTİTÜLER SAYFASI
+  Kullanılan Teknoloji: Saf HTML + CSS + Bootstrap 4.6
+  Font Awesome YOK | Google Fonts YOK | jQuery YOK
+  ═══════════════════════════════════════════════════════
+  PDF Rapor Kriterleri:
+  ✔ Modern, temiz, minimalist ve kurumsal tasarım
+  ✔ Yuvarlatılmış köşeli butonlar
+  ✔ Breadcrumb navigasyonu (hiyerarşi)
+  ✔ Sans-serif sistem fontları
+  ✔ Renk paleti: #007BFF, #1A1F36, #CCCCCC
+  ✔ 3 tık kuralı (Ana Sayfa > Akademik > Enstitüler)
+  ✔ Organik kullanıcı odaklı içerik (SEO meta etiketleri)
+  ✔ Koyu zemin üzerine beyaz yazı / beyaz zemin üzerine siyah yazı
+  ═══════════════════════════════════════════════════════
+-->
+<html lang="tr">
+
+<head>
+  <!-- SEO: Sayfa dili ve karakter seti -->
+  <meta charset="UTF-8" />
+  <!-- SEO: Mobil uyumluluk (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO: Açıklama etiketi - arama motorları için -->
+  <meta name="description"
+    content="Atatürk Üniversitesi Enstitüleri — Lisansüstü eğitim ve araştırma programları. Fen, Sosyal, Sağlık ve Eğitim Bilimleri enstitüleri hakkında bilgi." />
+  <!-- SEO: Anahtar kelimeler - organik kullanıcı için -->
+  <meta name="keywords"
+    content="Atatürk Üniversitesi enstitüler, yüksek lisans, doktora, lisansüstü, fen bilimleri, sosyal bilimler" />
+  <!-- Tarayıcı sekmesi başlığı -->
+  <title>Enstitüler — Atatürk Üniversitesi</title>
+
+  <!-- Bootstrap 4.6 CSS — Grid, navbar, dropdown, buton vb. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Projeye özel stiller -->
+  <link rel="stylesheet" href="../css/ortak.css" />
+
+  <!-- Enstitüler sayfasına özel stiller — ayrı dosyada tutulur
+       Yükleme sırası: Bootstrap → style.css → enstitüler.css
+       style.css'teki CSS değişkenlerini (--primary vb.) kullanır -->
+  <link rel="stylesheet" href="../css/enstitüler.css" />
+
+
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════
+       TOPBAR — En üstteki ince bilgi çubuğu
+       Koyu arka plan (#1A1F36) üzerine açık renkli metin
+       Rapor renk paleti: koyu zemin / beyaz yazı
+  ════════════════════════════════════════════════════ -->
+  <div class="topbar">
+    <div class="container-fluid px-4">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+
+        <!-- Sol: İletişim bilgileri -->
+        <div class="topbar-left d-flex align-items-center">
+          <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</span>
+        </div>
+
+        <!-- Sağ: Dil seçimi -->
+        <div class="topbar-right d-flex align-items-center">
+          <a href="#" class="topbar-link">Türkçe</a>
+          <span class="topbar-divider">|</span>
+          <a href="#" class="topbar-link">English</a>
+          <span class="topbar-divider">|</span>
+          <a href="#" class="topbar-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="topbar-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="topbar-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="topbar-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /TOPBAR -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       NAVBAR — Ana navigasyon
+       sticky-top: Sayfa kaydırılınca üstte sabit kalır
+       navbar-expand-lg: 992px altında hamburger menüye geçer
+       Bootstrap 4.6 dropdown bileşeni — data-toggle ile çalışır
+  ════════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top" id="mainNav">
+    <div class="container-fluid px-4">
+
+      <!-- Logo: Ana sayfaya dönen link -->
+      <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+          style="width: 46px; height: 46px; object-fit: contain;" />
+        <div class="logo-text">
+          <span class="logo-title">ATATÜRK</span>
+          <span class="logo-sub">ÜNİVERSİTESİ</span>
+        </div>
+      </a>
+
+      <!-- Mobil hamburger butonu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Menüyü aç">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Gizlenebilir menü alanı -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+
+        <!-- Ana menü linkleri -->
+        <ul class="navbar-nav mr-auto ml-3">
+
+          <!-- AKADEMİK — Mega menü (aktif sayfa bu altında olduğu için vurgulu) -->
+          <li class="nav-item dropdown current">
+            <a class="nav-link dropdown-toggle" href="#" id="akademikMenu" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Akademik <span class="arrow"></span>
+            </a>
+            <div class="dropdown-menu mega-menu" aria-labelledby="akademikMenu">
+              <div class="row px-3 py-2">
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Birimler</h6>
+                  <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                  <!-- Aktif sayfa: Enstitüler linkine style ile vurgu -->
+                  <a class="dropdown-item" href="enstitüler.html" style="color:var(--primary);font-weight:700;">▶
+                    Enstitüler</a>
+                  <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                  <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Akademik Takvim</h6>
+                  <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                  <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                  <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Eğitim</h6>
+                  <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                  <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- ARAŞTIRMA -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+              Araştırma <span class="arrow"></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Araştırma Merkezleri</a>
+              <a class="dropdown-item" href="#">Projeler</a>
+              <a class="dropdown-item" href="#">Yayınlar</a>
+            </div>
+          </li>
+
+          <!-- ÖĞRENCİ -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+              Öğrenci <span class="arrow"></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">🍽️ Yemek Listesi</a>
+              <a class="dropdown-item" href="#">🚌 Ring Saatleri</a>
+              <a class="dropdown-item" href="akademiktakvim.html">📅 Akademik Takvim</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="duyurular.html">📢 Duyurular</a>
+              <a class="dropdown-item" href="#">Öğrenci Kulüpleri</a>
+            </div>
+          </li>
+
+          <!-- ADAY ÖĞRENCİ -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+              Aday Öğrenci <span class="arrow"></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Neden Atatürk Üniversitesi?</a>
+              <a class="dropdown-item" href="#">YÖK Atlas</a>
+              <a class="dropdown-item" href="#">ÖSYM Bilgileri</a>
+              <a class="dropdown-item" href="#">Burs & İmkânlar</a>
+            </div>
+          </li>
+
+          <!-- İDARİ -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+              İdari <span class="arrow"></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Rektörlük</a>
+              <a class="dropdown-item" href="#">Personel Bilgi</a>
+              <a class="dropdown-item" href="#">KVKK Başvuru</a>
+            </div>
+          </li>
+
+          <!-- İLETİŞİM -->
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+
+        </ul>
+
+        <!-- Çift giriş sistemi + arama -->
+        <div class="d-flex align-items-center nav-right-actions">
+          <a href="#" class="btn btn-ogrenci mr-2">
+            <i class="fa-solid fa-user mr-1"></i> Öğrenci Girişi
+          </a>
+          <a href="#" class="btn btn-personel mr-2">
+            <i class="fa-solid fa-chalkboard-user mr-1"></i> Personel Girişi
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- /NAVBAR -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       BREADCRUMB — Konum göstergesi (Ekmek Kırıntısı)
+       Rapor: "Breadcrumb ile rahat bir dolaşma (hiyerarşiklik)"
+       Kullanıcı nerede olduğunu gösterir, geri dönmesi kolaylaşır.
+       3 kademe: Ana Sayfa > Akademik > Enstitüler
+  ════════════════════════════════════════════════════ -->
+  <div class="breadcrumb-bar">
+    <div class="container-fluid px-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Akademik</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Enstitüler
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- /BREADCRUMB -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       SAYFA HERO — Koyu arka plan + beyaz başlık
+       Rapor: "Koyu zemin üzerine beyaz yazı"
+       Altındaki mavi çizgi: CSS ::after ile eklendi
+  ════════════════════════════════════════════════════ -->
+  <div class="page-hero enstituler-hero">
+    <div class="container-fluid px-4">
+      <h1 class="page-hero-title">Enstitüler</h1>
+      <p class="page-hero-sub">
+        Lisansüstü eğitim ve ileri araştırma için Atatürk Üniversitesi bünyesindeki 4 enstitü
+      </p>
+    </div>
+  </div>
+  <!-- /SAYFA HERO -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       ANA İÇERİK ALANI
+       İki sütunlu yapı (Bootstrap grid):
+       Sol (col-lg-8): Enstitü kartları + başvuru süreci
+       Sağ (col-lg-4): Sidebar (hızlı linkler, önemli tarihler)
+  ════════════════════════════════════════════════════ -->
+  <section class="content-section">
+    <div class="container-fluid px-4">
+      <div class="row">
+
+        <!-- ── ANA İÇERİK (sol, geniş sütun) ─────────── -->
+        <div class="col-lg-8">
+
+          <!-- Bilgi kutusu: Enstitü sistemini kısaca tanıtır -->
+          <div class="info-box">
+            <p>
+              Atatürk Üniversitesi bünyesinde <strong>4 enstitü</strong> faaliyet
+              göstermektedir. Enstitüler; yüksek lisans (tezli / tezsiz) ve doktora
+              programlarıyla lisansüstü eğitim sunar. Başvurular <strong>ALES</strong>
+              sonuçlarına ve enstitü koşullarına göre değerlendirilir.
+            </p>
+          </div>
+
+          <!-- ── ENSTİTÜ KARTLARI ──────────────────────
+               Her kart iki sütuna bölünmüştür (col-md-6).
+               Mobilde üst üste, masaüstünde yan yana dizilir. -->
+          <h2 class="inner-section-title">Enstitülerimiz</h2>
+          <div class="row">
+
+            <!-- ========================================
+                 ENSTİTÜ 1: FEN BİLİMLERİ ENSTİTÜSÜ
+            ========================================= -->
+            <div class="col-md-6 mb-4">
+              <div class="enstitü-card enstitü-card-fen">
+
+                <!-- Koyu header: Üniversite rengi, beyaz metin (rapor kriteri) -->
+                <div class="enstitü-header">
+                  <div class="enstitü-emoji"><i class="fa-solid fa-microscope"></i></div>
+                  <div class="enstitü-header-text">
+                    <h4>Fen Bilimleri Enstitüsü</h4>
+                    <p>Müdür: Prof. Dr. Ahmet Yıldırım</p>
+                  </div>
+                </div>
+
+                <!-- Beyaz içerik alanı -->
+                <div class="enstitü-body">
+                  <p class="desc">
+                    Temel ve uygulamalı fen bilimleri, mühendislik ve teknoloji
+                    alanlarında lisansüstü düzeyde eğitim ve araştırma faaliyetleri
+                    yürüten enstitümüz, 30'u aşkın anabilim dalıyla Türkiye'nin
+                    en kapsamlı fen enstitülerinden biridir.
+                  </p>
+
+                  <!-- Program türü rozetleri -->
+                  <div class="program-badges">
+                    <span class="badge-program">Yüksek Lisans (Tezli)</span>
+                    <span class="badge-program">Yüksek Lisans (Tezsiz)</span>
+                    <span class="badge-doktora">Doktora</span>
+                  </div>
+
+                  <!-- İstatistikler: 3 metrik yan yana -->
+                  <div class="enstitü-stats">
+                    <div class="enstitü-stat">
+                      <span class="s-num">32</span>
+                      <span class="s-label">Anabilim Dalı</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">1.450</span>
+                      <span class="s-label">Öğrenci</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">180</span>
+                      <span class="s-label">Akademisyen</span>
+                    </div>
+                  </div>
+
+                  <!-- Detay butonu: Rapor'daki yuvarlatılmış köşeli buton stili -->
+                  <a href="#fen" class="btn-enstitü">
+                    Enstitüyü İncele →
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            <!-- /Fen Bilimleri Enstitüsü -->
+
+
+            <!-- ========================================
+                 ENSTİTÜ 2: SOSYAL BİLİMLER ENSTİTÜSÜ
+            ========================================= -->
+            <div class="col-md-6 mb-4">
+              <div class="enstitü-card enstitü-card-sosyal">
+
+                <div class="enstitü-header">
+                  <div class="enstitü-emoji"><i class="fa-solid fa-book-open-reader"></i></div>
+                  <div class="enstitü-header-text">
+                    <h4>Sosyal Bilimler Enstitüsü</h4>
+                    <p>Müdür: Prof. Dr. Fatma Çelik</p>
+                  </div>
+                </div>
+
+                <div class="enstitü-body">
+                  <p class="desc">
+                    İktisat, işletme, hukuk, tarih, sosyoloji, psikoloji ve daha
+                    pek çok sosyal bilim dalında yüksek lisans ve doktora programları
+                    sunan enstitümüz; eleştirel düşünce ve toplumsal araştırma
+                    geleneğini ön planda tutar.
+                  </p>
+
+                  <div class="program-badges">
+                    <span class="badge-program">Yüksek Lisans (Tezli)</span>
+                    <span class="badge-program">Yüksek Lisans (Tezsiz)</span>
+                    <span class="badge-doktora">Doktora</span>
+                  </div>
+
+                  <div class="enstitü-stats">
+                    <div class="enstitü-stat">
+                      <span class="s-num">28</span>
+                      <span class="s-label">Anabilim Dalı</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">2.100</span>
+                      <span class="s-label">Öğrenci</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">210</span>
+                      <span class="s-label">Akademisyen</span>
+                    </div>
+                  </div>
+
+                  <a href="#sosyal" class="btn-enstitü">
+                    Enstitüyü İncele →
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            <!-- /Sosyal Bilimler Enstitüsü -->
+
+
+            <!-- ========================================
+                 ENSTİTÜ 3: SAĞLIK BİLİMLERİ ENSTİTÜSÜ
+            ========================================= -->
+            <div class="col-md-6 mb-4">
+              <div class="enstitü-card enstitü-card-saglik">
+
+                <div class="enstitü-header">
+                  <div class="enstitü-emoji"><i class="fa-solid fa-heart-pulse"></i></div>
+                  <div class="enstitü-header-text">
+                    <h4>Sağlık Bilimleri Enstitüsü</h4>
+                    <p>Müdür: Prof. Dr. Mehmet Arslan</p>
+                  </div>
+                </div>
+
+                <div class="enstitü-body">
+                  <p class="desc">
+                    Tıp, eczacılık, hemşirelik, fizyoterapi ve sağlıkla ilgili temel
+                    bilim dallarında lisansüstü eğitim veren enstitümüz; Atatürk
+                    Üniversitesi Araştırma Hastanesi ile entegre çalışarak klinik
+                    araştırma imkânı sunar.
+                  </p>
+
+                  <div class="program-badges">
+                    <span class="badge-program">Yüksek Lisans (Tezli)</span>
+                    <span class="badge-doktora">Doktora</span>
+                  </div>
+
+                  <div class="enstitü-stats">
+                    <div class="enstitü-stat">
+                      <span class="s-num">18</span>
+                      <span class="s-label">Anabilim Dalı</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">820</span>
+                      <span class="s-label">Öğrenci</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">140</span>
+                      <span class="s-label">Akademisyen</span>
+                    </div>
+                  </div>
+
+                  <a href="#saglik" class="btn-enstitü">
+                    Enstitüyü İncele →
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            <!-- /Sağlık Bilimleri Enstitüsü -->
+
+
+            <!-- ========================================
+                 ENSTİTÜ 4: EĞİTİM BİLİMLERİ ENSTİTÜSÜ
+            ========================================= -->
+            <div class="col-md-6 mb-4">
+              <div class="enstitü-card enstitü-card-egitim">
+
+                <div class="enstitü-header">
+                  <div class="enstitü-emoji"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div class="enstitü-header-text">
+                    <h4>Eğitim Bilimleri Enstitüsü</h4>
+                    <p>Müdür: Prof. Dr. Zeynep Kaya</p>
+                  </div>
+                </div>
+
+                <div class="enstitü-body">
+                  <p class="desc">
+                    Eğitim yönetimi, program geliştirme, rehberlik ve psikolojik
+                    danışmanlık, özel eğitim ve çeşitli öğretmenlik alanlarında
+                    lisansüstü eğitim sunan enstitümüz; öğretmen ve eğitimci
+                    yetiştirme misyonunu sürdürmektedir.
+                  </p>
+
+                  <div class="program-badges">
+                    <span class="badge-program">Yüksek Lisans (Tezli)</span>
+                    <span class="badge-program">Yüksek Lisans (Tezsiz)</span>
+                    <span class="badge-doktora">Doktora</span>
+                  </div>
+
+                  <div class="enstitü-stats">
+                    <div class="enstitü-stat">
+                      <span class="s-num">22</span>
+                      <span class="s-label">Anabilim Dalı</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">1.680</span>
+                      <span class="s-label">Öğrenci</span>
+                    </div>
+                    <div class="enstitü-stat">
+                      <span class="s-num">160</span>
+                      <span class="s-label">Akademisyen</span>
+                    </div>
+                  </div>
+
+                  <a href="#egitim" class="btn-enstitü">
+                    Enstitüyü İncele →
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            <!-- /Eğitim Bilimleri Enstitüsü -->
+
+          </div>
+          <!-- /Enstitü kartları row -->
+
+
+          <!-- ── BAŞVURU SÜRECİ ─────────────────────────────
+               Rapor: Kullanıcıların aradıkları bilgiye en hızlı
+               ve kolay şekilde ulaşmasını sağlamak.
+               Aday öğrenciler için adım adım süreç gösterimi. -->
+          <div class="mt-5">
+            <h2 class="inner-section-title">Başvuru Süreci</h2>
+            <div class="content-card">
+
+              <!-- Adım 1 -->
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h6>ALES / GRE Sınavına Girin</h6>
+                  <p>Yüksek lisans için en az 55, doktora için en az 60 ALES puanı
+                    gerekmektedir. Eşdeğer GRE puanı da kabul edilir.</p>
+                </div>
+              </div>
+
+              <!-- Adım 2 -->
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h6>Programa Başvurun</h6>
+                  <p>OBS üzerinden online başvuru yapın. İstenen belgeler:
+                    lisans diploması, transkript, ALES sonuç belgesi ve nüfus cüzdanı fotokopisi.</p>
+                </div>
+              </div>
+
+              <!-- Adım 3 -->
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h6>Mülakat / Bilim Sınavı</h6>
+                  <p>İlgili anabilim dalının belirlediği tarihte mülakat veya yazılı bilim sınavına katılın.
+                    Sınav tarihleri enstitü web sitesinden duyurulur.</p>
+                </div>
+              </div>
+
+              <!-- Adım 4 -->
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h6>Kesin Kayıt Yaptırın</h6>
+                  <p>Kabul listesinde adınız varsa belirlenen tarihler arasında
+                    enstitüye şahsen başvurarak kesin kaydınızı tamamlayın.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- /Başvuru süreci -->
+
+        </div>
+        <!-- /Ana içerik sütunu -->
+
+
+        <!-- ── SIDEBAR (sağ sütun) ────────────────────────── -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+
+          <!-- Hızlı Erişim Linkleri -->
+          <div class="sidebar-card">
+            <h6>Hızlı Erişim</h6>
+            <ul class="sidebar-link-list">
+              <li>
+                <span class="arrow">▶</span>
+                <a href="#">Lisansüstü Başvuru Kılavuzu</a>
+              </li>
+              <li>
+                <span class="arrow">▶</span>
+                <a href="#">ALES Başvuru Bilgileri</a>
+              </li>
+              <li>
+                <span class="arrow">▶</span>
+                <a href="#">Tez Yazım Kılavuzu</a>
+              </li>
+              <li>
+                <span class="arrow">▶</span>
+                <a href="#">Burs ve Araştırma Görevlisi İlanları</a>
+              </li>
+              <li>
+                <span class="arrow">▶</span>
+                <a href="#">Öğrenci İşleri — OBS</a>
+              </li>
+              <li>
+                <span class="arrow">▶</span>
+                <a href="akademiktakvim.html">Akademik Takvim</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Genel İstatistik Kutusu -->
+          <div class="sidebar-card">
+            <h6><i class="fa-solid fa-chart-simple mr-2"></i> Genel Bakış</h6>
+            <!-- Bootstrap grid: 2 sütun istatistik -->
+            <div class="row text-center">
+              <div class="col-6 mb-3">
+                <div style="font-size:28px;font-weight:800;color:var(--primary);">4</div>
+                <div style="font-size:12px;color:var(--text-muted);">Enstitü</div>
+              </div>
+              <div class="col-6 mb-3">
+                <div style="font-size:28px;font-weight:800;color:var(--primary);">100</div>
+                <div style="font-size:12px;color:var(--text-muted);">Anabilim Dalı</div>
+              </div>
+              <div class="col-6">
+                <div style="font-size:28px;font-weight:800;color:var(--primary);">6.050</div>
+                <div style="font-size:12px;color:var(--text-muted);">Lisansüstü Öğrenci</div>
+              </div>
+              <div class="col-6">
+                <div style="font-size:28px;font-weight:800;color:var(--primary);">690</div>
+                <div style="font-size:12px;color:var(--text-muted);">Akademisyen</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- İletişim Kartı -->
+          <div class="sidebar-card">
+            <h6><i class="fa-solid fa-phone mr-2"></i> Enstitü İletişim</h6>
+            <ul class="sidebar-link-list">
+              <li>
+                <strong style="font-size:12px;color:var(--dark-navy);">Fen Bilimleri</strong><br>
+                <span style="font-size:13px;color:var(--text-muted);">+90 442 231 1400</span>
+              </li>
+              <li>
+                <strong style="font-size:12px;color:var(--dark-navy);">Sosyal Bilimler</strong><br>
+                <span style="font-size:13px;color:var(--text-muted);">+90 442 231 1410</span>
+              </li>
+              <li>
+                <strong style="font-size:12px;color:var(--dark-navy);">Sağlık Bilimleri</strong><br>
+                <span style="font-size:13px;color:var(--text-muted);">+90 442 231 1420</span>
+              </li>
+              <li>
+                <strong style="font-size:12px;color:var(--dark-navy);">Eğitim Bilimleri</strong><br>
+                <span style="font-size:13px;color:var(--text-muted);">+90 442 231 1430</span>
+              </li>
+            </ul>
+            <a href="iletisim.html" class="btn-enstitü mt-3" style="font-size:13px;">
+              <i class="fa-solid fa-envelope mr-1"></i> İletişim Sayfası →
+            </a>
+          </div>
+
+        </div>
+        <!-- /Sidebar -->
+
+      </div>
+    </div>
+  </section>
+  <!-- /Ana içerik -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       ÖNEMLİ TARİHLER BANDI
+       Rapor: Koyu zemin (#1A1F36) üzerine beyaz yazı.
+       Başvuru ve kayıt dönemlerini ön plana çıkarır.
+  ════════════════════════════════════════════════════ -->
+  <div class="dates-band">
+    <div class="container-fluid px-4">
+      <h3 class="text-center"><i class="fa-solid fa-calendar-days mr-2"></i> 2024-2025 Başvuru Takvimi</h3>
+      <div class="row">
+
+        <!-- Tarih 1 -->
+        <div class="col-6 col-md-3 mb-3">
+          <div class="date-item">
+            <span class="d-emoji"><i class="fa-solid fa-clipboard-list text-primary-light"></i></span>
+            <div class="d-date">1 — 15 Eyl</div>
+            <div class="d-label">Güz Dönemi Başvuruları</div>
+          </div>
+        </div>
+
+        <!-- Tarih 2 -->
+        <div class="col-6 col-md-3 mb-3">
+          <div class="date-item">
+            <span class="d-emoji"><i class="fa-solid fa-pen-to-square text-primary-light"></i></span>
+            <div class="d-date">20 — 25 Eyl</div>
+            <div class="d-label">Mülakat / Bilim Sınavları</div>
+          </div>
+        </div>
+
+        <!-- Tarih 3 -->
+        <div class="col-6 col-md-3 mb-3">
+          <div class="date-item">
+            <span class="d-emoji"><i class="fa-solid fa-circle-check text-primary-light"></i></span>
+            <div class="d-date">1 — 5 Eki</div>
+            <div class="d-label">Kesin Kayıtlar</div>
+          </div>
+        </div>
+
+        <!-- Tarih 4 -->
+        <div class="col-6 col-md-3 mb-3">
+          <div class="date-item">
+            <span class="d-emoji"><i class="fa-solid fa-graduation-cap text-primary-light"></i></span>
+            <div class="d-date">7 Eki</div>
+            <div class="d-label">Güz Yarıyılı Başlangıcı</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /Önemli tarihler bandı -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER — Koyu arka plan, beyaz linkler
+       Rapor: Tüm sayfalarda tutarlı footer yapısı
+  ════════════════════════════════════════════════════ -->
+  <footer class="main-footer pt-5 pb-3">
+    <div class="container-fluid px-4">
+      <div class="row">
+
+        <!-- Sütun 1: Logo ve iletişim -->
+        <div class="col-md-4 mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+              style="width: 44px; height: 44px; object-fit: contain;" />
+            <div>
+              <span class="footer-logo-title">ATATÜRK ÜNİVERSİTESİ</span>
+            </div>
+          </div>
+          <p class="footer-address"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</p>
+          <p class="footer-address"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</p>
+          <p class="footer-address"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</p>
+          <div class="footer-social mt-3">
+            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Sütun 2: Hızlı bağlantılar -->
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">HIZLI BAĞLANTILAR</h6>
+          <ul class="footer-links">
+            <li><a href="ATA_ÜNİ.HTML">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="fakulteler.html">Fakülteler</a></li>
+            <li><a href="enstitüler.html">Enstitüler</a></li>
+            <li><a href="duyurular.html">Duyurular</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <!-- Sütun 3: Birimler -->
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">BİRİMLER</h6>
+          <ul class="footer-links">
+            <li><a href="fakulteler.html">Fakülteler</a></li>
+            <li><a href="enstitüler.html">Enstitüler</a></li>
+            <li><a href="yuksekokullar.html">Yüksekokullar</a></li>
+            <li><a href="myo.html">MYO'lar</a></li>
+            <li><a href="#">Araştırma Merkezleri</a></li>
+            <li><a href="#">Hastaneler</a></li>
+          </ul>
+        </div>
+
+        <!-- Sütun 4: E-Hizmetler -->
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">E-HİZMETLER</h6>
+          <ul class="footer-links">
+            <li><a href="#">e-Portal</a></li>
+            <li><a href="#">OBS</a></li>
+            <li><a href="#">Personel Bilgi</a></li>
+            <li><a href="#">KVKK Başvuru</a></li>
+            <li><a href="#">Bilgi Edinme</a></li>
+          </ul>
+        </div>
+
+        <!-- Sütun 5: Öğrenci -->
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">ÖĞRENCİ</h6>
+          <ul class="footer-links">
+            <li><a href="#">Yemek Listesi</a></li>
+            <li><a href="#">Ring Saatleri</a></li>
+            <li><a href="duyurular.html">Duyurular</a></li>
+            <li><a href="#">Kampüs Yaşamı</a></li>
+            <li><a href="#">Burslar</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Alt ayraç ve telif hakkı -->
+      <hr class="footer-divider" />
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <p class="footer-copy mb-0">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+        <div class="footer-legal">
+          <a href="#">Web Kılavuzu</a>
+          <span class="mx-2">|</span>
+          <a href="#">Gizlilik Politikası</a>
+          <span class="mx-2">|</span>
+          <a href="#">KVKK</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       BOOTSTRAP JS — Dropdown ve hamburger menü için
+       jQuery YOK: Bootstrap 4.6 sadece Popper.js gerektirir.
+       bundle.min.js = Bootstrap JS + Popper.js birlikte
+  ════════════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════
+  ATATÜRK ÜNİVERSİTESİ — MESLEK YÜKSEKOKULLARI SAYFASI
+  Kullanılan Teknoloji: Saf HTML + CSS + Bootstrap 4.6
+  ═══════════════════════════════════════════════════════
+-->
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Atatürk Üniversitesi Meslek Yüksekokulları (MYO) — Sektörün ihtiyaç duyduğu nitelikli tekniker ve meslek elemanlarını yetiştiren 2 yıllık önlisans programları." />
+    <meta name="keywords"
+        content="Atatürk Üniversitesi myo, meslek yüksekokulu, önlisans, 2 yıllık bölümler, tekniker, sağlık hizmetleri myo, adalet myo" />
+    <title>Meslek Yüksekokulları — Atatürk Üniversitesi</title>
+
+    <!-- Bootstrap 4.6 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Projeye özel stiller -->
+    <link rel="stylesheet" href="../css/ortak.css" />
+    <!-- MYO sayfasına özel stiller -->
+    <link rel="stylesheet" href="../css/myo.css" />
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                <div class="topbar-left d-flex align-items-center">
+                    <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye /
+                        ERZURUM</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center">
+                    <a href="#" class="topbar-link">Türkçe</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link">English</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="topbar-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="topbar-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="topbar-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top" id="mainNav">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+                <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                    style="width: 46px; height: 46px; object-fit: contain;" />
+                <div class="logo-text">
+                    <span class="logo-title">ATATÜRK</span>
+                    <span class="logo-sub">ÜNİVERSİTESİ</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Menüyü aç">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mr-auto ml-3">
+                    <!-- AKADEMİK -->
+                    <li class="nav-item dropdown current">
+                        <a class="nav-link dropdown-toggle" href="#" id="akademikMenu" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Akademik <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="akademikMenu">
+                            <div class="row px-3 py-2">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Birimler</h6>
+                                    <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                                    <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                                    <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                                    <a class="dropdown-item" href="myo.html"
+                                        style="color:var(--primary);font-weight:700;">▶ MYO'lar</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Akademik Takvim</h6>
+                                    <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                                    <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                                    <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Eğitim</h6>
+                                    <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                                    <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Araştırma <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Araştırma Merkezleri</a>
+                            <a class="dropdown-item" href="#">Projeler</a>
+                            <a class="dropdown-item" href="#">Yayınlar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Öğrenci <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fa-solid fa-utensils mr-2"></i> Yemek
+                                Listesi</a>
+                            <a class="dropdown-item" href="#"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+                            <a class="dropdown-item" href="akademiktakvim.html"><i
+                                    class="fa-solid fa-calendar-days mr-2"></i> Akademik
+                                Takvim</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="duyurular.html"><i class="fa-solid fa-bullhorn mr-2"></i>
+                                Duyurular</a>
+                            <a class="dropdown-item" href="#">Öğrenci Kulüpleri</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Aday Öğrenci <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Neden Atatürk Üniversitesi?</a>
+                            <a class="dropdown-item" href="#">YÖK Atlas</a>
+                            <a class="dropdown-item" href="#">ÖSYM Bilgileri</a>
+                            <a class="dropdown-item" href="#">Burs & İmkânlar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            İdari <span class="arrow"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Rektörlük</a>
+                            <a class="dropdown-item" href="#">Personel Bilgi</a>
+                            <a class="dropdown-item" href="#">KVKK Başvuru</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center nav-right-actions">
+                    <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user mr-1"></i> Öğrenci Girişi</a>
+                    <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-chalkboard-user mr-1"></i> Personel
+                        Girişi</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+        <div class="container-fluid px-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana
+                            Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">Akademik</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Meslek Yüksekokulları</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SAYFA HERO -->
+    <div class="page-hero myo-hero">
+        <div class="container-fluid px-4">
+            <h1 class="page-hero-title">Meslek Yüksekokulları</h1>
+            <p class="page-hero-sub">
+                Sektörün ihtiyaç duyduğu donanımlı tekniker ve meslek elemanlarını yetiştiren 2 yıllık önlisans
+                programlarımız
+            </p>
+        </div>
+    </div>
+
+    <!-- ANA İÇERİK ALANI -->
+    <section class="content-section">
+        <div class="container-fluid px-4">
+            <div class="row">
+
+                <!-- SOL SÜTUN -->
+                <div class="col-lg-8">
+                    <div class="info-box">
+                        <p>
+                            Atatürk Üniversitesi bünyesindeki <strong>Meslek Yüksekokulları (MYO)</strong>, sanayi,
+                            sağlık, hizmet ve adalet sektörlerinin ara eleman ihtiyacını karşılamak üzere kurulmuştur. 2
+                            yıllık (4 yarıyıl) eğitim veren bu kurumlarımız, teorik eğitimin yanı sıra <strong>zorunlu
+                                staj ve işyeri eğitimi (3+1 modeli)</strong> ile öğrencileri doğrudan iş hayatına
+                            hazırlar.
+                        </p>
+                    </div>
+
+                    <h2 class="inner-section-title">Meslek Yüksekokullarımız</h2>
+                    <div class="row">
+
+                        <!-- Erzurum MYO -->
+                        <div class="col-md-6 mb-4">
+                            <div class="myo-card myo-card-erzurum">
+                                <div class="myo-header">
+                                    <div class="myo-emoji"><i class="fa-solid fa-microchip"></i></div>
+                                    <div class="myo-header-text">
+                                        <h4>Erzurum MYO</h4>
+                                        <p>Kampüs İçi MYO</p>
+                                    </div>
+                                </div>
+                                <div class="myo-body">
+                                    <p class="desc">
+                                        Bilgisayar programcılığı, makine, elektrik, inşaat ve tasarım gibi teknik
+                                        ağırlıklı bölümlerde uygulamalı eğitim vererek sanayinin bel kemiği teknikerleri
+                                        yetiştirir.
+                                    </p>
+                                    <div class="program-badges">
+                                        <span class="badge-puan">TYT Puan Türü</span>
+                                        <span class="badge-program">Teknik Bölümler</span>
+                                    </div>
+                                    <div class="myo-stats">
+                                        <div class="myo-stat"><span class="s-num">15</span><span
+                                                class="s-label">Program</span></div>
+                                        <div class="myo-stat"><span class="s-num">4.500</span><span
+                                                class="s-label">Öğrenci</span></div>
+                                        <div class="myo-stat"><span class="s-num">85</span><span class="s-label">Öğr.
+                                                Gör.</span></div>
+                                    </div>
+                                    <a href="#" class="btn-myo">Okulu İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sağlık Hizmetleri MYO -->
+                        <div class="col-md-6 mb-4">
+                            <div class="myo-card myo-card-saglik">
+                                <div class="myo-header">
+                                    <div class="myo-emoji"><i class="fa-solid fa-truck-medical"></i></div>
+                                    <div class="myo-header-text">
+                                        <h4>Sağlık Hizmetleri MYO</h4>
+                                        <p>Araştırma Hastanesi Yanı</p>
+                                    </div>
+                                </div>
+                                <div class="myo-body">
+                                    <p class="desc">
+                                        İlk ve Acil Yardım (Paramedik), Anestezi, Tıbbi Görüntüleme ve Ağız-Diş Sağlığı
+                                        gibi kritik alanlarda, üniversite hastanemizde birebir pratik yaparak eğitim
+                                        alma imkanı sunar.
+                                    </p>
+                                    <div class="program-badges">
+                                        <span class="badge-puan">TYT Puan Türü</span>
+                                        <span class="badge-program">Sağlık Teknikerliği</span>
+                                    </div>
+                                    <div class="myo-stats">
+                                        <div class="myo-stat"><span class="s-num">12</span><span
+                                                class="s-label">Program</span></div>
+                                        <div class="myo-stat"><span class="s-num">3.200</span><span
+                                                class="s-label">Öğrenci</span></div>
+                                        <div class="myo-stat"><span class="s-num">65</span><span class="s-label">Öğr.
+                                                Gör.</span></div>
+                                    </div>
+                                    <a href="#" class="btn-myo">Okulu İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Adalet MYO -->
+                        <div class="col-md-6 mb-4">
+                            <div class="myo-card myo-card-adalet">
+                                <div class="myo-header">
+                                    <div class="myo-emoji"><i class="fa-solid fa-gavel"></i></div>
+                                    <div class="myo-header-text">
+                                        <h4>Adalet MYO</h4>
+                                        <p>Hukuk Fakültesi Binası</p>
+                                    </div>
+                                </div>
+                                <div class="myo-body">
+                                    <p class="desc">
+                                        Adalet sarayları, ceza infaz kurumları ve avukatlık büroları için adli kalem,
+                                        icra memuru ve infaz koruma memuru statüsünde donanımlı personeller yetiştirir.
+                                    </p>
+                                    <div class="program-badges">
+                                        <span class="badge-puan">TYT Puan Türü</span>
+                                        <span class="badge-program">Adli Programlar</span>
+                                    </div>
+                                    <div class="myo-stats">
+                                        <div class="myo-stat"><span class="s-num">2</span><span
+                                                class="s-label">Program</span></div>
+                                        <div class="myo-stat"><span class="s-num">1.800</span><span
+                                                class="s-label">Öğrenci</span></div>
+                                        <div class="myo-stat"><span class="s-num">25</span><span class="s-label">Öğr.
+                                                Gör.</span></div>
+                                    </div>
+                                    <a href="#" class="btn-myo">Okulu İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Turizm ve Otelcilik MYO -->
+                        <div class="col-md-6 mb-4">
+                            <div class="myo-card myo-card-turizm">
+                                <div class="myo-header">
+                                    <div class="myo-emoji"><i class="fa-solid fa-bell-concierge"></i></div>
+                                    <div class="myo-header-text">
+                                        <h4>Turizm ve Otelcilik MYO</h4>
+                                        <p>Kampüs İçi</p>
+                                    </div>
+                                </div>
+                                <div class="myo-body">
+                                    <p class="desc">
+                                        Aşçılık, Turizm Rehberliği ve Otel İşletmeciliği alanlarında modern uygulama
+                                        mutfakları ve anlaşmalı tesislerdeki staj imkanlarıyla sektöre hazır mezunlar
+                                        verir.
+                                    </p>
+                                    <div class="program-badges">
+                                        <span class="badge-puan">TYT Puan Türü</span>
+                                        <span class="badge-program">Hizmet Sektörü</span>
+                                    </div>
+                                    <div class="myo-stats">
+                                        <div class="myo-stat"><span class="s-num">4</span><span
+                                                class="s-label">Program</span></div>
+                                        <div class="myo-stat"><span class="s-num">1.100</span><span
+                                                class="s-label">Öğrenci</span></div>
+                                        <div class="myo-stat"><span class="s-num">30</span><span class="s-label">Öğr.
+                                                Gör.</span></div>
+                                    </div>
+                                    <a href="#" class="btn-myo">Okulu İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- DGS VE STAJ SÜRECİ -->
+                    <div class="mt-5">
+                        <h2 class="inner-section-title">Eğitim ve Kariyer Fırsatları</h2>
+                        <div class="content-card">
+                            <div class="step-item">
+                                <div class="step-number"><i class="fa-solid fa-pen-nib"></i></div>
+                                <div class="step-content">
+                                    <h6>YKS (TYT) ile Yerleşme</h6>
+                                    <p>MYO programlarımıza ÖSYM'nin düzenlediği YKS sınavının TYT (Temel Yeterlilik
+                                        Testi) puan türü ile öğrenci kabul edilmektedir.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number"><i class="fa-solid fa-briefcase"></i></div>
+                                <div class="step-content">
+                                    <h6>Zorunlu Staj ve 3+1 Modeli</h6>
+                                    <p>Öğrencilerimiz, 4 yarıyıllık eğitimlerinin bir yarıyılını (veya yaz dönemlerini)
+                                        doğrudan sektörde, anlaşmalı kurumlarda işyeri eğitimi (staj) yaparak
+                                        geçirirler.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                                <div class="step-content">
+                                    <h6>DGS ile Lisansa Tamamlama</h6>
+                                    <p>Mezunlarımız, her yıl ÖSYM tarafından yapılan Dikey Geçiş Sınavı (DGS) ile kendi
+                                        alanlarındaki 4 yıllık lisans programlarına (Örn: Adalet MYO -> Hukuk Fakültesi)
+                                        geçiş yapabilirler.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /SOL SÜTUN -->
+
+                <!-- SAĞ SÜTUN (SIDEBAR) -->
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="sidebar-card">
+                        <h6>Hızlı Erişim</h6>
+                        <ul class="sidebar-link-list">
+                            <li><span class="arrow">▶</span><a href="#">TYT Kontenjanları ve Taban Puanlar</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Mesleki Staj Yönergesi</a></li>
+                            <li><span class="arrow">▶</span><a href="#">DGS (Dikey Geçiş) Kılavuzu</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Sınavsız İkinci Üniversite (AÖF)</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Öğrenci İşleri — OBS</a></li>
+                            <li><span class="arrow">▶</span><a href="#">İlçe MYO'lar Ulaşım Rehberi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h6><i class="fa-solid fa-chart-simple mr-2"></i> Genel Bakış</h6>
+                        <div class="row text-center">
+                            <div class="col-6 mb-3">
+                                <div style="font-size:28px;font-weight:800;color:var(--primary);">12</div>
+                                <div style="font-size:12px;color:var(--text-muted);">Farklı MYO</div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div style="font-size:28px;font-weight:800;color:var(--primary);">90+</div>
+                                <div style="font-size:12px;color:var(--text-muted);">Önlisans Programı</div>
+                            </div>
+                            <div class="col-6">
+                                <div style="font-size:28px;font-weight:800;color:var(--primary);">28.000</div>
+                                <div style="font-size:12px;color:var(--text-muted);">Kayıtlı Öğrenci</div>
+                            </div>
+                            <div class="col-6">
+                                <div style="font-size:28px;font-weight:800;color:var(--primary);">650</div>
+                                <div style="font-size:12px;color:var(--text-muted);">Öğretim Görevlisi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h6><i class="fa-solid fa-bullhorn mr-2"></i> Staj Duyuruları</h6>
+                        <p style="font-size:13.5px;color:var(--text-muted);margin-bottom:15px;">MYO öğrencileri için
+                            güncel staj ve işyeri eğitimi bilgilendirmeleri.</p>
+                        <div style="border-left: 3px solid var(--primary); padding-left: 10px; margin-bottom: 10px;">
+                            <strong style="font-size:12px;color:var(--dark-navy);">Yaz Stajı Başvuruları</strong><br>
+                            <span style="font-size:11.5px;color:var(--text-muted);">Son Gün: 15 Mayıs 2026</span>
+                        </div>
+                        <div style="border-left: 3px solid var(--primary); padding-left: 10px;">
+                            <strong style="font-size:12px;color:var(--dark-navy);">Kariyer Kapısı
+                                (Cumhurbaşkanlığı)</strong><br>
+                            <span style="font-size:11.5px;color:var(--text-muted);">Sistem üzerinden eşleştirme
+                                başladı.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ÖNEMLİ TARİHLER BANDI -->
+    <div class="dates-band">
+        <div class="container-fluid px-4">
+            <h3 class="text-center"><i class="fa-solid fa-calendar-days mr-2"></i> Önlisans Önemli Tarihleri</h3>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-file-signature text-primary-light"></i></span>
+                        <div class="d-date">20 — 25 Ağu</div>
+                        <div class="d-label">YKS (TYT) E-Kayıtları</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-book-open text-primary-light"></i></span>
+                        <div class="d-date">16 — 20 Eyl</div>
+                        <div class="d-label">Ders Kayıt İşlemleri</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-id-badge text-primary-light"></i></span>
+                        <div class="d-date">15 May</div>
+                        <div class="d-label">Yaz Stajı Evrak Teslimi</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="date-item">
+                        <span class="d-emoji"><i class="fa-solid fa-graduation-cap text-primary-light"></i></span>
+                        <div class="d-date">Temmuz</div>
+                        <div class="d-label">DGS Sınavı</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer pt-5 pb-3">
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                            style="width: 44px; height: 44px; object-fit: contain;" />
+                        <div><span class="footer-logo-title">ATATÜRK ÜNİVERSİTESİ</span></div>
+                    </div>
+                    <p class="footer-address"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</p>
+                    <p class="footer-address"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</p>
+                    <p class="footer-address"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</p>
+                    <div class="footer-social mt-3">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">HIZLI BAĞLANTILAR</h6>
+                    <ul class="footer-links">
+                        <li><a href="ATA_ÜNİ.HTML">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="fakulteler.html">Fakülteler</a></li>
+                        <li><a href="enstitüler.html">Enstitüler</a></li>
+                        <li><a href="duyurular.html">Duyurular</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">BİRİMLER</h6>
+                    <ul class="footer-links">
+                        <li><a href="fakulteler.html">Fakülteler</a></li>
+                        <li><a href="enstitüler.html">Enstitüler</a></li>
+                        <li><a href="yuksekokullar.html">Yüksekokullar</a></li>
+                        <li><a href="myo.html">MYO'lar</a></li>
+                        <li><a href="#">Araştırma Merkezleri</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">E-HİZMETLER</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">e-Portal</a></li>
+                        <li><a href="#">OBS</a></li>
+                        <li><a href="#">Personel Bilgi</a></li>
+                        <li><a href="#">KVKK Başvuru</a></li>
+                        <li><a href="#">Bilgi Edinme</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">ÖĞRENCİ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Yemek Listesi</a></li>
+                        <li><a href="#">Ring Saatleri</a></li>
+                        <li><a href="duyurular.html">Duyurular</a></li>
+                        <li><a href="#">Kampüs Yaşamı</a></li>
+                        <li><a href="#">Burslar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <p class="footer-copy mb-0">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+                <div class="footer-legal">
+                    <a href="#">Web Kılavuzu</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">Gizlilik Politikası</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

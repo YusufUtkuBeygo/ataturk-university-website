@@ -130,6 +130,10 @@ a:hover {
   flex-shrink: 0;
 }
 
+.logo-emblem::before {
+  content: "🏛";
+}
+
 /* Logo içerisindeki "ATATÜRK" ve "ÜNİVERSİTESİ" yazılarını alt alta sıralar. */
 .logo-text {
   display: flex;
@@ -184,7 +188,7 @@ a:hover {
 
 /* Akademik gibi çoklu sütuna sahip geniş açılır (mega dropdown) menülerin minimum genişliği. */
 .mega-menu {
-  min-width: 480px;
+  min-width: 540px;
 }
 
 /* Açılır menülerdeki kategori başlıklarının (Örn: Birimler, Eğitim) büyük harfli tasarımı. */
@@ -444,6 +448,10 @@ a:hover {
   color: var(--white);
   font-size: 20px;
   flex-shrink: 0;
+}
+
+.footer-logo-emblem::before {
+  content: "🏛";
 }
 
 /* Adres ve telefon bilgilerinin yazı stili ve boşlukları. */

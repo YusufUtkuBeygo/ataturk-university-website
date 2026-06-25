@@ -43,7 +43,7 @@
   <!--NAVBAR: Logo, açılır menüler, arama çubuğu ve kullanıcı giriş butonlarını barındıran üst gezinme çubuğu -->
   <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
     <div class="container-fluid px-4">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
         <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
           style="width: 46px; height: 46px; object-fit: contain;" />
         <div class="logo-text">
@@ -63,21 +63,20 @@
                 <div class="col-md-4">
                   <h6 class="dropdown-header">Birimler</h6>
                   <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
-                  <a class="dropdown-item" href="#">Enstitüler</a>
-                  <a class="dropdown-item" href="#">Yüksekokullar</a>
-                  <a class="dropdown-item" href="#">MYO'lar</a>
+                  <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                  <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                  <a class="dropdown-item" href="myo.html">MYO'lar</a>
                 </div>
                 <div class="col-md-4">
                   <h6 class="dropdown-header">Akademik Takvim</h6>
-                  <a class="dropdown-item" href="#">2024-2025 Takvimi</a>
-                  <a class="dropdown-item" href="#">Sınav Programı</a>
-                  <a class="dropdown-item" href="#">Ders Kayıtları</a>
+                  <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                  <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                  <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
                 </div>
                 <div class="col-md-4">
                   <h6 class="dropdown-header">Eğitim</h6>
-                  <a class="dropdown-item" href="#">Lisans Programları</a>
-                  <a class="dropdown-item" href="#">Lisansüstü</a>
-                  <a class="dropdown-item" href="#">Uzaktan Eğitim</a>
+                  <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                  <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
                 </div>
               </div>
             </div>
@@ -146,7 +145,7 @@
     <div class="container-fluid px-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</a></li>
+          <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</a></li>
           <li class="breadcrumb-item"><a href="#">Akademik</a></li>
           <li class="breadcrumb-item active">Duyurular</li>
         </ol>
@@ -156,10 +155,9 @@
 
 
   <!-- PAGE HERO: İlgili sayfanın ana başlığını ve kısa açıklamasını içeren karşılama alanı -->
-  <div class="page-hero">
+  <div class="page-hero duyurular-hero">
     <div class="container-fluid px-4">
-      <h1 class="page-hero-title"><span style="color:var(--primary-light)"><i class="fa-solid fa-bullhorn"></i></span>
-        Duyurular</h1>
+      <h1 class="page-hero-title">Duyurular</h1>
       <p class="page-hero-sub">Üniversitemize ait güncel akademik, idari ve öğrenci duyuruları.</p>
     </div>
   </div>
@@ -292,16 +290,15 @@
         <div class="col-lg-4 mt-4 mt-lg-0">
 
           <div class="content-card mb-4">
-            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
             <h5>Öğrenci Hızlı Erişim</h5>
             <ul style="list-style:none;padding:0;margin:0;">
-              <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="#"
+              <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="sınavtakvimi.html"
                   style="font-size:14px;font-weight:600;color:var(--dark-navy);"><i
                     class="fa-solid fa-chevron-right mr-1"></i> Sınav Programı</a></li>
-              <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="#"
+              <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="akademiktakvim.html"
                   style="font-size:14px;font-weight:600;color:var(--dark-navy);"><i
                     class="fa-solid fa-chevron-right mr-1"></i> Akademik Takvim</a></li>
-              <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="#"
+              <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="derskayit.html"
                   style="font-size:14px;font-weight:600;color:var(--dark-navy);"><i
                     class="fa-solid fa-chevron-right mr-1"></i> Ders Kayıt Tarihleri</a></li>
               <li style="padding:8px 0;border-bottom:1px solid var(--border);"><a href="#"
@@ -313,7 +310,6 @@
           </div>
 
           <div class="content-card">
-            <div class="card-icon"><i class="fa-regular fa-folder-open"></i></div>
             <h5>Arşiv</h5>
             <ul style="list-style:none;padding:0;margin:0;">
               <li
@@ -371,7 +367,7 @@
         <div class="col-md-2 col-6 mb-4">
           <h6 class="footer-heading">HIZLI BAĞLANTILAR</h6>
           <ul class="footer-links">
-            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="ATA_ÜNİ.HTML">Ana Sayfa</a></li>
             <li><a href="hakkimizda.html">Hakkımızda</a></li>
             <li><a href="fakulteler.html">Fakülteler</a></li>
             <li><a href="duyurular.html">Duyurular</a></li>
@@ -382,8 +378,9 @@
           <h6 class="footer-heading">BİRİMLER</h6>
           <ul class="footer-links">
             <li><a href="fakulteler.html">Fakülteler</a></li>
-            <li><a href="#">Enstitüler</a></li>
-            <li><a href="#">Yüksekokullar</a></li>
+            <li><a href="enstitüler.html">Enstitüler</a></li>
+            <li><a href="yuksekokullar.html">Yüksekokullar</a></li>
+            <li><a href="myo.html">MYO'lar</a></li>
             <li><a href="#">Araştırma Merkezleri</a></li>
             <li><a href="#">Hastaneler</a></li>
           </ul>
