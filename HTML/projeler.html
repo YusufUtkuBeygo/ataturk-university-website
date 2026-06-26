@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════
+  ATATÜRK ÜNİVERSİTESİ — PROJELER (BAP) SAYFASI
+  Kullanılan Teknoloji: Saf HTML + CSS + Bootstrap 4.6
+  ═══════════════════════════════════════════════════════
+-->
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Atatürk Üniversitesi Bilimsel Araştırma Projeleri (BAP), TÜBİTAK ve AB projeleri destek ve koordinasyon ofisi." />
+    <meta name="keywords"
+        content="Atatürk Üniversitesi BAP, projeler, tübitak, bilimsel araştırma, bapsis, proje destekleri" />
+    <title>Bilimsel Araştırma Projeleri — Atatürk Üniversitesi</title>
+
+    <!-- Bootstrap 4.6 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Projeye özel stiller -->
+    <link rel="stylesheet" href="../css/ortak.css" />
+    <!-- Projeler sayfasına özel stiller -->
+    <link rel="stylesheet" href="../css/projeler.css" />
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                <div class="topbar-left d-flex align-items-center">
+                    <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye /
+                        ERZURUM</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center">
+                    <a href="#" class="topbar-link">Türkçe</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link">English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR: Logo, açılır menüler, arama çubuğu ve kullanıcı giriş butonlarını barındıran üst gezinme çubuğu -->
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+                <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                    style="width: 46px; height: 46px; object-fit: contain;" />
+                <div class="logo-text">
+                    <span class="logo-title">ATATÜRK</span>
+                    <span class="logo-sub">ÜNİVERSİTESİ</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mr-auto ml-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Akademik</a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="row px-3 py-2">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Birimler</h6>
+                                    <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                                    <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                                    <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                                    <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Akademik Takvim</h6>
+                                    <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                                    <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                                    <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Eğitim</h6>
+                                    <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                                    <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown current">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Araştırma</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="arastirma-merkezleri.html">Araştırma Merkezleri</a>
+                            <a class="dropdown-item" href="projeler.html" style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-angle-right mr-2"></i>Bilimsel Araştırma Projeleri (BAP)</a>
+                            <a class="dropdown-item" href="teknokent.html">Teknokent (ATA Teknokent)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Öğrenci</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="yemek-listesi.html"><i class="fa-solid fa-utensils mr-2"></i> Yemek
+                                Listesi</a>
+                            <a class="dropdown-item" href="ring-saatleri.html"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ogrenci-kulupleri.html">Öğrenci Kulüpleri</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">İdari</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="rektorluk.html">Rektörlük</a>
+                            <a class="dropdown-item" href="personel-bilgi.html">Personel Bilgi</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center nav-right-actions">
+                    <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user-graduate mr-2"></i> Öğrenci
+                        Girişi</a>
+                    <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-briefcase mr-2"></i> Personel
+                        Girişi</a>
+                    <button class="btn btn-icon-search" type="button" data-toggle="collapse" data-target="#searchBar"
+                        aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="collapse search-bar-container" id="searchBar">
+            <div class="container-fluid px-4">
+                <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Sitede ara..." />
+                    <div class="input-group-append">
+                        <button class="btn btn-search-go" type="button"><i
+                                class="fa-solid fa-magnifying-glass mr-2"></i>
+                            Ara</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+        <div class="container-fluid px-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana
+                            Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="arastirma-merkezleri.html">Araştırma</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Bilimsel Araştırma Projeleri (BAP)</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SAYFA HERO -->
+    <div class="page-hero">
+        <div class="container-fluid px-4">
+            <h1 class="page-hero-title">Bilimsel Araştırma Projeleri (BAP)</h1>
+            <p class="page-hero-sub">
+                Üniversitemiz araştırmacılarının yenilikçi projelerine mali destek ve koordinasyon sağlayan merkezimiz
+            </p>
+        </div>
+    </div>
+
+    <!-- ANA İÇERİK ALANI -->
+    <section class="content-section">
+        <div class="container-fluid px-4">
+            <div class="row">
+
+                <!-- SOL SÜTUN -->
+                <div class="col-lg-8">
+
+                    <div class="info-box mb-4">
+                        <p><strong>BAP Koordinatörlüğü</strong>, Atatürk Üniversitesi öğretim üyeleri ve lisansüstü
+                            öğrencilerinin yürüttüğü bilimsel araştırma projelerinin değerlendirilmesi,
+                            bütçelendirilmesi, satın alma süreçlerinin yürütülmesi ve sonuçlandırılmasını koordine eder.
+                            Amacımız, üniversitemizin ulusal ve uluslararası bilimsel yayın, patent ve inovasyon
+                            kapasitesini artırmaktır.</p>
+                    </div>
+
+                    <!-- Fon Türleri Kartları -->
+                    <h2 class="inner-section-title">Destek ve Fon Programları</h2>
+                    <div class="row mb-5">
+
+                        <div class="col-md-4 mb-4">
+                            <div class="fund-card fund-bap">
+                                <div class="fund-icon"><i class="fa-solid fa-microscope"></i></div>
+                                <h5>Kurumsal BAP</h5>
+                                <p>Lisansüstü tez projeleri, hızlı destek ve kapsamlı araştırma projeleri için
+                                    üniversite içi öz kaynak destekleri.</p>
+                                <a href="#" class="fund-link">Yönergeleri İncele →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="fund-card fund-tubitak">
+                                <div class="fund-icon"><i class="fa-solid fa-chart-network"></i></div>
+                                <h5>TÜBİTAK Projeleri</h5>
+                                <p>1001, 1002, 2209-A (Öğrenci) ve diğer TÜBİTAK ARDEB/BİDEB projeleri için başvuru
+                                    danışmanlığı ve süreç takibi.</p>
+                                <a href="#" class="fund-link">Detaylı Bilgi →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="fund-card fund-eu">
+                                <div class="fund-icon"><i class="fa-solid fa-earth-europe"></i></div>
+                                <h5>AB / Uluslararası</h5>
+                                <p>Horizon Europe, Erasmus+ ve diğer uluslararası ikili işbirliği fonları için proje
+                                    yazım ve eşleştirme destekleri.</p>
+                                <a href="#" class="fund-link">Açık Çağrılar →</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Öne Çıkan Projeler Listesi -->
+                    <h2 class="inner-section-title d-flex justify-content-between align-items-center">
+                        Öne Çıkan Projeler
+                        <a href="#" class="btn btn-sm btn-outline-primary"
+                            style="font-size:13px; border-radius:50px;">Tüm Arşivi Gör</a>
+                    </h2>
+
+                    <div class="project-list-container mb-4">
+
+                        <!-- Proje 1 -->
+                        <div class="project-item">
+                            <div class="p-status status-active">Devam Ediyor</div>
+                            <div class="p-details">
+                                <div class="p-tags">
+                                    <span class="p-tag tag-tubitak">TÜBİTAK 1001</span>
+                                    <span class="p-tag tag-faculty">Tıp Fakültesi</span>
+                                </div>
+                                <h4 class="p-title">Hedefe Yönelik Yeni Nesil Akıllı Kanser İlaçlarının Sentezi ve İn
+                                    Vitro Etkileri</h4>
+                                <p class="p-manager"><i class="fa-solid fa-user-tie mr-1"></i> Yürütücü: Prof. Dr. Ahmet
+                                    Yılmaz | Bütçe: 1.250.000 ₺</p>
+                            </div>
+                        </div>
+
+                        <!-- Proje 2 -->
+                        <div class="project-item">
+                            <div class="p-status status-active">Devam Ediyor</div>
+                            <div class="p-details">
+                                <div class="p-tags">
+                                    <span class="p-tag tag-bap">Kapsamlı BAP</span>
+                                    <span class="p-tag tag-faculty">Ziraat Fakültesi</span>
+                                </div>
+                                <h4 class="p-title">Erzurum Ekolojisine Uygun Kuraklığa Dayanıklı Yerli Buğday
+                                    Çeşitlerinin Geliştirilmesi</h4>
+                                <p class="p-manager"><i class="fa-solid fa-user-tie mr-1"></i> Yürütücü: Doç. Dr. Ayşe
+                                    Demir | Bütçe: 450.000 ₺</p>
+                            </div>
+                        </div>
+
+                        <!-- Proje 3 -->
+                        <div class="project-item">
+                            <div class="p-status status-completed">Tamamlandı</div>
+                            <div class="p-details">
+                                <div class="p-tags">
+                                    <span class="p-tag tag-eu">Horizon Europe</span>
+                                    <span class="p-tag tag-faculty">Mühendislik Fakültesi</span>
+                                </div>
+                                <h4 class="p-title">Kış Turizmi Tesislerinde Yapay Zeka Destekli Enerji Verimliliği ve
+                                    Kar Optimizasyonu</h4>
+                                <p class="p-manager"><i class="fa-solid fa-user-tie mr-1"></i> Yürütücü: Prof. Dr. Kemal
+                                    Kaya | Bütçe: € 240.000</p>
+                            </div>
+                        </div>
+
+                        <!-- Proje 4 -->
+                        <div class="project-item">
+                            <div class="p-status status-active">Devam Ediyor</div>
+                            <div class="p-details">
+                                <div class="p-tags">
+                                    <span class="p-tag tag-tubitak">TÜBİTAK 2209-A</span>
+                                    <span class="p-tag tag-faculty">Öğrenci Projesi</span>
+                                </div>
+                                <h4 class="p-title">Otonom İnsansız Su Altı Araçları (ROV) İçin Görüntü İşleme Tabanlı
+                                    Navigasyon Sistemi</h4>
+                                <p class="p-manager"><i class="fa-solid fa-user-graduate mr-1"></i> Yürütücü: Utku
+                                    (Lisans Öğrencisi) | Danışman: Dr. Öğr. Üyesi Ali Can</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /SOL SÜTUN -->
+
+                <!-- SAĞ SÜTUN (SIDEBAR) -->
+                <div class="col-lg-4 mt-4 mt-lg-0">
+
+                    <!-- DEV BAPSİS BUTONU -->
+                    <a href="#" class="btn-huge-bapsis mb-4">
+                        <i class="fa-solid fa-network-wired bapsis-icon"></i>
+                        <div class="bapsis-text">
+                            <span>Proje Başvuru ve Takip Sistemi</span>
+                            <strong>BAPSİS'e Giriş Yap</strong>
+                        </div>
+                        <i class="fa-solid fa-arrow-right-to-bracket bapsis-arrow"></i>
+                    </a>
+
+                    <!-- Proje Başvuru Takvimi -->
+                    <div class="sidebar-card">
+                        <h6><i class="fa-solid fa-calendar-plus mr-2 text-primary"></i> Açık Çağrılar & Takvim</h6>
+                        <div class="call-item">
+                            <div class="call-date">Son Tarih: <strong>15 Ekim 2025</strong></div>
+                            <div class="call-title">Lisansüstü Tez Projeleri (BAP-Tez) Güz Dönemi Başvuruları</div>
+                        </div>
+                        <div class="call-item">
+                            <div class="call-date">Son Tarih: <strong>30 Ekim 2025</strong></div>
+                            <div class="call-title">TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri</div>
+                        </div>
+                        <div class="call-item">
+                            <div class="call-date text-success">Sürekli Açık</div>
+                            <div class="call-title">Bilimsel Etkinlik (Kongre/Sempozyum) Katılım Destekleri</div>
+                        </div>
+                    </div>
+
+                    <!-- Kılavuz ve Formlar -->
+                    <div class="sidebar-card doc-card">
+                        <h6><i class="fa-solid fa-file-contract mr-2 text-warning"></i> Gerekli Belgeler</h6>
+                        <ul class="doc-list">
+                            <li><a href="#"><i class="fa-solid fa-file-pdf mr-2"></i> BAP Uygulama Yönergesi
+                                    (Güncel)</a></li>
+                            <li><a href="#"><i class="fa-solid fa-file-pdf mr-2"></i> Proje Yazım Kılavuzu</a></li>
+                            <li><a href="#"><i class="fa-solid fa-file-word mr-2 text-primary"></i> Proje Ara Rapor
+                                    Şablonu</a></li>
+                            <li><a href="#"><i class="fa-solid fa-file-word mr-2 text-primary"></i> Satın Alma Teknik
+                                    Şartname Örneği</a></li>
+                            <li><a href="#"><i class="fa-solid fa-link mr-2 text-info"></i> Harcırah ve Yolluk
+                                    Kanunu</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- İletişim Kutusu -->
+                    <div class="sidebar-card text-center pb-4 border-0" style="background-color: #f8f9fa;">
+                        <div class="support-icon mb-2"><i class="fa-solid fa-headset text-secondary"
+                                style="font-size:28px;"></i></div>
+                        <h6 class="text-dark">BAP Destek Masası</h6>
+                        <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin-bottom: 5px;">Satın
+                            alma ve proje süreçleri için:</p>
+                        <strong style="color:var(--dark-navy); font-size:18px;">Dahili: 1453 / 1454</strong><br>
+                        <a href="mailto:bap@atauni.edu.tr"
+                            style="font-size: 13.5px; color: var(--primary);">bap@atauni.edu.tr</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer pt-5 pb-3 mt-4">
+        <div class="container-fluid px-4">
+            <p class="footer-copy mb-0 text-center">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

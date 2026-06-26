@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════
+  ATATÜRK ÜNİVERSİTESİ — ÖĞRENCİ KULÜPLERİ SAYFASI
+  Kullanılan Teknoloji: Saf HTML + CSS + Bootstrap 4.6
+  ═══════════════════════════════════════════════════════
+-->
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atatürk Üniversitesi öğrenci kulüpleri, topluluklar ve sosyal faaliyetler." />
+  <title>Öğrenci Kulüpleri — Atatürk Üniversitesi</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/ortak.css" />
+  <link rel="stylesheet" href="../css/ogrenci-kulupleri.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+          style="width: 46px; height: 46px; object-fit: contain;" />
+        <div class="logo-text">
+          <span class="logo-title">ATATÜRK</span>
+          <span class="logo-sub">ÜNİVERSİTESİ</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mr-auto ml-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Akademik</a>
+            <div class="dropdown-menu mega-menu">
+              <div class="row px-3 py-2">
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Birimler</h6>
+                  <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                  <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                  <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                  <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Akademik Takvim</h6>
+                  <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                  <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                  <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Eğitim</h6>
+                  <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                  <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Araştırma</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="arastirma-merkezleri.html">Araştırma Merkezleri</a>
+              <a class="dropdown-item" href="projeler.html">Bilimsel Araştırma Projeleri (BAP)</a>
+              <a class="dropdown-item" href="teknokent.html">Teknokent (ATA Teknokent)</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown current">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Öğrenci</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="yemek-listesi.html"><i class="fa-solid fa-utensils mr-2"></i> Yemek Listesi</a>
+              <a class="dropdown-item" href="ring-saatleri.html"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="ogrenci-kulupleri.html" style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-angle-right mr-2"></i>Öğrenci Kulüpleri</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">İdari</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="rektorluk.html">Rektörlük</a>
+              <a class="dropdown-item" href="personel-bilgi.html">Personel Bilgi</a>
+            </div>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center nav-right-actions">
+          <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user-graduate mr-2"></i> Öğrenci Girişi</a>
+          <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-briefcase mr-2"></i> Personel Girişi</a>
+          <button class="btn btn-icon-search" type="button" data-toggle="collapse" data-target="#searchBar" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb-bar">
+    <div class="container-fluid px-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</a></li>
+          <li class="breadcrumb-item"><a href="yemek-listesi.html">Öğrenci</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Öğrenci Kulüpleri</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SAYFA HERO -->
+  <div class="page-hero">
+    <div class="container-fluid px-4">
+      <h1 class="page-hero-title">Öğrenci Kulüpleri</h1>
+      <p class="page-hero-sub">Kampüs yaşamına renk katan, yeteneklerini geliştiren topluluklar</p>
+    </div>
+  </div>
+
+  <!-- ANA İÇERİK -->
+  <section class="content-section">
+    <div class="container-fluid px-4">
+      <div class="row">
+        
+        <!-- SOL SÜTUN -->
+        <div class="col-lg-8">
+          <div class="info-box mb-4">
+            <p>Atatürk Üniversitesi bünyesinde <strong>100'den fazla</strong> öğrenci kulübü bulunmaktadır. Bilimden sanata, spordan teknolojiye kadar ilgi alanına uygun topluluklarımıza katılabilir, kampüs hayatını dolu dolu yaşayabilirsin.</p>
+          </div>
+
+          <h2 class="inner-section-title">Aktif Kulüp Kategorileri</h2>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="club-card">
+                <div class="c-icon"><i class="fa-solid fa-code"></i></div>
+                <h5>Teknoloji ve İnovasyon</h5>
+                <p>Yazılım, robotik, yapay zeka ve siber güvenlik odaklı kulüpler.</p>
+                <a href="#" class="btn-club">Kulüpleri Gör →</a>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="club-card">
+                <div class="c-icon"><i class="fa-solid fa-palette"></i></div>
+                <h5>Kültür ve Sanat</h5>
+                <p>Tiyatro, müzik, sinema, fotoğrafçılık ve edebiyat toplulukları.</p>
+                <a href="#" class="btn-club">Kulüpleri Gör →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAĞ SÜTUN -->
+        <div class="col-lg-4">
+          <div class="sidebar-card">
+            <h6><i class="fa-solid fa-plus-circle mr-2"></i> Kendi Kulübünü Kur</h6>
+            <p style="font-size: 13px;">Kendi topluluğunu kurmak için SKS Daire Başkanlığı'na başvuru yapman yeterli.</p>
+            <a href="#" class="btn btn-outline-primary btn-block">Başvuru Formunu İndir</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>

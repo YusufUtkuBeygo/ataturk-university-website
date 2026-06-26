@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Atatürk Üniversitesi Personel Bilgi Sistemi — Akademik ve idari personele yönelik özlük işlemleri, maaş, izin ve duyurular." />
+    <meta name="keywords"
+        content="Atatürk Üniversitesi personel, personel bilgi sistemi, özlük işlemleri, akademik personel, idari personel" />
+    <title>Personel Bilgi — Atatürk Üniversitesi</title>
+
+    <!-- Bootstrap 4.6 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Sayfaya özel stiller -->
+    <link rel="stylesheet" href="../css/ortak.css" />
+    <link rel="stylesheet" href="../css/personel-bilgi.css" />
+</head>
+
+<body>
+
+    <!-- ════════════ TOPBAR ════════════ -->
+    <div class="topbar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                <div class="topbar-left d-flex align-items-center">
+                    <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center">
+                    <a href="#" class="topbar-link">Türkçe</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link">English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════ NAVBAR ════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+                <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                    style="width: 46px; height: 46px; object-fit: contain;" />
+                <div class="logo-text">
+                    <span class="logo-title">ATATÜRK</span>
+                    <span class="logo-sub">ÜNİVERSİTESİ</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mr-auto ml-3">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Akademik</a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="row px-3 py-2">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Birimler</h6>
+                                    <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                                    <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                                    <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                                    <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Akademik Takvim</h6>
+                                    <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                                    <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                                    <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Eğitim</h6>
+                                    <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                                    <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Araştırma</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="arastirma-merkezleri.html">Araştırma Merkezleri</a>
+                            <a class="dropdown-item" href="projeler.html">Bilimsel Araştırma Projeleri (BAP)</a>
+                            <a class="dropdown-item" href="teknokent.html">Teknokent (ATA Teknokent)</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Öğrenci</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="yemek-listesi.html"><i class="fa-solid fa-utensils mr-2"></i> Yemek Listesi</a>
+                            <a class="dropdown-item" href="ring-saatleri.html"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ogrenci-kulupleri.html">Öğrenci Kulüpleri</a>
+                        </div>
+                    </li>
+
+                    <!-- İdari (aktif) -->
+                    <li class="nav-item dropdown current">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">İdari</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="rektorluk.html">Rektörlük</a>
+                            <a class="dropdown-item" href="personel-bilgi.html"
+                                style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-angle-right mr-2"></i>Personel Bilgi</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="d-flex align-items-center nav-right-actions">
+                    <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user-graduate mr-2"></i> Öğrenci Girişi</a>
+                    <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-briefcase mr-2"></i> Personel Girişi</a>
+                    <button class="btn btn-icon-search" type="button" data-toggle="collapse" data-target="#searchBar" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- SEARCH BAR COLLAPSE -->
+    <div class="collapse search-bar-container" id="searchBar">
+        <div class="container-fluid px-4">
+            <div class="input-group">
+                <input type="text" class="form-control search-input" placeholder="Sitede ara..." />
+                <div class="input-group-append">
+                    <button class="btn btn-search-go" type="button"><i class="fa-solid fa-magnifying-glass mr-2"></i> Ara</button>
+                </div>
+            </div>
+            <small class="search-hints">Popüler: <a href="yemek-listesi.html">Yemek Listesi</a> · <a href="#">OBS Girişi</a></small>
+        </div>
+    </div>
+
+    <!-- ════════════ BREADCRUMB ════════════ -->
+    <div class="breadcrumb-bar">
+        <div class="container-fluid px-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">İdari</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Personel Bilgi</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ════════════ SAYFA HERO ════════════ -->
+    <div class="page-hero">
+        <div class="container-fluid px-4">
+            <h1 class="page-hero-title">Personel Bilgi Sistemi</h1>
+            <p class="page-hero-sub">
+                Akademik ve idari personele yönelik özlük işlemleri, dijital hizmetler ve duyurular
+            </p>
+        </div>
+    </div>
+
+    <!-- ════════════ ANA İÇERİK ════════════ -->
+    <section class="content-section">
+        <div class="container-fluid px-4">
+            <div class="row">
+
+                <!-- Sol sütun (geniş) -->
+                <div class="col-lg-8">
+
+                    <!-- SİSTEME GİRİŞ KARTI -->
+                    <div class="giris-karti">
+                        <div class="giris-text">
+                            <h3><i class="fa-solid fa-lock mr-2"></i> Personel Bilgi Sistemine Giriş</h3>
+                            <p>
+                                Sicil numaranız ve şifrenizle sisteme giriş yaparak özlük
+                                bilgilerinize ulaşabilirsiniz.
+                            </p>
+                        </div>
+                        <div class="giris-butonlar">
+                            <a href="#" class="btn-giris-ana"><i class="fa-solid fa-briefcase mr-2"></i> Personel Girişi</a>
+                            <a href="#" class="btn-giris-ikincil"><i class="fa-solid fa-key mr-2"></i> Şifremi Unuttum</a>
+                        </div>
+                    </div>
+
+                    <!-- İSTATİSTİKLER -->
+                    <div class="row mb-5">
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="istat-kutu">
+                                <div class="i-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                                <div class="i-sayi">3.200</div>
+                                <div class="i-etiket">Akademik Personel</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="istat-kutu">
+                                <div class="i-icon"><i class="fa-solid fa-user-gear"></i></div>
+                                <div class="i-sayi">4.800</div>
+                                <div class="i-etiket">İdari Personel</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="istat-kutu">
+                                <div class="i-icon"><i class="fa-solid fa-building-columns"></i></div>
+                                <div class="i-sayi">25</div>
+                                <div class="i-etiket">Fakülte / Birim</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="istat-kutu">
+                                <div class="i-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                                <div class="i-sayi">120</div>
+                                <div class="i-etiket">Açık Kadro İlanı</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HİZMETLER -->
+                    <h2 class="inner-section-title">Personel Hizmetleri</h2>
+                    <div class="row mb-5">
+
+                        <div class="col-md-6 mb-4">
+                            <div class="hizmet-card">
+                                <div class="h-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                                <h5>Özlük İşlemleri</h5>
+                                <p>
+                                    Atama, terfi, görevden ayrılma ve disiplin işlemlerini
+                                    çevrimiçi takip edin. Sicil dosyanıza online erişim sağlayın.
+                                </p>
+                                <a href="#" class="link-btn">İşlem Yap →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="hizmet-card">
+                                <div class="h-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+                                <h5>Maaş ve Ödeme Bilgileri</h5>
+                                <p>
+                                    Aylık maaş bordrolarınızı, ek ödeme ve ikramiye bilgilerinizi
+                                    görüntüleyin. Geçmiş dönem ödemelerinize ulaşın.
+                                </p>
+                                <a href="#" class="link-btn">Bordroyu Görüntüle →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="hizmet-card">
+                                <div class="h-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                                <h5>İzin Yönetimi</h5>
+                                <p>
+                                    Yıllık, mazeret ve hastalık izinlerinizi online talep edin.
+                                    Kalan izin günlerinizi ve geçmiş izin kayıtlarınızı takip edin.
+                                </p>
+                                <a href="#" class="link-btn">İzin Talep Et →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="hizmet-card">
+                                <div class="h-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <h5>Performans Değerlendirme</h5>
+                                <p>
+                                    Yıllık performans değerlendirme sonuçlarınızı ve
+                                    hedef gerçekleşme raporlarınızı sisteme giriş yaparak
+                                    inceleyin.
+                                </p>
+                                <a href="#" class="link-btn">Rapora Git →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="hizmet-card">
+                                <div class="h-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <h5>Akademik Teşvik Başvurusu</h5>
+                                <p>
+                                    Akademik teşvik ödeneği için yayın, proje ve atıf
+                                    bilgilerinizi sisteme girerek başvurunuzu tamamlayın.
+                                </p>
+                                <a href="#" class="link-btn">Başvuru Yap →</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="hizmet-card">
+                                <div class="h-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                                <h5>Yer Değiştirme & Görevlendirme</h5>
+                                <p>
+                                    Birim içi veya birimler arası yer değiştirme ile geçici
+                                    görevlendirme taleplerini online olarak iletebilirsiniz.
+                                </p>
+                                <a href="#" class="link-btn">Talep Oluştur →</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- KADRO BAŞVURU SÜRECİ -->
+                    <h2 class="inner-section-title">Akademik Kadro Başvuru Süreci</h2>
+                    <div class="row mb-5">
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="adim-karti">
+                                <div class="adim-numara">1</div>
+                                <div class="adim-icon"><i class="fa-solid fa-clipboard-question"></i></div>
+                                <h6>İlanı İnceleyin</h6>
+                                <p>Personel Daire'nin yayımladığı kadro ilanını ve şartlarını okuyun.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="adim-karti">
+                                <div class="adim-numara">2</div>
+                                <div class="adim-icon"><i class="fa-solid fa-folder-open"></i></div>
+                                <h6>Belgeleri Hazırlayın</h6>
+                                <p>Diploma, ÜDS/YDS, yayın listesi ve diğer istenen evrakları toplayın.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="adim-karti">
+                                <div class="adim-numara">3</div>
+                                <div class="adim-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                <h6>Online Başvuru</h6>
+                                <p>Personel bilgi sistemi üzerinden başvurunuzu tamamlayın.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <div class="adim-karti">
+                                <div class="adim-numara">4</div>
+                                <div class="adim-icon"><i class="fa-solid fa-circle-check text-success"></i></div>
+                                <h6>Sonuç Takibi</h6>
+                                <p>Başvuru sonucunuzu sistem üzerinden veya Personel Daire'den takip edin.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- İNDİRİLEBİLİR BELGELER -->
+                    <h2 class="inner-section-title">Formlar ve Belgeler</h2>
+                    <div
+                        style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);margin-bottom:48px;">
+
+                        <div class="belge-item">
+                            <div class="belge-icon"><i class="fa-solid fa-file-pdf text-danger"></i></div>
+                            <div class="belge-bilgi">
+                                <h6>İzin Talep Formu</h6>
+                                <small>PDF · Son güncelleme: Ocak 2025</small>
+                            </div>
+                            <a href="#" class="belge-indir"><i class="fa-solid fa-download mr-1"></i> İndir</a>
+                        </div>
+
+                        <div class="belge-item">
+                            <div class="belge-icon"><i class="fa-solid fa-file-signature text-primary"></i></div>
+                            <div class="belge-bilgi">
+                                <h6>Görevlendirme Talep Formu</h6>
+                                <small>PDF · Son güncelleme: Mart 2025</small>
+                            </div>
+                            <a href="#" class="belge-indir"><i class="fa-solid fa-download mr-1"></i> İndir</a>
+                        </div>
+
+                        <div class="belge-item">
+                            <div class="belge-icon"><i class="fa-solid fa-graduation-cap text-success"></i></div>
+                            <div class="belge-bilgi">
+                                <h6>Akademik Teşvik Başvuru Formu</h6>
+                                <small>PDF · Son güncelleme: Şubat 2025</small>
+                            </div>
+                            <a href="#" class="belge-indir"><i class="fa-solid fa-download mr-1"></i> İndir</a>
+                        </div>
+
+                        <div class="belge-item">
+                            <div class="belge-icon"><i class="fa-solid fa-square-h text-danger"></i></div>
+                            <div class="belge-bilgi">
+                                <h6>Sağlık Raporu Bildirim Formu</h6>
+                                <small>PDF · Son güncelleme: Ocak 2025</small>
+                            </div>
+                            <a href="#" class="belge-indir"><i class="fa-solid fa-download mr-1"></i> İndir</a>
+                        </div>
+
+                        <div class="belge-item">
+                            <div class="belge-icon"><i class="fa-solid fa-arrows-rotate text-info"></i></div>
+                            <div class="belge-bilgi">
+                                <h6>Yer Değiştirme Talep Dilekçesi</h6>
+                                <small>DOCX · Son güncelleme: Nisan 2025</small>
+                            </div>
+                            <a href="#" class="belge-indir"><i class="fa-solid fa-download mr-1"></i> İndir</a>
+                        </div>
+
+                        <div class="belge-item">
+                            <div class="belge-icon"><i class="fa-solid fa-chart-bar text-warning"></i></div>
+                            <div class="belge-bilgi">
+                                <h6>Performans Değerlendirme Formu</h6>
+                                <small>PDF · Son güncelleme: Aralık 2024</small>
+                            </div>
+                            <a href="#" class="belge-indir"><i class="fa-solid fa-download mr-1"></i> İndir</a>
+                        </div>
+
+                    </div>
+
+                    <!-- PERSONEL DUYURULARI -->
+                    <h2 class="inner-section-title">Personel Duyuruları</h2>
+                    <div
+                        style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);">
+
+                        <div class="duyuru-satir">
+                            <div class="duyuru-tarih"><span class="gun">14</span><span class="ay">May</span></div>
+                            <div class="duyuru-govde">
+                                <span class="duyuru-etiket">Akademik Kadro</span>
+                                <h6>2025 Yılı Akademik Kadro İlan Sonuçları Açıklandı</h6>
+                                <small>Personel Daire Başkanlığı · 14 Mayıs 2025</small>
+                            </div>
+                        </div>
+
+                        <div class="duyuru-satir">
+                            <div class="duyuru-tarih"><span class="gun">10</span><span class="ay">May</span></div>
+                            <div class="duyuru-govde">
+                                <span class="duyuru-etiket">Maaş</span>
+                                <h6>Mayıs 2025 Maaşları Hesaplara Yatırıldı</h6>
+                                <small>Strateji Geliştirme Daire Başkanlığı · 10 Mayıs 2025</small>
+                            </div>
+                        </div>
+
+                        <div class="duyuru-satir">
+                            <div class="duyuru-tarih"><span class="gun">5</span><span class="ay">May</span></div>
+                            <div class="duyuru-govde">
+                                <span class="duyuru-etiket">Teşvik</span>
+                                <h6>2024 Akademik Teşvik Başvuru Sonuçları Yayımlandı</h6>
+                                <small>Personel Daire Başkanlığı · 5 Mayıs 2025</small>
+                            </div>
+                        </div>
+
+                        <div class="duyuru-satir">
+                            <div class="duyuru-tarih"><span class="gun">28</span><span class="ay">Nis</span></div>
+                            <div class="duyuru-govde">
+                                <span class="duyuru-etiket">Eğitim</span>
+                                <h6>Personel Hizmet İçi Eğitim Programı Açıklandı</h6>
+                                <small>İnsan Kaynakları Birimi · 28 Nisan 2025</small>
+                            </div>
+                        </div>
+
+                        <div class="duyuru-satir">
+                            <div class="duyuru-tarih"><span class="gun">20</span><span class="ay">Nis</span></div>
+                            <div class="duyuru-govde">
+                                <span class="duyuru-etiket">İdari Kadro</span>
+                                <h6>İdari Personel Atama ve Yer Değiştirme Kararları</h6>
+                                <small>Personel Daire Başkanlığı · 20 Nisan 2025</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /Sol sütun -->
+
+
+                <!-- Sağ sütun: Sidebar -->
+                <div class="col-lg-4 mt-4 mt-lg-0">
+
+                    <!-- Hızlı Erişim -->
+                    <div class="sidebar-kart">
+                        <h6>Hızlı Erişim</h6>
+                        <ul class="sidebar-link-list">
+                            <li><span class="arrow">▶</span><a href="#">Personel Bilgi Sistemine Giriş</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Maaş Bordrosu</a></li>
+                            <li><span class="arrow">▶</span><a href="#">İzin Talebi Oluştur</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Akademik Teşvik Başvurusu</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Kadro İlanları</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Emeklilik İşlemleri</a></li>
+                            <li><span class="arrow">▶</span><a href="#">Hizmet Belgesi Talebi</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Bilgi Kutusu -->
+                    <div class="sidebar-kart">
+                        <h6><i class="fa-solid fa-circle-info mr-2 text-primary"></i> Önemli Bilgi</h6>
+                        <div class="bilgi-kutusu" style="margin-bottom:0;">
+                            <p>
+                                Sisteme giriş için <strong>sicil numaranız</strong> ve
+                                <strong>e-Devlet şifreniz</strong> ya da üniversite tarafından
+                                size verilen <strong>kurumsal şifreniz</strong> gerekmektedir.
+                                Şifre sorunu yaşıyorsanız Personel Daire ile iletişime geçiniz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- İletişim -->
+                    <div class="sidebar-kart">
+                        <h6><i class="fa-solid fa-phone mr-2"></i> Personel Daire İletişim</h6>
+                        <div class="iletisim-satir">
+                            <div class="ic-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <strong>Adres</strong>
+                                <span>Personel Daire Başkanlığı, Rektörlük Binası Kat 2</span>
+                            </div>
+                        </div>
+                        <div class="iletisim-satir">
+                            <div class="ic-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <strong>Telefon</strong>
+                                <span>+90 442 231 1200</span>
+                            </div>
+                        </div>
+                        <div class="iletisim-satir">
+                            <div class="ic-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <strong>E-posta</strong>
+                                <span>personel@atauni.edu.tr</span>
+                            </div>
+                        </div>
+                        <div class="iletisim-satir">
+                            <div class="ic-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <strong>Çalışma Saatleri</strong>
+                                <span>Pzt–Cum: 08:00 – 17:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faydalı Bağlantılar -->
+                    <div class="sidebar-kart">
+                        <h6><i class="fa-solid fa-link mr-2"></i> Faydalı Bağlantılar</h6>
+                        <ul class="sidebar-link-list">
+                            <li><span class="arrow">▶</span><a href="#">e-Devlet Kapısı</a></li>
+                            <li><span class="arrow">▶</span><a href="#">SGK Hizmet Dökümü</a></li>
+                            <li><span class="arrow">▶</span><a href="#">YÖKSİS Sistemi</a></li>
+                            <li><span class="arrow">▶</span><a href="#">ÖSYM Sonuçları</a></li>
+                            <li><span class="arrow">▶</span><a href="#">657 Sayılı Kanun</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /Sağ sütun -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer class="main-footer pt-5 pb-3">
+        <div class="container-fluid px-4">
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                            style="width: 44px; height: 44px; object-fit: contain;" />
+                        <span class="footer-logo-title">ATATÜRK ÜNİVERSİTESİ</span>
+                    </div>
+                    <p class="footer-address"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</p>
+                    <p class="footer-address"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</p>
+                    <p class="footer-address"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</p>
+                    <div class="footer-social mt-3">
+                        <a href="#" class="social-icon">X</a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">LI</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">SAYFALAR</h6>
+                    <ul class="footer-links">
+                        <li><a href="ATA_ÜNİ.HTML">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="fakulteler.html">Fakülteler</a></li>
+                        <li><a href="enstitüler.html">Enstitüler</a></li>
+                        <li><a href="rektorluk.html">Rektörlük</a></li>
+                        <li><a href="personel-bilgi.html">Personel Bilgi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">BİRİMLER</h6>
+                    <ul class="footer-links">
+                        <li><a href="fakulteler.html">Fakülteler</a></li>
+                        <li><a href="enstitüler.html">Enstitüler</a></li>
+                        <li><a href="rektorluk.html">Rektörlük</a></li>
+                        <li><a href="personel-bilgi.html">Personel Bilgi</a></li>
+                        <li><a href="#">Araştırma Merkezleri</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">E-HİZMETLER</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">e-Portal</a></li>
+                        <li><a href="#">OBS</a></li>
+                        <li><a href="personel-bilgi.html">Personel Bilgi</a></li>
+                        <li><a href="#">KVKK Başvuru</a></li>
+                        <li><a href="#">Bilgi Edinme</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="footer-heading">ÖĞRENCİ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Yemek Listesi</a></li>
+                        <li><a href="#">Ring Saatleri</a></li>
+                        <li><a href="duyurular.html">Duyurular</a></li>
+                        <li><a href="#">Kampüs Yaşamı</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr class="footer-divider" />
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <p class="footer-copy mb-0">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+                <div class="footer-legal">
+                    <a href="#">Web Kılavuzu</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">Gizlilik Politikası</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

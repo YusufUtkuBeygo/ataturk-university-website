@@ -1,0 +1,460 @@
+/* ═══════════════════════════════════════════════════════
+   ATATÜRK ÜNİVERSİTESİ — REKTÖRLÜK SAYFASI
+   Dosya: rektorluk.css
+   Bağımlılık: Bootstrap 4.6 (CDN üzerinden HTML'de yüklenir)
+   Teknoloji: Saf CSS — harici kütüphane YOK
+═══════════════════════════════════════════════════════ */
+
+/* ── CSS Değişkenleri (Rapor renk paleti) ────────────── */
+:root {
+  --white:         #FFFFFF;
+  --dark-navy:     #1A1F36;
+  --dark-panel:    #212529;
+  --primary:       #007BFF;
+  --primary-light: #3399FF;
+  --grey-light:    #CCCCCC;
+  --grey-lighter:  #DDDDDD;
+  --bg-light:      #F4F6FA;
+  --border:        #E3E7EF;
+  --text-muted:    #6c757d;
+
+  --font-body:    -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+}
+
+/* ── Genel ───────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--dark-panel);
+  background: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+a { color: var(--primary); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--primary-light); text-decoration: none; }
+
+/* ── TOPBAR ──────────────────────────────────────────── */
+.topbar {
+  background: var(--dark-navy);
+  color: var(--grey-lighter);
+  font-size: 12.5px;
+  padding: 7px 0;
+}
+.topbar-item { color: var(--grey-lighter); }
+.topbar-divider { margin: 0 10px; color: #444c6a; }
+.topbar-link { color: var(--grey-lighter); margin: 0 4px; font-size: 12.5px; transition: color .2s; }
+.topbar-link:hover { color: var(--primary-light); }
+
+/* ── NAVBAR ──────────────────────────────────────────── */
+.main-navbar {
+  background: var(--white);
+  border-bottom: 2px solid var(--border);
+  padding: 12px 0;
+  box-shadow: var(--shadow-sm);
+  z-index: 1050;
+}
+.logo-emblem {
+  width: 46px; height: 46px;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0;
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.logo-title {
+  font-family: var(--font-heading);
+  font-weight: 800; font-size: 17px;
+  color: var(--dark-navy); letter-spacing: 1px;
+}
+.logo-sub {
+  font-family: var(--font-heading);
+  font-size: 11px; font-weight: 600;
+  color: var(--primary); letter-spacing: 2px;
+}
+.main-navbar .navbar-nav .nav-link {
+  font-weight: 600; font-size: 14px; color: var(--dark-panel);
+  padding: 8px 14px !important; border-radius: var(--radius-sm);
+  transition: background .2s, color .2s;
+}
+.main-navbar .navbar-nav .nav-link:hover,
+.main-navbar .navbar-nav .nav-link.active { background: var(--bg-light); color: var(--primary); }
+.main-navbar .navbar-nav .nav-item.current > .nav-link { color: var(--primary); }
+
+.dropdown-menu {
+  border: none; box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  border-top: 3px solid var(--primary);
+  padding: 8px 0; min-width: 220px;
+}
+.mega-menu { min-width: 480px; }
+.dropdown-header {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.2px; color: var(--primary); padding: 6px 16px 4px;
+}
+.dropdown-item {
+  font-size: 14px; color: var(--dark-panel);
+  padding: 7px 16px; border-radius: var(--radius-sm);
+  transition: background .15s, color .15s;
+}
+.dropdown-item:hover { background: var(--bg-light); color: var(--primary); }
+
+.btn-ogrenci {
+  background: var(--primary); color: var(--white) !important;
+  font-size: 13px; font-weight: 600; padding: 8px 18px;
+  border-radius: 50px; border: 2px solid var(--primary); transition: background .2s;
+}
+.btn-ogrenci:hover { background: #0062cc; border-color: #0062cc; }
+.btn-personel {
+  background: var(--dark-navy); color: var(--white) !important;
+  font-size: 13px; font-weight: 600; padding: 8px 18px;
+  border-radius: 50px; border: 2px solid var(--dark-navy); transition: background .2s;
+}
+.btn-personel:hover { background: #111827; }
+.nav-right-actions { gap: 8px; }
+
+/* ── BREADCRUMB ──────────────────────────────────────── */
+.breadcrumb-bar { background: var(--bg-light); border-bottom: 1px solid var(--border); padding: 8px 0; }
+.breadcrumb { background: transparent; padding: 0; margin: 0; font-size: 13px; }
+.breadcrumb-item + .breadcrumb-item::before { color: var(--grey-light); }
+.breadcrumb-item.active { color: var(--text-muted); }
+.breadcrumb-item a { color: var(--primary); }
+
+/* ── SAYFA HERO ──────────────────────────────────────── */
+.page-hero {
+  background: linear-gradient(135deg, var(--dark-navy) 0%, #1e3a5f 100%);
+  padding: 60px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+}
+.page-hero-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800; color: var(--white); margin: 0;
+}
+.page-hero-sub { color: rgba(255,255,255,0.65); font-size: 16px; margin-top: 8px; }
+
+/* ── ANA İÇERİK ──────────────────────────────────────── */
+.content-section { padding: 60px 0; }
+.bg-alt { background: var(--bg-light); }
+
+.inner-section-title {
+  font-size: 24px; font-weight: 800; color: var(--dark-navy);
+  position: relative; padding-bottom: 14px; margin-bottom: 28px;
+}
+.inner-section-title::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 48px; height: 3px;
+  background: var(--primary); border-radius: 2px;
+}
+
+/* ── REKTÖR TANITIM KARTI ────────────────────────────────
+   Sayfanın en önemli bileşeni: Rektörün fotoğrafı ve mesajı */
+.rektor-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.rektor-card-header {
+  background: linear-gradient(135deg, var(--dark-navy) 0%, #1e3a5f 100%);
+  padding: 36px 36px 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.rektor-avatar {
+  width: 110px; height: 110px;
+  background: rgba(255,255,255,0.12);
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 52px;
+  flex-shrink: 0;
+}
+.rektor-info h2 {
+  color: var(--white);
+  font-size: 24px; font-weight: 800; margin: 0 0 6px;
+}
+.rektor-info .unvan {
+  color: var(--primary-light);
+  font-size: 14px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 8px; display: block;
+}
+.rektor-info .meta {
+  color: rgba(255,255,255,0.60);
+  font-size: 13px; margin: 0;
+}
+.rektor-card-body { padding: 32px 36px; }
+.rektor-card-body .mesaj-baslik {
+  font-size: 13px; font-weight: 700; color: var(--primary);
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px;
+  display: block;
+}
+.rektor-card-body p {
+  font-size: 15px; color: var(--dark-panel); line-height: 1.85;
+  margin-bottom: 16px;
+}
+.rektor-card-body p:last-child { margin-bottom: 0; }
+.rektor-imza {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 16px;
+}
+.rektor-imza .imza-avatar {
+  width: 52px; height: 52px;
+  background: var(--bg-light); border: 2px solid var(--border);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.rektor-imza strong { display: block; font-size: 15px; color: var(--dark-navy); }
+.rektor-imza span { font-size: 13px; color: var(--text-muted); }
+
+/* ── YÖNETİM KURULU KARTLARI ─────────────────────────── */
+.yonetim-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+.yonetim-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.yonetim-card .kisi-avatar {
+  width: 72px; height: 72px;
+  background: var(--bg-light);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; margin: 0 auto 14px;
+}
+.yonetim-card h6 { font-size: 15px; font-weight: 700; color: var(--dark-navy); margin-bottom: 4px; }
+.yonetim-card .gorev {
+  font-size: 12px; font-weight: 700; color: var(--primary);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  display: block; margin-bottom: 8px;
+}
+.yonetim-card p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+/* ── BİRİM KARTI ────────────────────────────────────────
+   Rektörlüğe bağlı daire başkanlıkları ve ofisler */
+.birim-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  display: flex; align-items: flex-start; gap: 16px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.birim-card:hover { box-shadow: var(--shadow-md); border-left-color: var(--primary-light); }
+.birim-card .birim-icon {
+  width: 48px; height: 48px;
+  background: rgba(0,123,255,0.08);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0;
+}
+.birim-card .birim-text h6 { font-size: 14px; font-weight: 700; color: var(--dark-navy); margin-bottom: 4px; }
+.birim-card .birim-text p  { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+.birim-card .birim-text a  {
+  font-size: 12.5px; font-weight: 700; color: var(--primary);
+  display: inline-block; margin-top: 8px;
+}
+.birim-card .birim-text a:hover { color: var(--primary-light); }
+
+/* ── ORGANİZASYON ŞEMASI BASAMAKLARI ────────────────── */
+.org-root {
+  text-align: center;
+  padding: 16px 24px;
+  background: var(--dark-navy);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-size: 15px; font-weight: 700;
+  margin-bottom: 0;
+  position: relative;
+}
+.org-root::after {
+  content: '';
+  position: absolute; bottom: -20px; left: 50%;
+  transform: translateX(-50%);
+  width: 2px; height: 20px;
+  background: var(--border);
+}
+.org-connector {
+  display: flex; justify-content: center;
+  position: relative; margin: 20px 0 0;
+}
+.org-connector::before {
+  content: '';
+  position: absolute; top: 0; left: 20%; right: 20%;
+  height: 2px; background: var(--border);
+}
+.org-level {
+  display: flex; justify-content: center;
+  gap: 16px; flex-wrap: wrap; margin-top: 0;
+}
+.org-node {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 13px; font-weight: 600;
+  color: var(--dark-navy); text-align: center;
+  min-width: 140px;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+.org-node::before {
+  content: '';
+  position: absolute; top: -22px; left: 50%;
+  transform: translateX(-50%);
+  width: 2px; height: 22px;
+  background: var(--border);
+}
+
+/* ── DUYURULAR / KARAR LİSTESİ ─────────────────────── */
+.karar-item {
+  display: flex; align-items: flex-start; gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.karar-item:last-child { border-bottom: none; }
+.karar-date {
+  flex-shrink: 0; width: 52px; text-align: center;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  padding: 8px 4px; border: 1px solid var(--border);
+}
+.karar-date .gun  { display: block; font-size: 20px; font-weight: 800; color: var(--primary); line-height: 1; }
+.karar-date .ay   { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+.karar-body h6    { font-size: 14px; font-weight: 700; color: var(--dark-navy); margin-bottom: 4px; }
+.karar-body small { font-size: 12.5px; color: var(--text-muted); }
+.karar-tag {
+  display: inline-block;
+  background: rgba(0,123,255,0.08);
+  color: var(--primary);
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  padding: 2px 10px; border-radius: 50px; margin-bottom: 5px;
+}
+
+/* ── SIDEBAR ─────────────────────────────────────────── */
+.sidebar-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px; box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+.sidebar-card h6 {
+  font-size: 14px; font-weight: 700; color: var(--dark-navy);
+  margin-bottom: 16px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+}
+.sidebar-link-list { list-style: none; padding: 0; margin: 0; }
+.sidebar-link-list li { padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+.sidebar-link-list li:last-child { border-bottom: none; }
+.sidebar-link-list a { color: var(--dark-navy); font-weight: 600; transition: color .2s; }
+.sidebar-link-list a:hover { color: var(--primary); }
+.sidebar-link-list .arrow { color: var(--primary); margin-right: 8px; font-size: 11px; }
+
+.iletisim-satir {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.iletisim-satir:last-child { border-bottom: none; }
+.iletisim-satir .ic-icon {
+  width: 38px; height: 38px;
+  background: rgba(0,123,255,0.08);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.iletisim-satir strong { display: block; font-size: 12px; font-weight: 700; color: var(--dark-navy); }
+.iletisim-satir span  { font-size: 13.5px; color: var(--text-muted); }
+
+/* ── FOOTER ──────────────────────────────────────────── */
+.main-footer { background: var(--dark-navy); color: rgba(255,255,255,0.75); }
+.footer-logo-emblem {
+  width: 44px; height: 44px; background: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0;
+}
+.footer-logo-title { font-size: 14px; font-weight: 800; color: var(--white); letter-spacing: 1px; }
+.footer-address    { font-size: 13.5px; color: rgba(255,255,255,0.6); margin: 4px 0; }
+.footer-social     { display: flex; gap: 10px; }
+.social-icon {
+  width: 34px; height: 34px;
+  border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 700;
+  transition: border-color .2s, color .2s, background .2s; text-decoration: none;
+}
+.social-icon:hover { border-color: var(--primary-light); color: var(--primary-light); background: rgba(51,153,255,0.1); }
+.footer-heading    { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--white); margin-bottom: 14px; }
+.footer-links      { list-style: none; padding: 0; margin: 0; }
+.footer-links li   { margin-bottom: 8px; }
+.footer-links a    { font-size: 13.5px; color: rgba(255,255,255,0.6); transition: color .2s; }
+.footer-links a:hover { color: var(--primary-light); }
+.footer-divider    { border-color: rgba(255,255,255,0.1); margin: 24px 0 16px; }
+.footer-copy       { font-size: 12.5px; color: rgba(255,255,255,0.45); }
+.footer-legal a    { font-size: 12.5px; color: rgba(255,255,255,0.45); transition: color .2s; }
+.footer-legal a:hover { color: var(--primary-light); }
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 991px) {
+  .topbar-left .topbar-item:not(:first-child),
+  .topbar-left .topbar-divider { display: none; }
+  .nav-right-actions { margin-top: 12px; flex-wrap: wrap; }
+  .mega-menu { min-width: 320px; }
+  .rektor-card-header { flex-direction: column; text-align: center; }
+  .org-connector::before { left: 10%; right: 10%; }
+}
+@media (max-width: 767px) {
+  .page-hero { padding: 40px 0 36px; }
+  .rektor-card-header { padding: 24px; }
+  .rektor-card-body   { padding: 24px; }
+  .org-level { flex-direction: column; align-items: center; }
+  .org-node::before   { display: none; }
+  .org-connector::before { display: none; }
+}
+@media (max-width: 575px) {
+  .topbar { display: none; }
+  .karar-item { flex-direction: column; gap: 10px; }
+}

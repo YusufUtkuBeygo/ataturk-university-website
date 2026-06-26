@@ -1,0 +1,4 @@
+.club-card { padding: 25px; border: 1px solid var(--border); border-radius: 8px; transition: 0.3s; height: 100%; }
+.club-card:hover { border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.c-icon { font-size: 30px; color: var(--primary); margin-bottom: 15px; }
+.btn-club { display: inline-block; margin-top: 10px; font-weight: bold; color: var(--primary); }

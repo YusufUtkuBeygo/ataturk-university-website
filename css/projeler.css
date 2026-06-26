@@ -1,0 +1,379 @@
+/* ═══════════════════════════════════════════════════════
+   BİLİMSEL ARAŞTIRMA PROJELERİ (BAP) SAYFASI — Sayfa Özel CSS
+   Dosya: projeler.css
+   Bağımlılık: style.css (ortak stiller) önce yüklenmeli
+═══════════════════════════════════════════════════════ */
+
+/* ── Bilgi Kutusu ────────────────────────────── */
+.info-box {
+    background: rgba(0, 123, 255, 0.05);
+    border: 1px solid rgba(0, 123, 255, 0.15);
+    border-left: 5px solid var(--primary);
+    border-radius: var(--radius-md);
+    padding: 18px 24px;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--dark-panel);
+    line-height: 1.7;
+}
+
+/* ── Fon Türleri Kartları ────────────────────────────── */
+.fund-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 140px 24px 24px;
+    height: 100%;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.fund-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.fund-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.fund-bap::before {
+    background-image: linear-gradient(135deg, rgba(0, 123, 255, 0.85) 0%, rgba(0, 86, 179, 0.7) 100%), url('../images/news_science.png');
+}
+
+.fund-tubitak::before {
+    background-image: linear-gradient(135deg, rgba(40, 167, 69, 0.85) 0%, rgba(25, 105, 44, 0.7) 100%), url('../images/fac_fen.png');
+}
+
+.fund-eu::before {
+    background-image: linear-gradient(135deg, rgba(111, 66, 193, 0.85) 0%, rgba(81, 45, 148, 0.7) 100%), url('../images/campus_history.png');
+}
+
+.fund-icon {
+    position: absolute;
+    top: 90px;
+    left: 24px;
+    width: 54px;
+    height: 54px;
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: var(--shadow-sm);
+    z-index: 3;
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.fund-bap .fund-icon {
+    color: #007bff;
+}
+
+.fund-tubitak .fund-icon {
+    color: #28a745;
+}
+
+.fund-eu .fund-icon {
+    color: #6f42c1;
+}
+
+.fund-card:hover .fund-icon {
+    transform: scale(1.08);
+}
+
+.fund-card h5 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--dark-navy);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.fund-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.fund-link {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+    z-index: 2;
+}
+
+.fund-link:hover {
+    color: var(--primary-light);
+    text-decoration: none;
+}
+
+/* ── Öne Çıkan Projeler Listesi ──────────────────────── */
+.project-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    display: flex;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.p-status {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-active {
+    background: #007bff;
+}
+
+.status-completed {
+    background: #28a745;
+}
+
+.p-details {
+    padding: 20px;
+    flex: 1;
+}
+
+.p-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.p-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.tag-tubitak {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+.tag-bap {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    border: 1px solid rgba(0, 123, 255, 0.2);
+}
+
+.tag-eu {
+    background: rgba(111, 66, 193, 0.1);
+    color: #6f42c1;
+    border: 1px solid rgba(111, 66, 193, 0.2);
+}
+
+.tag-faculty {
+    background: #f8f9fa;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.p-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--dark-panel);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.p-manager {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ── Sağ Sidebar Alanı ───────────────────────────────── */
+
+/* Dev BAPSİS Butonu */
+.btn-huge-bapsis {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1A1F36 0%, #2c3e50 100%);
+    color: var(--white);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(26, 31, 54, 0.3);
+}
+
+.btn-huge-bapsis:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26, 31, 54, 0.4);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.bapsis-icon {
+    font-size: 30px;
+    margin-right: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #00d2ff;
+}
+
+.bapsis-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.bapsis-text span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+}
+
+.bapsis-text strong {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.bapsis-arrow {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Sidebar Kartları Genel */
+.sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h6 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+/* Çağrı / Takvim Listesi */
+.call-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.call-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.call-date {
+    font-size: 12.5px;
+    color: #d32f2f;
+    margin-bottom: 4px;
+}
+
+.call-title {
+    font-size: 13.5px;
+    color: var(--dark-panel);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Doküman Listesi */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.doc-list li {
+    margin-bottom: 12px;
+}
+
+.doc-list li:last-child {
+    margin-bottom: 0;
+}
+
+.doc-list a {
+    font-size: 13.5px;
+    color: var(--dark-panel);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.doc-list a:hover {
+    color: var(--primary);
+}
+
+.doc-list i {
+    color: #dc3545;
+    /* PDF Red by default, overridden by HTML classes if needed */
+    font-size: 15px;
+}
+
+/* ── Sayfa Hero Arka Plan Resmi ────────────────────── */
+.page-hero {
+    background: linear-gradient(135deg, rgba(26, 31, 54, 0.95) 0%, rgba(13, 27, 42, 0.85) 100%),
+        url('../images/campus_history.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+}

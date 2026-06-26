@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════
+  ATATÜRK ÜNİVERSİTESİ — ARAŞTIRMA MERKEZLERİ SAYFASI
+  Kullanılan Teknoloji: Saf HTML + CSS + Bootstrap 4.6
+  ═══════════════════════════════════════════════════════
+-->
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Atatürk Üniversitesi Araştırma ve Uygulama Merkezleri. DAG, nanoteknoloji, klinik araştırmalar ve inovasyon laboratuvarları." />
+    <meta name="keywords"
+        content="Atatürk Üniversitesi araştırma, araştırma merkezleri, DAG gözlemevi, BAP, teknokent, inovasyon" />
+    <title>Araştırma Merkezleri — Atatürk Üniversitesi</title>
+
+    <!-- Bootstrap 4.6 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Projeye özel stiller -->
+    <link rel="stylesheet" href="../css/ortak.css" />
+    <!-- Araştırma sayfasına özel stiller -->
+    <link rel="stylesheet" href="../css/arastirma-merkezleri.css" />
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                <div class="topbar-left d-flex align-items-center">
+                    <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye /
+                        ERZURUM</span>
+                    <span class="topbar-divider">|</span>
+                    <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+                </div>
+                <div class="topbar-right d-flex align-items-center">
+                    <a href="#" class="topbar-link">Türkçe</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="#" class="topbar-link">English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR: Logo, açılır menüler, arama çubuğu ve kullanıcı giriş butonlarını barındıran üst gezinme çubuğu -->
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+                <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+                    style="width: 46px; height: 46px; object-fit: contain;" />
+                <div class="logo-text">
+                    <span class="logo-title">ATATÜRK</span>
+                    <span class="logo-sub">ÜNİVERSİTESİ</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mr-auto ml-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Akademik</a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="row px-3 py-2">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Birimler</h6>
+                                    <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                                    <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                                    <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                                    <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Akademik Takvim</h6>
+                                    <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                                    <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                                    <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Eğitim</h6>
+                                    <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                                    <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown current">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Araştırma</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="arastirma-merkezleri.html" style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-angle-right mr-2"></i>Araştırma Merkezleri</a>
+                            <a class="dropdown-item" href="projeler.html">Bilimsel Araştırma Projeleri (BAP)</a>
+                            <a class="dropdown-item" href="teknokent.html">Teknokent (ATA Teknokent)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Öğrenci</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="yemek-listesi.html"><i class="fa-solid fa-utensils mr-2"></i> Yemek
+                                Listesi</a>
+                            <a class="dropdown-item" href="ring-saatleri.html"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ogrenci-kulupleri.html">Öğrenci Kulüpleri</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">İdari</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="rektorluk.html">Rektörlük</a>
+                            <a class="dropdown-item" href="personel-bilgi.html">Personel Bilgi</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center nav-right-actions">
+                    <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user-graduate mr-2"></i> Öğrenci
+                        Girişi</a>
+                    <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-briefcase mr-2"></i> Personel
+                        Girişi</a>
+                    <button class="btn btn-icon-search" type="button" data-toggle="collapse" data-target="#searchBar"
+                        aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="collapse search-bar-container" id="searchBar">
+            <div class="container-fluid px-4">
+                <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Sitede ara..." />
+                    <div class="input-group-append">
+                        <button class="btn btn-search-go" type="button"><i
+                                class="fa-solid fa-magnifying-glass mr-2"></i>
+                            Ara</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+        <div class="container-fluid px-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana
+                            Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="arastirma-merkezleri.html">Araştırma</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Araştırma Merkezleri</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SAYFA HERO -->
+    <div class="page-hero">
+        <div class="container-fluid px-4">
+            <h1 class="page-hero-title">Araştırma ve Uygulama Merkezleri</h1>
+            <p class="page-hero-sub">
+                Bilimin sınırlarını zorlayan, sektörel sorunlara çözüm üreten ve topluma değer katan inovasyon üslerimiz
+            </p>
+        </div>
+    </div>
+
+    <!-- ANA İÇERİK ALANI -->
+    <section class="content-section">
+        <div class="container-fluid px-4">
+            <div class="row">
+
+                <!-- SOL SÜTUN -->
+                <div class="col-lg-8">
+
+                    <div class="info-box mb-4">
+                        <p>Atatürk Üniversitesi bünyesinde yer alan <strong>25'ten fazla Uygulama ve Araştırma
+                                Merkezi</strong>, kendi alanlarında Türkiye'nin önde gelen bilimsel veri üreticileridir.
+                            Ulusal ve uluslararası fonlarla (TÜBİTAK, AB Projeleri) desteklenen merkezlerimiz,
+                            sanayi-üniversite işbirliğinin en somut örneklerini sergiler.</p>
+                    </div>
+
+                    <h2 class="inner-section-title">Öne Çıkan Araştırma Merkezleri</h2>
+
+                    <div class="row">
+
+                        <!-- KART 1: DAG -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card">
+                                <div class="rc-header rc-bg-dag">
+                                    <div class="rc-badges">
+                                        <span class="badge-research"><i class="fa-solid fa-star text-warning mr-1"></i>
+                                            Vizyon Proje</span>
+                                    </div>
+                                </div>
+                                <div class="rc-body">
+                                    <div class="rc-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                                    <h4 class="rc-title">Doğu Anadolu Gözlemevi (DAG)</h4>
+                                    <p class="rc-desc">Türkiye'nin en büyük çaplı (4m) ve ilk kırmızı ötesi teleskobuna
+                                        sahip ulusal uzay ve astronomi araştırma merkezi.</p>
+                                    <a href="#" class="btn-research">Merkezi İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KART 2: DAYTAM -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card">
+                                <div class="rc-header rc-bg-daytam">
+                                    <div class="rc-badges">
+                                        <span class="badge-research">Multidisipliner</span>
+                                    </div>
+                                </div>
+                                <div class="rc-body">
+                                    <div class="rc-icon"><i class="fa-solid fa-microscope"></i></div>
+                                    <h4 class="rc-title">İleri Malzemeler ve Nanoteknoloji (DAYTAM)</h4>
+                                    <p class="rc-desc">Elektron mikroskopları ve spektroskopi laboratuvarları ile ileri
+                                        teknoloji malzemelerinin sentezi ve karakterizasyonu.</p>
+                                    <a href="#" class="btn-research">Merkezi İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KART 3: KLİNİK -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card">
+                                <div class="rc-header rc-bg-klinik">
+                                    <div class="rc-badges">
+                                        <span class="badge-research">Sağlık Bilimleri</span>
+                                    </div>
+                                </div>
+                                <div class="rc-body">
+                                    <div class="rc-icon"><i class="fa-solid fa-dna"></i></div>
+                                    <h4 class="rc-title">Klinik Araştırmalar Merkezi</h4>
+                                    <p class="rc-desc">Faz çalışması gerektiren yeni ilaç ve tedavi yöntemlerinin
+                                        uluslararası standartlarda klinik testlerinin yürütüldüğü birim.</p>
+                                    <a href="#" class="btn-research">Merkezi İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KART 4: BİYOTASARIM -->
+                        <div class="col-md-6 mb-4">
+                            <div class="research-card">
+                                <div class="rc-header rc-bg-biyo">
+                                    <div class="rc-badges">
+                                        <span class="badge-research"><i class="fa-solid fa-leaf text-success mr-1"></i>
+                                            Çevre & Tarım</span>
+                                    </div>
+                                </div>
+                                <div class="rc-body">
+                                    <div class="rc-icon"><i class="fa-solid fa-vial-virus"></i></div>
+                                    <h4 class="rc-title">Biyoçeşitlilik ve Tarımsal Araştırmalar</h4>
+                                    <p class="rc-desc">Bölgeye özgü endemik bitki türlerinin korunması, tohum ıslahı ve
+                                        sürdürülebilir tarım teknolojilerinin geliştirilmesi.</p>
+                                    <a href="#" class="btn-research">Merkezi İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Tüm Merkezler Listesi (Akordeon) -->
+                    <div class="mt-4 mb-5">
+                        <button class="btn btn-outline-primary btn-block py-3" type="button" data-toggle="collapse"
+                            data-target="#allCenters">
+                            <i class="fa-solid fa-list mr-2"></i> Tüm Uygulama ve Araştırma Merkezlerini Listele
+                        </button>
+                        <div class="collapse mt-3" id="allCenters">
+                            <div class="card card-body" style="border: 1px solid var(--border);">
+                                <ul class="list-unstyled columns-2">
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Avrupa
+                                        Birliği ve Uluslararası İlişkiler</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i>
+                                        Bilgisayar Bilimleri (BAUM)</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Çevre
+                                        Sorunları</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Deprem
+                                        Araştırma</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Kadın
+                                        Sorunları (ATA-KAM)</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Organ
+                                        Nakli Eğitim ve Araştırma</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Türkiyat
+                                        Araştırmaları</li>
+                                    <li class="mb-2"><i class="fa-solid fa-caret-right text-primary mr-2"></i> Yapay
+                                        Zeka ve Veri Bilimi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /SOL SÜTUN -->
+
+                <!-- SAĞ SÜTUN (SIDEBAR) -->
+                <div class="col-lg-4 mt-4 mt-lg-0">
+
+                    <!-- BAP ve Teknokent Butonları -->
+                    <a href="projeler.html" class="btn-bap mb-3">
+                        <div class="bap-icon"><i class="fa-solid fa-flask"></i></div>
+                        <div class="bap-text">
+                            <strong>BAP Koordinatörlüğü</strong>
+                            <span>Bilimsel Araştırma Projeleri Fonları</span>
+                        </div>
+                    </a>
+
+                    <a href="teknokent.html" class="btn-teknokent mb-4">
+                        <div class="bap-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="bap-text">
+                            <strong>ATA Teknokent</strong>
+                            <span>Kuluçka ve Ar-Ge Şirketleri</span>
+                        </div>
+                    </a>
+
+                    <!-- Rakamlarla Araştırma -->
+                    <div class="sidebar-card">
+                        <h6><i class="fa-solid fa-chart-line mr-2 text-primary"></i> Rakamlarla Araştırma</h6>
+                        <div class="stats-grid mt-3">
+                            <div class="stat-box text-center mb-3">
+                                <span class="stat-num text-primary">28</span>
+                                <span class="stat-label">Aktif Merkez</span>
+                            </div>
+                            <div class="stat-box text-center mb-3">
+                                <span class="stat-num text-primary">145+</span>
+                                <span class="stat-label">Ar-Ge Laboratuvarı</span>
+                            </div>
+                            <div class="stat-box text-center">
+                                <span class="stat-num text-primary">1.2B₺</span>
+                                <span class="stat-label">Aktif Proje Bütçesi</span>
+                            </div>
+                            <div class="stat-box text-center">
+                                <span class="stat-num text-primary">85</span>
+                                <span class="stat-label">Tescilli Patent</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Akademik Teşvik Kartı -->
+                    <div class="sidebar-card bg-light border-0">
+                        <h6><i class="fa-solid fa-award mr-2 text-warning"></i> Patent ve Yayın Ofisi</h6>
+                        <p style="font-size:13px; color:var(--text-muted); line-height:1.5;">Akademisyenlerimiz ve
+                            öğrencilerimizin buluşlarının patentlenme süreçleri ile prestijli dergilerdeki (SCI/SSCI)
+                            yayın teşvikleri koordinasyon birimi tarafından yürütülmektedir.</p>
+                        <a href="#" class="btn-link" style="font-weight:700; font-size:13px;"><i
+                                class="fa-solid fa-arrow-right mr-1"></i> Destek Başvurusu Yap</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer pt-5 pb-3">
+        <!-- Footer içeriği -->
+        <div class="container-fluid px-4">
+            <p class="footer-copy mb-0 text-center">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

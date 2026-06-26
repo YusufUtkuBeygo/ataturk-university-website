@@ -131,7 +131,9 @@ a:hover {
 }
 
 .logo-emblem::before {
-  content: "🏛";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f19c";
 }
 
 /* Logo içerisindeki "ATATÜRK" ve "ÜNİVERSİTESİ" yazılarını alt alta sıralar. */
@@ -451,7 +453,9 @@ a:hover {
 }
 
 .footer-logo-emblem::before {
-  content: "🏛";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f19c";
 }
 
 /* Adres ve telefon bilgilerinin yazı stili ve boşlukları. */
