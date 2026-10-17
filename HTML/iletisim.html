@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atatürk Üniversitesi iletişim bilgileri, adres, telefon, e-posta ve iletişim formu." />
+  <title>İletişim — Atatürk Üniversitesi</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/ortak.css" />
+  <link rel="stylesheet" href="../css/iletisim.css" />
+</head>
+
+<body>
+
+
+  <!--TOPBAR: İletişim bilgileri, dil seçenekleri ve sosyal medya ikonları gibi hızlı erişim alanlarını kapsar -->
+  <div class="topbar">
+    <div class="container-fluid px-4">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <div class="topbar-left d-flex align-items-center">
+          <span class="topbar-item"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</span>
+        </div>
+        <div class="topbar-right d-flex align-items-center">
+          <a href="#" class="topbar-link">Türkçe</a><span class="topbar-divider">|</span>
+          <a href="#" class="topbar-link">English</a><span class="topbar-divider">|</span>
+          <a href="#" class="topbar-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="topbar-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="topbar-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="topbar-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--NAVBAR: Logo, açılır menüler, arama çubuğu ve kullanıcı giriş butonlarını barındıran üst gezinme çubuğu -->
+  <nav class="navbar navbar-expand-lg navbar-light main-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="ATA_ÜNİ.HTML">
+        <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+          style="width: 46px; height: 46px; object-fit: contain;" />
+        <div class="logo-text">
+          <span class="logo-title">ATATÜRK</span>
+          <span class="logo-sub">ÜNİVERSİTESİ</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mr-auto ml-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Akademik</a>
+            <div class="dropdown-menu mega-menu">
+              <div class="row px-3 py-2">
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Birimler</h6>
+                  <a class="dropdown-item" href="fakulteler.html">Fakülteler</a>
+                  <a class="dropdown-item" href="enstitüler.html">Enstitüler</a>
+                  <a class="dropdown-item" href="yuksekokullar.html">Yüksekokullar</a>
+                  <a class="dropdown-item" href="myo.html">MYO'lar</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Akademik Takvim</h6>
+                  <a class="dropdown-item" href="akademiktakvim.html">2025-2026 Takvimi</a>
+                  <a class="dropdown-item" href="sınavtakvimi.html">Sınav Programı</a>
+                  <a class="dropdown-item" href="derskayit.html">Ders Kayıtları</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Eğitim</h6>
+                  <a class="dropdown-item" href="lisansprogramlari.html">Lisans Programları</a>
+                  <a class="dropdown-item" href="uzaktanegitim.html">Uzaktan Eğitim</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Araştırma</a>
+            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="arastirma-merkezleri.html">Araştırma Merkezleri</a>
+                            <a class="dropdown-item" href="projeler.html">Bilimsel Araştırma Projeleri (BAP)</a>
+                            <a class="dropdown-item" href="teknokent.html">Teknokent (ATA Teknokent)</a>
+                        </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Öğrenci</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="yemek-listesi.html"><i class="fa-solid fa-utensils mr-2"></i> Yemek Listesi</a>
+              <a class="dropdown-item" href="ring-saatleri.html"><i class="fa-solid fa-bus mr-2"></i> Ring Saatleri</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="ogrenci-kulupleri.html">Öğrenci Kulüpleri</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">İdari</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="rektorluk.html">Rektörlük</a>
+              <a class="dropdown-item" href="personel-bilgi.html">Personel Bilgi</a>
+            </div>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center nav-right-actions">
+          <a href="#" class="btn btn-ogrenci mr-2"><i class="fa-solid fa-user-graduate mr-2"></i> Öğrenci Girişi</a>
+          <a href="#" class="btn btn-personel mr-2"><i class="fa-solid fa-briefcase mr-2"></i> Personel Girişi</a>
+          <button class="btn btn-icon-search" type="button" data-toggle="collapse" data-target="#searchBar"
+            aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse search-bar-container" id="searchBar">
+      <div class="container-fluid px-4">
+        <div class="input-group">
+          <input type="text" class="form-control search-input" placeholder="Sitede ara..." />
+          <div class="input-group-append">
+            <button class="btn btn-search-go" type="button"><i class="fa-solid fa-magnifying-glass mr-2"></i>
+              Ara</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="breadcrumb-bar">
+    <div class="container-fluid px-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="ATA_ÜNİ.HTML"><i class="fa-solid fa-house mr-1"></i> Ana Sayfa</a></li>
+          <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!--PAGE HERO: Sayfa başlığı ve kısa açıklama -->
+  <div class="page-hero iletisim-hero">
+    <div class="container-fluid px-4">
+      <h1 class="page-hero-title">İletişim</h1>
+      <p class="page-hero-sub">Sorularınız, önerileriniz ve başvurularınız için bize ulaşın.</p>
+    </div>
+  </div>
+
+  <!--İLETİŞİM KARTLARI: Adres, telefon, e-posta ve çalışma saatleri -->
+  <section class="content-section">
+    <div class="container-fluid px-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h6>Adres</h6>
+            <p>Atatürk Üniversitesi Rektörlüğü<br />25240 Yakutiye / ERZURUM</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <h6>Telefon</h6>
+            <p><a href="tel:+904422311111">+90 442 231 1111</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h6>E-posta</h6>
+            <p><a href="mailto:ata@atauni.edu.tr">ata@atauni.edu.tr</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <h6>Çalışma Saatleri</h6>
+            <p>Hafta içi 08:00 - 17:00</p>
+          </div>
+        </div>
+      </div>
+
+      <!--FORM VE HARİTA: Sol tarafta iletişim formu, sağda kampüs haritası -->
+      <div class="row mt-2">
+        <div class="col-lg-7 mb-4">
+          <div class="contact-form-card">
+            <h2 class="section-title">Bize Yazın</h2>
+            <form onsubmit="event.preventDefault(); document.getElementById('formMsg').classList.remove('d-none'); this.reset();">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="ad">Ad Soyad</label>
+                  <input type="text" class="form-control" id="ad" required />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="eposta">E-posta</label>
+                  <input type="email" class="form-control" id="eposta" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="konu">Konu</label>
+                <select class="form-control" id="konu">
+                  <option>Genel Bilgi</option>
+                  <option>Öğrenci İşleri</option>
+                  <option>Aday Öğrenci</option>
+                  <option>Personel İşleri</option>
+                  <option>Öneri / Şikâyet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mesaj">Mesajınız</label>
+                <textarea class="form-control" id="mesaj" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary px-4"><i class="fa-solid fa-paper-plane mr-2"></i>Gönder</button>
+              <div id="formMsg" class="alert alert-success mt-3 mb-0 d-none">Mesajınız alındı. Bu bir tasarım örneğidir; form gerçek bir sunucuya gönderilmez.</div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5 mb-4">
+          <div class="contact-map-card">
+            <h2 class="section-title">Kampüs Haritası</h2>
+            <iframe title="Atatürk Üniversitesi harita"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=41.22%2C39.88%2C41.26%2C39.91&amp;layer=mapnik"
+              loading="lazy"></iframe>
+            <a href="https://www.openstreetmap.org/search?query=Atat%C3%BCrk%20%C3%9Cniversitesi%20Erzurum" target="_blank" rel="noopener"
+              class="btn btn-outline-primary btn-block mt-3"><i class="fa-solid fa-map mr-2"></i>Haritada Aç</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FOOTER: Sayfa en altında yer alan logo, adres, iletişim, sosyal medya bağlantıları, site haritası linkleri ve telif hakkı bildirimini kapsayan bölüm -->
+  <footer class="main-footer pt-5 pb-3">
+    <div class="container-fluid px-4">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="../images/university_logo.png" alt="Atatürk Üniversitesi Logo" class="mr-3"
+              style="width: 44px; height: 44px; object-fit: contain;" />
+            <div><span class="footer-logo-title">ATATÜRK ÜNİVERSİTESİ</span></div>
+          </div>
+          <p class="footer-address"><i class="fa-solid fa-location-dot mr-1"></i> 25240 Yakutiye / ERZURUM</p>
+          <p class="footer-address"><i class="fa-solid fa-phone mr-1"></i> +90 442 231 1111</p>
+          <p class="footer-address"><i class="fa-solid fa-envelope mr-1"></i> ata@atauni.edu.tr</p>
+          <div class="footer-social mt-3">
+            <a href="#" class="social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">HIZLI BAĞLANTILAR</h6>
+          <ul class="footer-links">
+            <li><a href="ATA_ÜNİ.HTML">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="fakulteler.html">Fakülteler</a></li>
+            <li><a href="duyurular.html">Duyurular</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">BİRİMLER</h6>
+          <ul class="footer-links">
+            <li><a href="fakulteler.html">Fakülteler</a></li>
+            <li><a href="enstitüler.html">Enstitüler</a></li>
+            <li><a href="yuksekokullar.html">Yüksekokullar</a></li>
+            <li><a href="myo.html">MYO'lar</a></li>
+            <li><a href="arastirma-merkezleri.html">Araştırma Merkezleri</a></li>
+            <li><a href="#">Hastaneler</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">E-HİZMETLER</h6>
+          <ul class="footer-links">
+            <li><a href="#">e-Portal</a></li>
+            <li><a href="#">OBS</a></li>
+            <li><a href="personel-bilgi.html">Personel Bilgi</a></li>
+            <li><a href="#">KVKK Başvuru</a></li>
+            <li><a href="#">Bilgi Edinme</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6 mb-4">
+          <h6 class="footer-heading">ÖĞRENCİ</h6>
+          <ul class="footer-links">
+            <li><a href="yemek-listesi.html">Yemek Listesi</a></li>
+            <li><a href="ring-saatleri.html">Ring Saatleri</a></li>
+            <li><a href="duyurular.html">Duyurular</a></li>
+            <li><a href="#">Kampüs Yaşamı</a></li>
+            <li><a href="#">Burslar</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <p class="footer-copy mb-0">Telif Hakkı © Atatürk Üniversitesi · Tüm Hakları Saklıdır</p>
+        <div class="footer-legal">
+          <a href="#">Web Kılavuzu</a><span class="mx-2">|</span>
+          <a href="#">Gizlilik Politikası</a><span class="mx-2">|</span>
+          <a href="#">KVKK</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
