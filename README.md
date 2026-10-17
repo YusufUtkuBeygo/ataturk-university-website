@@ -6,7 +6,7 @@ An alternative, responsive redesign of the Atatürk University website, built fo
 
 ## What's inside
 
-- **20 pages:** home, faculties, institutes, vocational schools, undergraduate programs, academic and exam calendars, course registration, announcements, research centers, technopark, student clubs, campus shuttle times, cafeteria menu and more
+- **21 pages:** home, contact (with form and map), faculties, institutes, vocational schools, undergraduate programs, academic and exam calendars, course registration, announcements, research centers, technopark, student clubs, campus shuttle times, cafeteria menu and more
 - **Responsive layout** with Bootstrap 4 grid and a collapsible navbar
 - Shared styles in `css/ortak.css`, plus one stylesheet per page
 - Font Awesome icons, semantic sections and comments explaining each block
